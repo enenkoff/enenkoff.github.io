@@ -7,8 +7,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: $text;
-
-
 }
 body, input, textarea, button, select {font-family: 'Roboto', sans-serif;}
 a {
@@ -20,13 +18,14 @@ a {
   &_home {
     height: 100%;
     background-color: $bg;
+
   }
 }
 .content {
   margin: 0 auto;
   @extend %boxSize;
   padding: 0 15px;
-  &_lg {max-width: 1830px;}
+  &_lg {max-width: 1200px;}
   &_bg {max-width: 985px;}
   &_md {max-width: 930px;}
   &_sm {max-width: 830px;}
@@ -54,6 +53,8 @@ a {
   }
 }
 
+.bg__white {background-color: #fff}
+
 
 .hidden-in-mobile {
   @include media(media,1024){
@@ -70,6 +71,14 @@ a {
   @include media(media,1024){
     display: block;
   }
+}
+
+#wrapper {
+  padding-left: 200px;
+}
+.main {
+  position: relative;
+  z-index: 1;
 }
 
 /*-------- error page --------*/

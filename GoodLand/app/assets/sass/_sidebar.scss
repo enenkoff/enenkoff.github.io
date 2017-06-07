@@ -4,8 +4,9 @@
   left: 0;
   bottom: 0;
   z-index: 12;
-  width: 17%;
+  width: 200px;
   background-color: #fff;
+  @include boxShadow(0,0,7px,0,rgba(162,174,191,0.5));
   @include media(media,1024) {
     display: none;
   }

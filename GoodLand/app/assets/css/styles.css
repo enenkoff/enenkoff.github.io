@@ -197,12 +197,12 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
-.content, .btn, #mobile-nav {
+.content, .btn, .machine-list ul li, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.error-page_text span i svg {
+.error-page_text span i svg, .video div {
   width: 100%;
   height: 100%;
   display: block; }
@@ -334,7 +334,7 @@ a {
   margin: 0 auto;
   padding: 0 15px; }
   .content_lg {
-    max-width: 1830px; }
+    max-width: 1200px; }
   .content_bg {
     max-width: 985px; }
   .content_md {
@@ -359,6 +359,9 @@ a {
       top: 0;
       left: 0; } }
 
+.bg__white {
+  background-color: #fff; }
+
 @media screen and (max-width: 1024px) {
   .hidden-in-mobile {
     display: none !important; } }
@@ -372,6 +375,13 @@ a {
   @media screen and (max-width: 1024px) {
     .show-in-mobile {
       display: block; } }
+
+#wrapper {
+  padding-left: 200px; }
+
+.main {
+  position: relative;
+  z-index: 1; }
 
 /*-------- error page --------*/
 .error-page {
@@ -439,11 +449,60 @@ a {
   left: 0;
   bottom: 0;
   z-index: 12;
-  width: 17%;
-  background-color: #fff; }
+  width: 200px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 7px 0 rgba(162, 174, 191, 0.5);
+  -moz-box-shadow: 0 0 7px 0 rgba(162, 174, 191, 0.5);
+  box-shadow: 0 0 7px 0 rgba(162, 174, 191, 0.5); }
   @media screen and (max-width: 1024px) {
     #sidebar {
       display: none; } }
+
+.section_bottom .fp-tableCell {
+  vertical-align: bottom; }
+
+.section_top .fp-tableCell {
+  vertical-align: top; }
+
+.video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 200px;
+  bottom: 0;
+  z-index: 1; }
+  .video div {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+    .video div video {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
+.machine-list {
+  background-color: #fff;
+  width: 100%;
+  height: 50%; }
+  .machine-list ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .machine-list ul li {
+      float: left;
+      width: 25%;
+      height: 50%;
+      position: relative;
+      border: 0.5px solid #d1d7df; }
 
 #mobile-nav {
   display: none;
