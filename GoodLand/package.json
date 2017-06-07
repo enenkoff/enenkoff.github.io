@@ -10,8 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
+    "gulp-rigger": "^0.5.8",
     "gulp-concat": "^2.6.1",
     "gulp-uglifyjs": "^0.6.2"
   }

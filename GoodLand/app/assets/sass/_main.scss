@@ -1,0 +1,214 @@
+
+html {
+  &.ovh {overflow: hidden !important;}
+}
+body {
+  @extend html;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: $text;
+
+
+}
+body, input, textarea, button, select {font-family: 'Roboto', sans-serif;}
+a {
+  color: $link;
+  @include transit(all 0.3s);
+}
+
+.container {
+  &_home {
+    height: 100%;
+    background-color: $bg;
+  }
+}
+.content {
+  margin: 0 auto;
+  @extend %boxSize;
+  padding: 0 15px;
+  &_lg {max-width: 1830px;}
+  &_bg {max-width: 985px;}
+  &_md {max-width: 930px;}
+  &_sm {max-width: 830px;}
+  &_xs {max-width: 640px;}
+}
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  @extend %boxSize;
+  color: $darklink;
+  font-size: 16px;
+  background-color: transparent;
+  position: relative;
+  border-radius: 0;
+  text-align: center;
+  margin-bottom: 9px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -9px;
+    width: 100%;
+    height: 100%;
+    background-color: $bg;
+    @extend %boxSize;
+    @include transit(all 0.3s);
+  }
+  &.invert {
+    &:before {background-color: #fff}
+  }
+  strong {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-style: normal;
+    border: 2px solid $darklink;
+    padding: 8px 35px;
+    color: $darklink;
+    .arrow {
+      display: inline-block;
+      font-size: 22px;
+      line-height: 16px;
+      margin-right: 6px;
+    }
+  }
+  &:hover {
+    @include media(hover,1025){
+      &:before {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.copyright {
+  margin-top: 115px;
+  font-size: 13px;
+  overflow: hidden;
+  color: $darklink;
+  text-align: center;
+  @include media(media,1024){
+    margin-top: 80px;
+    text-align: right;
+  }
+  @include media(media,640){
+    text-align: center;
+  }
+  p {
+    float: left;
+    width: 33.33%;
+    margin-left: 33.33%;
+    @include media(media,1024){
+      margin: 0;
+      text-align: left;
+      width: auto;
+    }
+    @include media(media,640){
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  .brand {
+    float: left;
+    width: 33.33%;
+    text-align: right;
+    @include media(media,1024){
+      float: none;
+      width: auto;
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+.hidden-in-mobile {
+  @include media(media,1024){
+    display: none !important;
+  }
+}
+.hidden-in-smarts {
+  @include media(media,640){
+    display: none !important;
+  }
+}
+.show-in-mobile {
+  display: none;
+  @include media(media,1024){
+    display: block;
+  }
+}
+.h_center {
+  margin-top: 75px;
+  @include media(media,1024){
+    margin-top: 60px;
+    .section_grid & {
+      margin-top: 0;
+    }
+  }
+  @include media(media,640){
+    margin-top: 0;
+  }
+}
+
+/*-------- error page --------*/
+
+.error-page {
+  text-align: center;
+  padding-bottom: 40px;
+  .section__plaid {
+    margin-top: 75px;
+    overflow: hidden;
+    padding: 75px 0 5px;
+    position: relative;
+    @include media(media,1024){
+      margin-top: 60px;
+      padding-top: 60px;
+    }
+    @include media(media,640){
+      padding-top: 40px;
+    }
+  }
+  &_text {
+    text-align: center;
+    font-size: 250px;
+    color: $darklink;
+    font-weight: 100;
+
+    margin-bottom: 40px;
+    line-height: 1;
+    @include media(media,640){
+      font-size: 175px;
+    }
+    span {
+      vertical-align: middle;
+      display: inline-block;
+      position: relative;
+      margin: 0 -25px;
+      @include media(media,640){
+        margin: 0 -22px;
+      }
+      i {
+        bottom: 47px;
+        height: 72px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 60px;
+        @include media(media,640){
+          bottom: 30px;
+          height: 55px;
+          width: 45px;
+        }
+        svg {
+          @extend %fullBlock;
+        }
+      }
+    }
+  }
+}

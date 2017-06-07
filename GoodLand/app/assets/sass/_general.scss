@@ -1,0 +1,129 @@
+$bg: #e4f2fd;
+$text: #616161;
+$textdark: #424242;
+$link: #110F96;
+$darklink: #011d4e;
+$cyan: #BBDEFA;
+$bord: #2196f3;
+$grey: #eee;
+
+%boxSize {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+%fullBlock {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+%cover {
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+@mixin boxShadow($x,$y,$sh,$tr,$color) {
+  -webkit-box-shadow: $x $y $sh $tr $color;
+  -moz-box-shadow: $x $y $sh $tr $color;
+  box-shadow: $x $y $sh $tr $color;
+}
+@mixin boxShadowInset($x,$y,$sh,$tr,$color,$inset) {
+  -webkit-box-shadow: $x $y $sh $tr $color $inset;
+  -moz-box-shadow: $x $y $sh $tr $color $inset;
+  box-shadow: $x $y $sh $tr $color $inset;
+}
+@mixin transit($tr){
+  -webkit-transition: $tr;
+  -moz-transition: $tr;
+  -ms-transition: $tr;
+  -o-transition: $tr;
+  transition: $tr;
+}
+@mixin transform($tr){
+  -webkit-transform: $tr;
+  -moz-transform: $tr;
+  -ms-transform: $tr;
+  -o-transform: $tr;
+  transform: $tr;
+}
+@mixin translate($x,$y){
+  -webkit-transform: translate($x,$y);
+  -moz-transform: translate($x,$y);
+  -ms-transform: translate($x,$y);
+  -o-transform: translate($x,$y);
+  transform: translate($x,$y);
+}
+@mixin fonts($name,$file){
+  @font-face {
+    font-family: $name;
+    src: url("../fonts/" + $file + ".ttf"),
+    url("../fonts/" + $file + ".woff"),
+    url("../fonts/" + $file + ".eot");
+  }
+}
+@mixin media($media,$w) {
+  @if $media == hover {
+    @media screen and (min-width:$w+'px'){@content;}
+  }
+  @else {
+    @media screen and (max-width:$w+'px'){@content;}
+  }
+}
+@mixin animation($a){
+  -webkit-animation: $a;
+  -moz-animation: $a;
+  -o-animation: $a;
+  animation: $a;
+}
+@mixin keyframes-parallax($name,$per,$y){
+  @-webkit-keyframes #{$name} { #{$per} { -webkit-transform: translate(0,$y) } }
+  @-moz-keyframes #{$name} { #{$per} { -moz-transform: translate(0,$y) } }
+  @-o-keyframes #{$name} { #{$per} { -o-transform: translate(0,$y) } }
+  @keyframes #{$name} { #{$per} { transform: translate(0,$y) } }
+}
+%icon_start {
+  .main-stroke {stroke: #011d4e}
+  .n {fill: none}
+  .w_w, .w_b, .w_c, .w_v {fill: #fff}
+  .g_c {fill: #e6e8ed}
+  .w_w, .w_b, .w_c, .w_v, .g_c {@include transit(all 0.3s)}
+}
+%icon_active {
+  i {
+    .w_b {fill: #90CAF8}
+    .w_c, .g_c {fill: #BBDEFA}
+    .w_v {fill: #2196F3}
+  }
+}
+%icon_hover {
+  @include media(hover,1025){
+    i {
+      .w_b {fill: #90CAF8}
+      .w_c, .g_c {fill: #BBDEFA}
+      .w_v {fill: #2196F3}
+    }
+  }
+
+}
+
+
+
+.layout:after {content: ""; display: block; clear: both;}
+.tableBox {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  & > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+    & > div {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+}
+@include fonts(pfair,PlayfairDisplay-Italic);

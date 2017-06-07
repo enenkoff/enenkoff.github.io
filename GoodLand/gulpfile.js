@@ -8,7 +8,7 @@ gulp.task('sass', function () {
     return gulp.src('app/assets/sass/**/*.+(sass|scss)')
         .pipe(sass())
         .pipe(gulp.dest('app/assets/css'))
-        .pipe(browserSync.reload({stream: true}))
+        // .pipe(browserSync.reload({stream: true}))
 });
 
 
@@ -18,8 +18,8 @@ gulp.task('sass', function () {
 
 gulp.task('watch', ['sass'], function () {
     gulp.watch('app/assets/sass/**/*.+(sass|scss)',['sass']);
-    gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/assets/js/**/*.js', browserSync.reload);
+    // gulp.watch('app/*.html', browserSync.reload);
+    // gulp.watch('app/assets/js/**/*.js', browserSync.reload);
 });
 
 
