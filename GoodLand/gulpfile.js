@@ -1,17 +1,31 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    notify = require('gulp-notify'),
     rigger = require('gulp-rigger');
 
 /* compile sass to css */
+//
+// gulp.task('sass', function () {
+//     return gulp.src('app/assets/sass/**/*.+(sass|scss)')
+//         .pipe(sass())
+//         .pipe(gulp.dest('app/assets/css'))
+//         // .pipe(browserSync.reload({stream: true}))
+// });
 
-gulp.task('sass', function () {
-    return gulp.src('app/assets/sass/**/*.+(sass|scss)')
-        .pipe(sass())
-        .pipe(gulp.dest('app/assets/css'))
-        // .pipe(browserSync.reload({stream: true}))
+
+/* compile sass with notify errors */
+
+gulp.task( 'sass', function() {
+    gulp.src('app/assets/sass/**/*.+(sass|scss)')
+        .pipe( sass().on( 'error', notify.onError(
+            {
+                message: "<%= error.message %>",
+                title  : "Sass ошибка!"
+            } ) )
+        )
+        .pipe( gulp.dest( 'app/assets/css' ) )
+        .pipe( notify( 'Готово!' ) );
 });
-
-
 
 
 /* watch sass changes */

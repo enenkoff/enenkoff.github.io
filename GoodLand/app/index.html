@@ -8,10 +8,11 @@
     <meta name="robots" content="noindex, nofollow">
     <title>GoodLand</title>
     <link rel="icon" href="favicon.png" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100i,400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100i,300,400,500&amp;subset=latin-ext" rel="stylesheet">
     <link href="assets/css/jquery.fullpage.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../audit_06_06/sass/_preloader.scss">
 </head>
 <body class="container container_home">
     <div id="preloader">
@@ -20,7 +21,6 @@
                 <div>
                     <div class="loader-wrap">
                         <div class="loader"></div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 1693 1693" shape-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="m792 45h122l60 87c91 14 176 45 252 89l101-26 95 83-11 95c67 78 117 170 144 270l139 69-1 159-126 60c-10 56-27 110-50 161l22 189-124 125-155-17c-36 23-74 43-114 60l-126 195-282 2-129-180c-30-10-59-23-86-36l-187 21-132-132 19-171c-33-58-58-120-73-187l-151-71v-152l150-70c24-109 75-208 146-292l-9-101 93-78 95 27c77-46 163-78 256-94l61-88zm64 168c348 0 630 270 630 603 0 333-282 603-630 603-348 0-630-270-630-603 0-333 282-603 630-603" fill="#56698f"/><path d="m862 277c309 0 559 241 559 539 0 298-250 539-559 539-309 0-559-241-559-539 0-298 250-539 559-539m-6 58c275 0 497 214 497 479 0 265-223 479-497 479-275 0-497-214-497-479 0-265 223-479 497-479" fill="#b2b3b3"/></svg>
                     </div>
                 </div>
             </div>
@@ -35,26 +35,28 @@
                 </video>
             </div>
         </div>
-        <aside id="sidebar">
+        <aside id="sidebar" class="sidebar">
             <header>
                 <a href="index.html" class="logo">
                     <img src="assets/images/svg/logo.svg" alt="сельхозтехника">
                     <p>сельхозтехника</p>
                 </a>
             </header>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#">Купить</a></li>
-                    <li><a href="#">Продать</a></li>
-                    <li><a href="#">Перевозка</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
+            <div class="nav-menu">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Купить</a></li>
+                        <li><a href="#">Продать</a></li>
+                        <li><a href="#">Перевозка</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="callback">
                 <a href="#" class="tel">+7 (8442) 43-10-19</a>
-                <button class="request"><i></i><span>запрос на подбор</span></button>
+                <button class="request btn"><i></i><span>запрос на подбор</span></button>
             </div>
         </aside>
         <div id="fullpage" class="main home-page">

@@ -32,23 +32,23 @@ a {
   &_xs {max-width: 640px;}
 }
 .btn {
-  display: inline-block;
   text-transform: uppercase;
   @extend %boxSize;
   color: #fff;
   font-size: 16px;
-  background-color: transparent;
+  background-color: $link;
   position: relative;
   border-radius: 0;
   text-align: center;
-  margin-bottom: 9px;
-
+  font-family: PFDin_100;
+  border: none;
+  span, i {
+    display: inline-block;
+    vertical-align: middle;
+  }
   &:hover {
     @include media(hover,1025){
-      &:before {
-        top: 0;
-        left: 0;
-      }
+
     }
   }
 }

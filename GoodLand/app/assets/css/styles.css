@@ -197,12 +197,12 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
-.content, .btn, .machine-list ul li, #mobile-nav {
+.content, .btn, .sidebar, .machine-list ul li, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.error-page_text span i svg, .video div {
+#preloader .loader, .error-page_text span i svg, .video div {
   width: 100%;
   height: 100%;
   display: block; }
@@ -228,8 +228,24 @@ textarea {
       height: 100%; }
 
 @font-face {
-  font-family: pfair;
-  src: url("../fonts/PlayfairDisplay-Italic.ttf"), url("../fonts/PlayfairDisplay-Italic.woff"), url("../fonts/PlayfairDisplay-Italic.eot"); }
+  font-family: PFDin_100;
+  src: url("../fonts/PFDinDisplayPro-Thin.ttf"), url("../fonts/PFDinDisplayPro-Thin.woff"), url("../fonts/PFDinDisplayPro-Thin.eot"); }
+
+@font-face {
+  font-family: PFDin_300;
+  src: url("../fonts/PFDinDisplayPro-Light.ttf"), url("../fonts/PFDinDisplayPro-Light.woff"), url("../fonts/PFDinDisplayPro-Light.eot"); }
+
+@font-face {
+  font-family: PFDin_400;
+  src: url("../fonts/PFDinDisplayPro-Regular.ttf"), url("../fonts/PFDinDisplayPro-Regular.woff"), url("../fonts/PFDinDisplayPro-Regular.eot"); }
+
+@font-face {
+  font-family: PFDin_500;
+  src: url("../fonts/PFDinDisplayPro-Medium.ttf"), url("../fonts/PFDinDisplayPro-Medium.woff"), url("../fonts/PFDinDisplayPro-Medium.eot"); }
+
+@font-face {
+  font-family: PFDin_800;
+  src: url("../fonts/PFDinDisplayPro-Black.ttf"), url("../fonts/PFDinDisplayPro-Black.woff"), url("../fonts/PFDinDisplayPro-Black.eot"); }
 
 @-webkit-keyframes load3 {
   0% {
@@ -268,26 +284,15 @@ textarea {
     height: 150px;
     position: relative;
     margin: 0 auto; }
-    #preloader .loader-wrap svg {
-      position: absolute;
-      height: 150px;
-      width: 150px;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto; }
   #preloader .loader {
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
-    position: absolute;
-    z-index: 2;
-    right: 0;
-    top: 0;
-    left: 2px;
-    bottom: 6px;
-    margin: auto;
+    background: #2644BC;
+    background: -moz-linear-gradient(left, #2644BC 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, #2644BC 10%, rgba(255, 255, 255, 0) 42%);
+    background: -o-linear-gradient(left, #2644BC 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, #2644BC 10%, rgba(255, 255, 255, 0) 42%);
+    background: linear-gradient(to right, #2644BC 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
     -webkit-animation: load3 1.4s infinite linear;
     -moz-animation: load3 1.4s infinite linear;
     -o-animation: load3 1.4s infinite linear;
@@ -298,14 +303,26 @@ textarea {
     -o-transform: translateZ(0);
     transform: translateZ(0); }
     #preloader .loader:before {
-      width: 16px;
-      height: 16px;
-      background-color: #56698f;
-      border-radius: 50%;
+      width: 50%;
+      height: 50%;
+      background: #2644BC;
+      border-radius: 100% 0 0 0;
       position: absolute;
-      top: 28px;
+      top: 0;
       left: 0;
       content: ''; }
+    #preloader .loader:after {
+      background: #f0f3f5;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
 
 html.ovh, body.ovh {
   overflow: hidden !important; }
@@ -345,19 +362,18 @@ a {
     max-width: 640px; }
 
 .btn {
-  display: inline-block;
   text-transform: uppercase;
   color: #fff;
   font-size: 16px;
-  background-color: transparent;
+  background-color: #2644BC;
   position: relative;
   border-radius: 0;
   text-align: center;
-  margin-bottom: 9px; }
-  @media screen and (min-width: 1025px) {
-    .btn:hover:before {
-      top: 0;
-      left: 0; } }
+  font-family: PFDin_100;
+  border: none; }
+  .btn span, .btn i {
+    display: inline-block;
+    vertical-align: middle; }
 
 .bg__white {
   background-color: #fff; }
@@ -443,7 +459,7 @@ a {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
 
-#sidebar {
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -451,12 +467,42 @@ a {
   z-index: 12;
   width: 200px;
   background-color: #fff;
+  padding: 140px 0;
   -webkit-box-shadow: 0 0 7px 0 rgba(162, 174, 191, 0.5);
   -moz-box-shadow: 0 0 7px 0 rgba(162, 174, 191, 0.5);
   box-shadow: 0 0 7px 0 rgba(162, 174, 191, 0.5); }
   @media screen and (max-width: 1024px) {
-    #sidebar {
+    .sidebar {
       display: none; } }
+  .sidebar header {
+    left: 0;
+    padding-top: 35px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0; }
+    .sidebar header .logo {
+      display: inline-block; }
+      .sidebar header .logo img {
+        display: block;
+        height: 52px;
+        margin: 0 auto 4px;
+        width: 125px; }
+      .sidebar header .logo p {
+        color: #616161;
+        font-size: 15px;
+        font-weight: 300; }
+  .sidebar .nav-menu {
+    height: 100%;
+    width: 100%; }
+  .sidebar .callback {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .sidebar .callback a, .sidebar .callback button {
+      display: block;
+      width: 100%; }
 
 .section_bottom .fp-tableCell {
   vertical-align: bottom; }

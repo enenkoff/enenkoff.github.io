@@ -1,4 +1,4 @@
-#sidebar {
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,8 +6,46 @@
   z-index: 12;
   width: 200px;
   background-color: #fff;
+  @extend %boxSize;
+  padding: 140px 0;
   @include boxShadow(0,0,7px,0,rgba(162,174,191,0.5));
   @include media(media,1024) {
     display: none;
+  }
+  header {
+    left: 0;
+    padding-top: 35px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    .logo {
+      display: inline-block;
+      img {
+        display: block;
+        height: 52px;
+        margin: 0 auto 4px;
+        width: 125px;
+      }
+      p {
+        color: #616161;
+        font-size: 15px;
+        font-weight: 300;
+      }
+    }
+  }
+  .nav-menu {
+    height: 100%;
+    width: 100%;
+  }
+  .callback {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    a, button {
+      display: block;
+      width: 100%;
+    }
   }
 }

@@ -122,4 +122,8 @@ $border: #d1d7df;
     }
   }
 }
-@include fonts(pfair,PlayfairDisplay-Italic);
+@include fonts(PFDin_100,PFDinDisplayPro-Thin);
+@include fonts(PFDin_300,PFDinDisplayPro-Light);
+@include fonts(PFDin_400,PFDinDisplayPro-Regular);
+@include fonts(PFDin_500,PFDinDisplayPro-Medium);
+@include fonts(PFDin_800,PFDinDisplayPro-Black);
