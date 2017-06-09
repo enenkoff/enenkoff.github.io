@@ -197,7 +197,7 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
-.content, .btn, .sidebar, .machine-list ul li, #mobile-nav {
+.content, .btn, .searching fieldset input, .sidebar, .machine-list ul li, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -456,18 +456,57 @@ a {
             height: 55px;
             width: 45px; } }
 
-#header {
+.searching fieldset {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 15;
-  padding: 18px 0;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear; }
+  top: 15px;
+  left: 250px;
+  z-index: 10; }
+  .searching fieldset label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer; }
+  .searching fieldset button {
+    position: absolute;
+    width: 0;
+    top: 0;
+    line-height: 36px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .searching fieldset button[type="submit"] {
+      right: 0;
+      background-color: #2644BC;
+      color: #fff;
+      border-radius: 0 25px 25px 0;
+      text-align: center; }
+  .searching fieldset input {
+    background-color: #fff;
+    border: medium none;
+    border-radius: 25px;
+    height: 36px;
+    line-height: 36px;
+    outline: medium none;
+    padding: 0 7px;
+    width: 36px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .searching fieldset input:focus {
+      width: 600px;
+      padding: 0 107px 0 41px; }
 
 .sidebar {
   position: fixed;

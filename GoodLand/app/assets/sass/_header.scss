@@ -1,10 +1,59 @@
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 15;
-  padding: 18px 0;
-  @include transit(all 0.3s linear);
+.searching {
+  fieldset {
+    position: fixed;
+    top: 15px;
+    left: 250px;
+    z-index: 10;
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: gray;
+      cursor: pointer;
+    }
+    button {
+      position: absolute;
+      width: 0;
+      top: 0;
+      line-height: 36px;
+      border: none;
+      overflow: hidden;
+      cursor: pointer;
+      @include transit(all 0.3s);
+      &[type="reset"]{}
+      &[type="submit"]{
+        right: 0;
+        background-color: $link;
+        color: #fff;
+        border-radius: 0 25px 25px 0;
+        text-align: center;
+      }
+    }
+    input {
+      background-color: #fff;
+      border: medium none;
+      border-radius: 25px;
+      height: 36px;
+      line-height: 36px;
+      outline: medium none;
+      padding: 0 7px;
+      width: 36px;
+      overflow: hidden;
+      @extend %boxSize;
+      @include transit(all 0.3s);
+      &:focus {
+        width: 600px;
+        padding: 0 107px 0 41px;
+        //& ~ {
+        //  button[type="submit"]{
+        //    width: 80px;
+        //  }
+        //}
+      }
+    }
 
+  }
 }
