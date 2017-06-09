@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  left: 200px;
+  left: 199px;
   bottom: 0;
   z-index: 1;
   div {
@@ -23,6 +23,60 @@
       left: 50%;
       top: 50%;
       @include translate(-50%, -50%);
+    }
+  }
+}
+
+.home-page {
+  h1 {
+    color: #fff;
+    font-size: 3.8rem;
+    margin-bottom: 1.6rem;
+    a {
+      color: inherit;
+      &:hover {
+        @include media(hover,1025){
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .divider {
+    background-color: black;
+    height: 0.8rem;
+    margin: 1.6rem 0;
+    width: 7%;
+    background: $link;
+    background: -moz-linear-gradient(left, $link 0%, $darklink 100%);
+    background: -webkit-linear-gradient(left, $link 0%,$darklink 100%);
+    background: linear-gradient(to right, $link 0%,$darklink 100%);
+  }
+
+}
+
+.search-tech {
+  padding: 0.8rem 0;
+  form {
+    font-size: 0;
+    fieldset {
+      display: inline-block;
+      vertical-align: top;
+      width: 265px;
+      font-size: 1rem;
+      border-right: 2px solid $darkbord;
+      &:last-child {
+        border: none;
+      }
+      button {
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: $link;
+        color: #fff;
+        text-align: center;
+        line-height: 60px;
+      }
     }
   }
 }

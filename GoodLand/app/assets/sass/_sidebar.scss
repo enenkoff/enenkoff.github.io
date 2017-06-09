@@ -7,7 +7,7 @@
   width: 200px;
   background-color: #fff;
   @extend %boxSize;
-  padding: 140px 0;
+  padding: 140px 0 118px;
   @include boxShadow(0,0,7px,0,rgba(162,174,191,0.5));
   @include media(media,1024) {
     display: none;
@@ -46,6 +46,109 @@
     a, button {
       display: block;
       width: 100%;
+      text-align: center;
+    }
+    .tel {
+      color: $text;
+      padding: 18px 0;
+      font-size: 17px;
+      font-family: PFDin_400;
+    }
+  }
+}
+
+.nav-menu {
+  nav {
+    height: 100%;
+  }
+  li {
+
+  }
+  a {
+    font-family: "PFDin_400";
+    text-transform: uppercase;
+    position: relative;
+    color: $text;
+    display: block;
+    padding: 14px 14px 14px 38px;
+    font-size: 17px;
+    &.active {
+      color: $link;
+      & ~ .submenu {display: block}
+    }
+    &:hover {
+      @include media(hover,1025){
+        color: $link;
+      }
+    }
+  }
+  .submenu {
+    display: none;
+    a {
+      text-transform: none;
+      font-size: 15px;
+      padding: 5px 12px 5px 46px;
+      &.active {
+        &:before {
+          background-color: $link;
+          content: "";
+          height: 3px;
+          left: 0;
+          position: absolute;
+          top: 14px;
+          width: 38px;
+        }
+
+      }
+    }
+  }
+  .mCS-autoHide {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: rgba(181,182,186,0.5);
+      background: -moz-linear-gradient(top, rgba(181,182,186,0.5) 0%, rgba(181,182,186,0) 100%);
+      background: -webkit-linear-gradient(top, rgba(181,182,186,0.5) 0%,rgba(181,182,186,0) 100%);
+      background: linear-gradient(to bottom, rgba(181,182,186,0.5) 0%,rgba(181,182,186,0) 100%);
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: rgba(181,182,186,0.5);
+      background: -moz-linear-gradient(top, rgba(181,182,186,0) 0%, rgba(181,182,186,0.5) 100%);
+      background: -webkit-linear-gradient(top, rgba(181,182,186,0) 0%,rgba(181,182,186,0.5) 100%);
+      background: linear-gradient(to bottom, rgba(181,182,186,0) 0%,rgba(181,182,186,0.5) 100%);
+    }
+    &.mCS_no_scrollbar {
+      &:before,
+      &:after {display: none}
+    }
+  }
+  .mCSB_scrollTools { width: 6px; }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 6px;
+    border-radius: 0;
+  }
+  .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: $darkbord;
+  }
+  .mCSB_container {
+    display: table;
+    height: 100%;
+    width: 100%;
+    .main-nav-menu {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 20px 0;
     }
   }
 }

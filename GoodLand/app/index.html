@@ -8,11 +8,13 @@
     <meta name="robots" content="noindex, nofollow">
     <title>GoodLand</title>
     <link rel="icon" href="favicon.png" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100i,300,400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" type="text/css" rel="stylesheet">
     <link href="assets/css/jquery.fullpage.min.css" rel="stylesheet">
+    <link href="assets/css/jquery.selectbox.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/common.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../audit_06_06/sass/_preloader.scss">
+    <link rel="stylesheet" href="../../../style.css">
 </head>
 <body class="container container_home">
     <div id="preloader">
@@ -44,8 +46,23 @@
             </header>
             <div class="nav-menu">
                 <nav id="nav">
-                    <ul>
-                        <li><a href="#">Купить</a></li>
+                    <ul class="main-nav-menu">
+                        <li>
+                            <a href="#">Купить</a>
+                            <ul class="submenu">
+                                <li><a href="#">Вся техника</a></li>
+                                <li><a href="#">Тракторы</a></li>
+                                <li><a href="#">Грузовики</a></li>
+                                <li><a href="#">Уборочная техника</a></li>
+                                <li><a href="#">Посевная техника</a></li>
+                                <li><a href="#">Почвообработка</a></li>
+                                <li><a href="#">Внесение удобрений</a></li>
+                                <li><a href="#">Кормозаготовка</a></li>
+                                <li><a href="#">Элеваторы, зернотоки</a></li>
+                                <li><a href="#">Прицепы, бункеры</a></li>
+                                <li><a href="#">Запчасти и расходка</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Продать</a></li>
                         <li><a href="#">Перевозка</a></li>
                         <li><a href="#">О компании</a></li>
@@ -55,18 +72,53 @@
                 </nav>
             </div>
             <div class="callback">
-                <a href="#" class="tel">+7 (8442) 43-10-19</a>
-                <button class="request btn"><i></i><span>запрос на подбор</span></button>
+                <a href="tel:+78442431019" class="tel">+7 (8442) 43-10-19</a>
+                <button class="request btn">
+                    <i><img src="assets/images/svg/book.svg" alt="book"></i>
+                    <span>запрос на подбор</span>
+                </button>
             </div>
         </aside>
         <div id="fullpage" class="main home-page">
             <section class="section">
                 <div class="content content_lg">
-                    <h1>GoodLand &mdash; <br>10 лет продаем и покупаем сельхозтехнику России</h1>
+                    <h1>GoodLand &mdash; <br>10 лет <a href="#">продаем</a> и <a href="#">покупаем</a> сельхозтехнику России</h1>
                     <div class="divider"></div>
                     <div class="search-tech">
                         <form action="#">
-
+                            <fieldset>
+                                <select class="custom-select">
+                                    <option value="">Техника</option>
+                                    <option value="Тракторы">Тракторы</option>
+                                    <option value="Грузовики">Грузовики</option>
+                                    <option value="Уборочная техника">Уборочная техника</option>
+                                    <option value="Посевная техника">Посевная техника</option>
+                                    <option value="Почвообработка">Почвообработка</option>
+                                    <option value="Внесение удобрений">Внесение удобрений</option>
+                                    <option value="Кормозаготовка">Кормозаготовка</option>
+                                    <option value="Элеваторы, зернотоки">Элеваторы, зернотоки</option>
+                                    <option value="Прицепы, бункеры">Прицепы, бункеры</option>
+                                    <option value="Запчасти и расходка">Запчасти и расходка</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <select class="custom-select">
+                                    <option value="">Бренд</option>
+                                    <option value="Тракторы">Тракторы</option>
+                                    <option value="Грузовики">Грузовики</option>
+                                    <option value="Уборочная техника">Уборочная техника</option>
+                                    <option value="Посевная техника">Посевная техника</option>
+                                    <option value="Почвообработка">Почвообработка</option>
+                                    <option value="Внесение удобрений">Внесение удобрений</option>
+                                    <option value="Кормозаготовка">Кормозаготовка</option>
+                                    <option value="Элеваторы, зернотоки">Элеваторы, зернотоки</option>
+                                    <option value="Прицепы, бункеры">Прицепы, бункеры</option>
+                                    <option value="Запчасти и расходка">Запчасти и расходка</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <button type="submit">Найти</button>
+                            </fieldset>
                         </form>
                     </div>
 
@@ -133,6 +185,7 @@
 
     <script type="text/javascript" src="assets/js/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.fullpage.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.selectbox-0.2.js"></script>
     <script>
         $(document).ready(function() {
 
@@ -145,6 +198,15 @@
                     $('html').removeClass('ovh')
 
                 });
+
+                var nav = $('#nav');
+                nav.mCustomScrollbar({theme: 'minimal-dark'});
+
+                $(".custom-select").each(function () {
+                    $(this).selectbox();
+                    $(this).parents('fieldset').find('.sbOptions').mCustomScrollbar({theme: 'minimal-dark'});
+                })
+
 
 //                $('.contact-form').validate({
 //                    rules: {
