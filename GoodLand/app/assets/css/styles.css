@@ -460,7 +460,9 @@ a {
   position: fixed;
   top: 15px;
   left: 250px;
-  z-index: 10; }
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 30px; }
   .searching fieldset label {
     position: absolute;
     top: 0;
@@ -469,7 +471,8 @@ a {
     height: 36px;
     border-radius: 50%;
     background-color: gray;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 2; }
   .searching fieldset button {
     position: absolute;
     width: 0;
@@ -478,19 +481,19 @@ a {
     border: none;
     overflow: hidden;
     cursor: pointer;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; }
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    -ms-transition: all 0.2s ease 0.1s;
+    -o-transition: all 0.2s ease 0.1s;
+    transition: all 0.2s ease 0.1s; }
     .searching fieldset button[type="submit"] {
       right: 0;
       background-color: #2644BC;
-      color: #fff;
+      color: transparent;
       border-radius: 0 25px 25px 0;
       text-align: center; }
   .searching fieldset input {
-    background-color: #fff;
+    background-color: transparent;
     border: medium none;
     border-radius: 25px;
     height: 36px;
@@ -499,14 +502,23 @@ a {
     padding: 0 7px;
     width: 36px;
     overflow: hidden;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; }
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.3s, opacity 0.1s ease 0.2s;
+    -moz-transition: all 0.3s, opacity 0.1s ease 0.2s;
+    -ms-transition: all 0.3s, opacity 0.1s ease 0.2s;
+    -o-transition: all 0.3s, opacity 0.1s ease 0.2s;
+    transition: all 0.3s, opacity 0.1s ease 0.2s; }
     .searching fieldset input:focus {
       width: 600px;
-      padding: 0 107px 0 41px; }
+      padding: 0 107px 0 41px;
+      opacity: 1; }
+      .searching fieldset input:focus ~ button[type="submit"] {
+        width: 80px;
+        color: #fff; }
+      .searching fieldset input:focus ~ label {
+        z-index: 0; }
 
 .sidebar {
   position: fixed;

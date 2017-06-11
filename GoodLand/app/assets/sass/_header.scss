@@ -4,6 +4,8 @@
     top: 15px;
     left: 250px;
     z-index: 10;
+    background-color: #fff;
+    border-radius: 30px;
     label {
       position: absolute;
       top: 0;
@@ -13,6 +15,7 @@
       border-radius: 50%;
       background-color: gray;
       cursor: pointer;
+      z-index: 2;
     }
     button {
       position: absolute;
@@ -22,18 +25,18 @@
       border: none;
       overflow: hidden;
       cursor: pointer;
-      @include transit(all 0.3s);
+      @include transit(all 0.2s ease 0.1s);
       &[type="reset"]{}
       &[type="submit"]{
         right: 0;
         background-color: $link;
-        color: #fff;
+        color: transparent;
         border-radius: 0 25px 25px 0;
         text-align: center;
       }
     }
     input {
-      background-color: #fff;
+      background-color: transparent;
       border: medium none;
       border-radius: 25px;
       height: 36px;
@@ -42,16 +45,28 @@
       padding: 0 7px;
       width: 36px;
       overflow: hidden;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
       @extend %boxSize;
-      @include transit(all 0.3s);
+      -webkit-transition: all 0.3s, opacity 0.1s ease 0.2s;
+      -moz-transition: all 0.3s, opacity 0.1s ease 0.2s;
+      -ms-transition: all 0.3s, opacity 0.1s ease 0.2s;
+      -o-transition: all 0.3s, opacity 0.1s ease 0.2s;
+      transition: all 0.3s, opacity 0.1s ease 0.2s;
       &:focus {
         width: 600px;
         padding: 0 107px 0 41px;
-        //& ~ {
-        //  button[type="submit"]{
-        //    width: 80px;
-        //  }
-        //}
+        opacity: 1;
+        & ~ {
+          button[type="submit"]{
+            width: 80px;
+            color: #fff;
+          }
+          label {
+            z-index: 0;
+          }
+        }
       }
     }
 
