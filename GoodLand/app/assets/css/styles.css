@@ -388,6 +388,9 @@ a {
 .bg__white {
   background-color: #fff; }
 
+.bg__def {
+  background-color: #f0f3f5; }
+
 @media screen and (max-width: 1024px) {
   .hidden-in-mobile {
     display: none !important; } }
@@ -484,6 +487,7 @@ a {
     overflow: hidden;
     cursor: pointer;
     z-index: 2;
+    outline: none;
     -webkit-transition: all 0.2s ease 0.1s;
     -moz-transition: all 0.2s ease 0.1s;
     -ms-transition: all 0.2s ease 0.1s;
@@ -785,6 +789,45 @@ a {
       height: 50%;
       position: relative;
       border: 0.5px solid #d1d7df; }
+      .machine-list ul li a {
+        display: table;
+        height: 100%;
+        width: 100%; }
+        .machine-list ul li a figure {
+          display: table-cell;
+          vertical-align: middle;
+          height: 100%; }
+        .machine-list ul li a img {
+          height: 65%;
+          display: block;
+          margin: 0 auto 5px;
+          width: auto;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          -webkit-filter: grayscale(100%);
+          -moz-filter: grayscale(100%);
+          -o-filter: grayscale(100%);
+          filter: grayscale(100%); }
+        .machine-list ul li a figcaption {
+          text-transform: uppercase;
+          padding: 0 15px;
+          text-align: center;
+          color: #000;
+          font-family: PFDin_500;
+          font-size: 1.18rem; }
+        @media screen and (min-width: 1025px) {
+          .machine-list ul li a:hover {
+            -webkit-box-shadow: 0 0 30px 0 #a2aebf;
+            -moz-box-shadow: 0 0 30px 0 #a2aebf;
+            box-shadow: 0 0 30px 0 #a2aebf; }
+            .machine-list ul li a:hover img {
+              -webkit-filter: grayscale(0);
+              -moz-filter: grayscale(0);
+              -o-filter: grayscale(0);
+              filter: grayscale(0); } }
 
 #mobile-nav {
   display: none;

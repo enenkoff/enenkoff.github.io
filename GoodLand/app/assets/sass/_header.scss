@@ -29,6 +29,7 @@
       overflow: hidden;
       cursor: pointer;
       z-index: 2;
+      outline: none;
       @include transit(all 0.2s ease 0.1s);
       &[type="reset"]{
         right: 80px;

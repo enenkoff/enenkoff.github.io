@@ -96,6 +96,46 @@
       @extend %boxSize;
       position: relative;
       border: 0.5px solid $border;
+      a {
+        display: table;
+        height: 100%;
+        width: 100%;
+        figure {
+          display: table-cell;
+          vertical-align: middle;
+          height: 100%;
+        }
+        img {
+          height: 65%;
+          display: block;
+          margin: 0 auto 5px;
+          width: auto;
+          @include transit(all 0.3s);
+          -webkit-filter: grayscale(100%);
+          -moz-filter: grayscale(100%);
+          -o-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
+        figcaption {
+          text-transform: uppercase;
+          padding: 0 15px;
+          text-align: center;
+          color: #000;
+          font-family: PFDin_500;
+          font-size: 1.18rem;
+        }
+        &:hover {
+          @include media(hover,1025){
+            @include boxShadow(0,0,30px,0,rgba(162,174,191,1));
+            img {
+              -webkit-filter: grayscale(0);
+              -moz-filter: grayscale(0);
+              -o-filter: grayscale(0);
+              filter: grayscale(0);
+            }
+          }
+        }
+      }
     }
   }
 }

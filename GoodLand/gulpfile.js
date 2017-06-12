@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 gulp.task('svgstore', function(){
     gulp.src(['app/assets/images/svg/sprite/*.svg','!app/assets/**/logo.svg','!app/assets/**/logo-gear.svg'])
-        .pipe(svgstore({inlineSvg: true}))
+        .pipe(svgstore())
         .pipe(gulp.dest('app/assets/images/svg'))
 });
 
