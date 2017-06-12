@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="icon_book" viewBox="0 0 21 37">
+        <g fill="none" stroke="#fff">
+            <g stroke-linejoin="round" stroke-linecap="round">
+                <path d="m3 9l12-7 6 3v21l-18 10z"/>
+                <path d="m15 2l6 3-6 3c0 0 0-7 0-5z"/>
+                <path d="m18 10l-12 7"/>
+                <path d="m17 14l-12 7"/>
+                <path d="m17 17l-12 7"/>
+                <path d="m17 21l-12 7"/>
+                <path d="m3 36l-2-1v-28l12-6 1 1"/>
+            </g>
+            <path d="m1 7l2 2"/>
+        </g>
+    </symbol>
+    <symbol id="icon_close" viewBox="0 0 254 254">
+        <path d="m19 251c-4 4-12 4-16 0-4-4-4-12 0-16l108-108-108-108c-4-4-4-12 0-16 4-4 12-4 16 0l108 108 108-108c4-4 12-4 16 0 4 4 4 12 0 16l-108 108 108 108c4 4 4 12 0 16-4 4-12 4-16 0l-108-108-108 108" fill-rule="nonzero"/>
+    </symbol>
+    <symbol id="icon_search" viewBox="0 0 254 254">
+        <path d="m110 188c22 0 41-9 56-23 14-14 23-34 23-56 0-22-9-41-23-56-14-14-34-23-56-23-22 0-41 9-56 23-14 14-23 34-23 56 0 22 9 41 23 56 14 14 34 23 56 23m139 34c7 7 7 19 0 26-7 7-19 7-26 0l-49-49c-18 13-40 20-64 20-30 0-58-12-78-32-20-20-32-47-32-78 0-30 12-58 32-78 20-20 47-32 78-32 30 0 58 12 78 32 20 20 32 47 32 78 0 24-8 46-20 64l49 49"
+              fill="#2644bc" fill-rule="nonzero"/>
+    </symbol>
+</svg>

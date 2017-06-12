@@ -37,11 +37,12 @@
             </div>
         </div>
         <div id="searching" class="searching">
-            <form action="#">
+            <div class="bg"></div>
+            <form class="searching-form" action="#">
                 <fieldset>
                     <input id="search" type="text" placeholder="Поиск техники по названию">
-                    <label for="search"></label>
-                    <button type="reset"></button>
+                    <label class="label" for="search"><svg> <use xlink:href="assets/images/svg/sprite.svg#icon_search" /> </svg></label>
+                    <button type="reset"><svg> <use xlink:href="assets/images/svg/sprite.svg#icon_close" /> </svg></button>
                     <button type="submit">Найти</button>
                 </fieldset>
             </form>
@@ -49,6 +50,7 @@
         <aside id="sidebar" class="sidebar">
             <header>
                 <a href="index.html" class="logo">
+
                     <img src="assets/images/svg/logo.svg" alt="сельхозтехника">
                     <p>сельхозтехника</p>
                 </a>
@@ -83,7 +85,9 @@
             <div class="callback">
                 <a href="tel:+78442431019" class="tel">+7 (8442) 43-10-19</a>
                 <button class="request btn">
-                    <i><img src="assets/images/svg/book.svg" alt="book"></i>
+                    <i>
+                        <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"></use> </svg>
+                    </i>
                     <span>запрос на подбор</span>
                 </button>
             </div>
@@ -186,6 +190,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="assets/js/svg4everybody.js"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 
 
@@ -198,18 +203,31 @@
         $(document).ready(function() {
 
             function startRules() {
+                // =preloader
                 $('html').addClass('ovh')
                 $('body').imagesLoaded({ background: true }, function () {
                     $('#preloader').fadeOut(600,function(){
                         $('#parallax').removeClass('dwn')
                     });
                     $('html').removeClass('ovh')
-
                 });
 
+                // =search
+                $('#search').focus(function () {
+                    $('#searching').addClass('active')
+                })
+                $(document).click(function(e){
+                    var targ = $(e.target)
+                    if(targ.parents('.searching-form').length==0){
+                        $('#searching').removeClass('active')
+                    }
+                })
+
+                // =scroll in sidebar
                 var nav = $('#nav');
                 nav.mCustomScrollbar({theme: 'minimal-dark'});
 
+                // =custom selectors
                 $(".custom-select").each(function () {
                     $(this).selectbox();
                     $(this).parents('fieldset').find('.sbOptions').mCustomScrollbar({theme: 'minimal-dark'});

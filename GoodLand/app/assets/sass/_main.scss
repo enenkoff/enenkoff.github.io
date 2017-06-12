@@ -13,7 +13,7 @@ a {
   color: $link;
   @include transit(all 0.3s);
 }
-
+svg {@extend %fullBlock}
 .container {
   &_home {
     height: 100%;
@@ -47,7 +47,7 @@ a {
   span, i {
     display: inline-block;
     vertical-align: middle;
-    img {@extend %fullBlock;}
+    svg, img {@extend %fullBlock;}
   }
   i {
     .callback & {

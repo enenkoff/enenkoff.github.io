@@ -3,19 +3,22 @@
     position: fixed;
     top: 15px;
     left: 250px;
-    z-index: 10;
+    z-index: 15;
     background-color: #fff;
     border-radius: 30px;
-    label {
+    overflow: hidden;
+    .label {
       position: absolute;
       top: 0;
       left: 0;
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background-color: gray;
       cursor: pointer;
       z-index: 2;
+      @extend %boxSize;
+      padding: 10px;
+      background-color: #fff;
     }
     button {
       position: absolute;
@@ -25,8 +28,20 @@
       border: none;
       overflow: hidden;
       cursor: pointer;
+      z-index: 2;
       @include transit(all 0.2s ease 0.1s);
-      &[type="reset"]{}
+      &[type="reset"]{
+        right: 80px;
+        width: 36px;
+        height: 36px;
+        background-color: transparent;
+        @extend %boxSize;
+        padding: 10px;
+        opacity: 0;
+        svg {
+          fill: #9e9e9e;
+        }
+      }
       &[type="submit"]{
         right: 0;
         background-color: $link;
@@ -54,21 +69,43 @@
       -ms-transition: all 0.3s, opacity 0.1s ease 0.2s;
       -o-transition: all 0.3s, opacity 0.1s ease 0.2s;
       transition: all 0.3s, opacity 0.1s ease 0.2s;
-      &:focus {
+    }
+
+  }
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    z-index: 14;
+    @include transit(all 0.3s);
+    @include translate(0,-100%);
+    background: rgba(43,22,100,0.8);
+    background: -moz-linear-gradient(top, rgba(43,22,100,0.8) 0%, rgba(43,22,100,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(43,22,100,0.8) 0%,rgba(43,22,100,0) 100%);
+    background: linear-gradient(to bottom, rgba(43,22,100,0.8) 0%,rgba(43,22,100,0) 100%);
+  }
+  &.active {
+    .bg {
+      @include translate(0,0);
+    }
+    fieldset {
+      input {
         width: 600px;
         padding: 0 107px 0 41px;
         opacity: 1;
-        & ~ {
-          button[type="submit"]{
-            width: 80px;
-            color: #fff;
-          }
-          label {
-            z-index: 0;
-          }
-        }
+      }
+      button[type="submit"]{
+        width: 80px;
+        color: #fff;
+      }
+      button[type="reset"]{
+        opacity: 1;
+      }
+      label {
+        z-index: 0;
       }
     }
-
   }
 }

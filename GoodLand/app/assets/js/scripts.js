@@ -4,7 +4,22 @@
 // main scripts
 $(document).ready(function(){
 
-    // scroll to up
+    // focus in search
+    
+    function focusSearch() {
+        $('#search').focus(function () {
+            $('#searching').addClass('active')
+        })
+
+    }
+    function documentClick() {
+        $(document).click(function(e){
+            var targ = $(e.target)
+            if(targ.parents('.searching-form').length==0){
+                $('#searching').removeClass('active')
+            }
+        })
+    }
 
 
     // minimal sidebar
@@ -26,7 +41,7 @@ $(document).ready(function(){
 
     // preloader
 
-    if($('#fullpage').length == 0){
+    function preloader() {
         $('html').addClass('ovh')
         $('body').imagesLoaded({ background: true }, function () {
             $('#preloader').fadeOut(600,function(){
@@ -37,6 +52,7 @@ $(document).ready(function(){
             $('html').removeClass('ovh')
         })
     }
+    
 
 
 
@@ -69,7 +85,10 @@ $(document).ready(function(){
     // start functions
 
     if($('#fullpage').length == 0){
-        scrollInSidebar()
+        preloader();
+        scrollInSidebar();
+        focusSearch();
+        documentClick();
     }
 
     // resize functions
