@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     svgstore = require('gulp-svgstore'),
     sass = require('gulp-sass'),
     notify = require('gulp-notify'),
+    imagemin = require('gulp-imagemin'),
     rigger = require('gulp-rigger');
 
 
@@ -15,6 +16,14 @@ gulp.task('svgstore', function(){
 });
 
 
+
+/* minimize images */
+
+gulp.task('imagemin', function () {
+    gulp.src('app/assets/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('app/assets/images'))
+});
 
 /* compile sass to css */
 //

@@ -762,7 +762,7 @@ a {
       vertical-align: top;
       width: 265px;
       font-size: 1rem;
-      border-right: 2px solid #a2aebf; }
+      border-right: 1px solid #a2aebf; }
       .search-tech form fieldset:last-child {
         border: none; }
       .search-tech form fieldset button {
@@ -788,7 +788,9 @@ a {
       width: 25%;
       height: 50%;
       position: relative;
-      border: 0.5px solid #d1d7df; }
+      border-style: solid;
+      border-color: #d1d7df;
+      border-width: 0 0 1px 1px; }
       .machine-list ul li a {
         display: table;
         height: 100%;

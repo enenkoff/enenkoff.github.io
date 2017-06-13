@@ -63,7 +63,7 @@
       vertical-align: top;
       width: 265px;
       font-size: 1rem;
-      border-right: 2px solid $darkbord;
+      border-right: 1px solid $darkbord;
       &:last-child {
         border: none;
       }
@@ -95,7 +95,9 @@
       height: 50%;
       @extend %boxSize;
       position: relative;
-      border: 0.5px solid $border;
+      border-style: solid;
+      border-color: $border;
+      border-width: 0 0 1px 1px;
       a {
         display: table;
         height: 100%;
