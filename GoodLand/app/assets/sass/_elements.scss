@@ -1,0 +1,74 @@
+/* =sign up */
+
+.sign-up {
+  max-width: 600px;
+  padding:0 20px;
+  margin: 3rem auto;
+  form {
+    width: 100%;
+    fieldset {
+      width: 100%;
+      @extend %boxSize;
+      border: 9px solid $border;
+      @include boxShadow(0,5px,8px,0,rgba($shadow,0.4));
+      border-radius: 40px;
+      background-color: $bg;
+      overflow: hidden;
+      position: relative;
+      input {
+        border: medium none;
+        @extend %boxSize;
+        display: block;
+        font-style: italic;
+        line-height: 2.5rem;
+        padding: 0 40% 0 1.1rem;
+        width: 100%;
+      }
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 2.5rem;
+        padding: 0 1.1rem;
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+/* sign up */
+
+
+/* =flex links */
+
+.flex-links {
+  margin: 2rem 0;
+  &-wrapper {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    a,button {
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $border;
+        z-index: 1;
+      }
+      &:last-child {
+        &:after {display: none}
+      }
+    }
+  }
+}
+
+
+
+/* flex links */

@@ -44,12 +44,16 @@ svg {@extend %fullBlock}
   padding: 11px 0;
   border: none;
   @include transit(all 0.3s);
+  .gradient & {
+    background-color: transparent;
+  }
   span, i {
     display: inline-block;
     vertical-align: middle;
     svg, img {@extend %fullBlock;}
   }
   i {
+    .flex-links &,
     .callback & {
       width: 22px;
       height: 38px;
@@ -58,14 +62,24 @@ svg {@extend %fullBlock}
   }
   &:hover {
     @include media(hover,1025){
-
+      background-color: $linkhover;
+      .gradient & {
+        background-color: rgba($darklink,0.5);
+      }
     }
   }
 }
 
 .bg__white {background-color: #fff}
 .bg__def {background-color: $bg}
-
+.gradient {
+  color: #fff;
+  background: $link;
+  background: -moz-linear-gradient(left, $link 0%, $darklink 100%);
+  background: -webkit-linear-gradient(left, $link 0%,$darklink 100%);
+  background: linear-gradient(to right, $link 0%,$darklink 100%);
+}
+button[type="submit"].gradient {@extend .gradient};
 
 .hidden-in-mobile {
   @include media(media,1024){
