@@ -23,6 +23,7 @@
         line-height: 2.5rem;
         padding: 0 40% 0 1.1rem;
         width: 100%;
+        border-radius: 40px;
       }
       button {
         position: absolute;
@@ -32,6 +33,7 @@
         padding: 0 1.1rem;
         font-size: 0.9rem;
         font-weight: 300;
+        border-radius: 0 40px 40px 0;
       }
     }
   }
