@@ -197,12 +197,12 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
-.content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .machine-list ul li, .machine-items ul li, .sign-up form fieldset, .sign-up form fieldset input, #mobile-nav {
+.content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .machine-list ul li, .machine-items ul li, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-#preloader .loader, svg, .btn span svg, .btn span img, .btn i svg, .btn i img, .error-page_text span i svg, .video div, .machine-items ul li a {
+#preloader .loader, svg, .btn span svg, .btn span img, .btn i svg, .btn i img, .error-page_text span i svg, .video div, .machine-items ul li a, .blog-box ul li a {
   width: 100%;
   height: 100%;
   display: block; }
@@ -246,6 +246,44 @@ textarea {
 @font-face {
   font-family: PFDin_800;
   src: url("../fonts/PFDinDisplayPro-Black.ttf"), url("../fonts/PFDinDisplayPro-Black.woff"), url("../fonts/PFDinDisplayPro-Black.eot"); }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?b0b3ku");
+  src: url("../fonts/icomoon.eot?b0b3ku#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?b0b3ku") format("truetype"), url("../fonts/icomoon.woff?b0b3ku") format("woff"), url("../fonts/icomoon.svg?b0b3ku#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-twitter:before {
+  content: "\e900"; }
+
+.icon-odnoklassniki:before {
+  content: "\e901"; }
+
+.icon-vk:before {
+  content: "\e902"; }
+
+.icon-instagram:before {
+  content: "\e903"; }
+
+.icon-facebook:before {
+  content: "\e904"; }
+
+.icon-facebook-f:before {
+  content: "\e904"; }
 
 @-webkit-keyframes load3 {
   0% {
@@ -937,7 +975,7 @@ a {
   .about-box-wrap {
     background: #282d90 url("../images/bg-about.jpg") 0 0/cover no-repeat; }
   .about-box-content {
-    padding-bottom: 60px; }
+    padding-bottom: 100px; }
     .about-box-content .profile {
       margin-top: -60px;
       width: 340px;
@@ -1049,6 +1087,99 @@ a {
         display: none; }
 
 /* flex links */
+/* =blog-box */
+.blog-box {
+  padding: 10px 30px; }
+  .blog-box ul {
+    overflow: hidden; }
+    .blog-box ul li {
+      width: 25%;
+      float: left;
+      vertical-align: top;
+      padding: 10px; }
+      .blog-box ul li > div {
+        width: 100%;
+        padding-top: 100%;
+        position: relative; }
+      .blog-box ul li a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px;
+        background: url("../images/border-h-dashed.png") 0 0 repeat-x, url("../images/border-v-dashed.png") 0 0 repeat-y, url("../images/border-h-dashed.png") 0 100% repeat-x, url("../images/border-v-dashed.png") 100% 0 repeat-y;
+        -webkit-box-shadow: 0 0 0 1px transparent inset;
+        -moz-box-shadow: 0 0 0 1px transparent inset;
+        box-shadow: 0 0 0 1px transparent inset; }
+        .blog-box ul li a time {
+          font-family: PFDin_400;
+          display: block;
+          width: 80px;
+          color: #6E7078;
+          font-size: 0.9rem;
+          margin-bottom: 2.8rem;
+          padding-bottom: 1rem;
+          border-bottom: 3px solid #2b1664; }
+          .blog-box ul li a time strong {
+            display: block;
+            font-weight: normal;
+            font-size: 2.6rem;
+            line-height: 0.8;
+            margin-bottom: 3px; }
+        .blog-box ul li a h4 {
+          font-family: PFDin_500;
+          font-size: 1.25rem;
+          color: #000;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+        @media screen and (min-width: 1025px) {
+          .blog-box ul li a:hover {
+            -webkit-box-shadow: 0 0 0 1px #2644BC inset;
+            -moz-box-shadow: 0 0 0 1px #2644BC inset;
+            box-shadow: 0 0 0 1px #2644BC inset; }
+            .blog-box ul li a:hover h4 {
+              color: #2644BC; } }
+
+/* blog-box */
+/* =sharing */
+.sharing {
+  padding-bottom: 50px; }
+  .sharing ul {
+    margin: 0 auto;
+    text-align: center; }
+    .sharing ul li {
+      display: inline-block;
+      vertical-align: middle;
+      border-right: 1px solid #d1d7df; }
+      .sharing ul li:last-child {
+        border: none; }
+      .sharing ul li a {
+        display: block;
+        color: #6E7078;
+        padding: 8px 17px;
+        font-size: 1.1rem;
+        font-weight: 100; }
+        .sharing ul li a i {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 1.5rem;
+          color: #a2aebf;
+          margin-right: 12px;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+        .sharing ul li a span {
+          display: inline-block;
+          vertical-align: middle; }
+        @media screen and (min-width: 1025px) {
+          .sharing ul li a:hover i {
+            color: #2644BC; } }
+
+/* sharing */
 #mobile-nav {
   display: none;
   background-color: #ffffff;

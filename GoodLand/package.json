@@ -9,6 +9,7 @@
   "author": "enenkoff",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.3.0",

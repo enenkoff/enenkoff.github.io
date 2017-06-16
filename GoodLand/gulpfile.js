@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     svgstore = require('gulp-svgstore'),
     sass = require('gulp-sass'),
+    browserSync = require('browser-sync'),
     notify = require('gulp-notify'),
     imagemin = require('gulp-imagemin'),
     rigger = require('gulp-rigger');
@@ -25,6 +26,17 @@ gulp.task('imagemin', function () {
         .pipe(gulp.dest('app/assets/images'))
 });
 
+/* browser sync */
+
+gulp.task('browser-sync',function () {
+    browserSync({
+        server: {
+            baseDir: 'app'
+        },
+        notify: false
+    })
+});
+
 /* compile sass to css */
 //
 // gulp.task('sass', function () {
@@ -46,15 +58,16 @@ gulp.task( 'sass', function() {
             } ) )
         )
         .pipe( gulp.dest( 'app/assets/css' ) )
-        .pipe( notify( 'Готово!' ) );
+        .pipe( notify( 'Готово!' ) )
+        .pipe(browserSync.reload({stream: true}));
 });
 
 
 /* watch sass changes */
 
-gulp.task('watch', ['sass'], function () {
+gulp.task('watch', ['sass', 'browser-sync'], function () {
     gulp.watch('app/assets/sass/**/*.+(sass|scss)',['sass']);
-    // gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/*.html', browserSync.reload);
     // gulp.watch('app/assets/js/**/*.js', browserSync.reload);
 });
 
