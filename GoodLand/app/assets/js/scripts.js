@@ -30,13 +30,27 @@ $(document).ready(function(){
     }
 
 
+    // open modal
+
+    $('.request').click(function (e) {
+        e.preventDefault;
+        var data_form = $(this).attr('data-form');
+        $('#modal').find('section[data-form="'+data_form+'"]').addClass('current');
+        $('#modal').fadeIn(300);
+        $('html').addClass('ovh');
+    });
+
     // close modal
 
     $('#modal').find('.close').click(function(e){
         e.preventDefault();
-        $('#modal').fadeOut(300);
+        $('#modal').fadeOut(300,function () {
+            $('#modal').find('section').removeClass('current');
+            $('#modal').find('.modal-thanks').removeClass('active');
+        });
+
         $('html').removeClass('ovh');
-    })
+    });
 
 
     // preloader
@@ -94,24 +108,6 @@ $(document).ready(function(){
     // resize functions
 
     $(window).resize(function(){
-        var WinWidth = $(window).width();
-        if($('#fix-section').length > 0){
-            fixSection()
-        }
-
-        if(WinWidth > 1024){
-
-            if($('.quality-diagram').length > 0){
-                diagram();
-            }
-
-            if($('.has_figures').length > 0){
-                $('.has_figures').each(function(){
-                    var $thisFigureBox = $(this);
-                    figuresBox($thisFigureBox);
-                })
-            }
-        }
 
     })
 

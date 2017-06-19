@@ -69,6 +69,13 @@ svg {@extend %fullBlock}
       }
     }
   }
+  &-field {
+    text-align: center;
+    .btn {
+      display: inline-block;
+      min-width: 180px;
+    }
+  }
 }
 
 .bg__white {background-color: #fff}
@@ -83,7 +90,7 @@ svg {@extend %fullBlock}
   &_alone {
     &:hover {
       @include media(hover,1025){
-        @include boxShadowInset(0,0,0,50px,rgba($darklink,0.5),inset);
+        @include boxShadowInset(0,0,0,100px,rgba($darklink,0.5),inset);
       }
     }
   }
