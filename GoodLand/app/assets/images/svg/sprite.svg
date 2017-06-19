@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon_bigView" viewBox="0 0 254 254">
+        <g>
+            <path d="m0 0h111.12v60.33h-111.12z"/>
+            <path d="m143 0h111.12v60.33h-111.12z"/>
+            <path d="m0 97h111.12v60.33h-111.12z"/>
+            <path d="m143 97h111.12v60.33h-111.12z"/>
+            <path d="m0 194h111.12v60.33h-111.12z"/>
+            <path d="m143 194h111.12v60.33h-111.12z"/>
+        </g>
+    </symbol>
     <symbol id="icon_book" viewBox="0 0 21 37">
         <g fill="none" stroke="#fff">
             <g stroke-linejoin="round" stroke-linecap="round">
@@ -48,5 +58,25 @@
     </symbol>
     <symbol id="icon_sendform" viewBox="0 0 339 339">
         <path fill="#fff" d="m7 153l325-117-92 241-79-42-58 67 12-91 77-62-98 51z"/>
+    </symbol>
+    <symbol id="icon_smallView" viewBox="0 0 254 254">
+        <g>
+            <path d="m0 0h46.18v46.18h-46.18z"/>
+            <path d="m0 69h46.18v46.18h-46.18z"/>
+            <path d="m0 139h46.18v46.18h-46.18z"/>
+            <path d="m0 208h46.18v46.18h-46.18z"/>
+            <path d="m69 0h46.18v46.18h-46.18z"/>
+            <path d="m69 69h46.18v46.18h-46.18z"/>
+            <path d="m69 139h46.18v46.18h-46.18z"/>
+            <path d="m69 208h46.18v46.18h-46.18z"/>
+            <path d="m139 0h46.18v46.18h-46.18z"/>
+            <path d="m208 0h46.18v46.18h-46.18z"/>
+            <path d="m139 69h46.18v46.18h-46.18z"/>
+            <path d="m208 69h46.18v46.18h-46.18z"/>
+            <path d="m139 139h46.18v46.18h-46.18z"/>
+            <path d="m139 208h46.18v46.18h-46.18z"/>
+            <path d="m208 139h46.18v46.18h-46.18z"/>
+            <path d="m208 208h46.18v46.18h-46.18z"/>
+        </g>
     </symbol>
 </svg>

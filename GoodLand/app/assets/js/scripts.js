@@ -4,6 +4,21 @@
 // main scripts
 $(document).ready(function(){
 
+
+    // preloader
+
+    function preloader() {
+        $('html').addClass('ovh')
+        $('body').imagesLoaded({ background: true }, function () {
+            $('#preloader').fadeOut(600,function(){
+                if($('#fix-section').length > 0){
+                    $('#fix-section .img-block').addClass('active')
+                }
+            });
+            $('html').removeClass('ovh')
+        })
+    }
+
     // focus in search
     
     function focusSearch() {
@@ -53,21 +68,16 @@ $(document).ready(function(){
     });
 
 
-    // preloader
+    // views
 
-    function preloader() {
-        $('html').addClass('ovh')
-        $('body').imagesLoaded({ background: true }, function () {
-            $('#preloader').fadeOut(600,function(){
-                if($('#fix-section').length > 0){
-                    $('#fix-section .img-block').addClass('active')
-                }
-            });
-            $('html').removeClass('ovh')
-        })
-    }
-    
+    $('.view i').click(function () {
 
+        $('.view i').removeClass('active');
+        var data_view = $(this).attr('class');
+        $(this).addClass('active');
+        $('.catalog-list').attr('data-view',data_view);
+
+    });
 
 
     // burger

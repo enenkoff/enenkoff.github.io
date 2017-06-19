@@ -19,7 +19,9 @@ svg {@extend %fullBlock}
   &_home {
     height: 100%;
     background-color: $bg;
-
+  }
+  &_page {
+    background-color: $bg;
   }
 }
 .content {
@@ -132,6 +134,19 @@ button[type="submit"].gradient {@extend .gradient};
     margin: -0.4rem 0 1.5rem;
   }
 }
+
+/*-------- page --------*/
+
+.page {
+  padding-top: 40px;
+  position: relative;
+  h1 {
+    text-align: center;
+    font-family: PFDin_100;
+    color: $header;
+  }
+}
+
 
 /*-------- error page --------*/
 

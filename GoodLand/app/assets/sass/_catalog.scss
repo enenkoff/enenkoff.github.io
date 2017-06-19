@@ -1,0 +1,106 @@
+.view {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  i {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    box-shadow: 0 1px 0 1px $border;
+    background-color: #fff;
+    @extend %boxSize;
+    padding: 8px;
+    margin: 0 5px;
+    @include transit(all 0.3s);
+    svg {
+      fill: $darkbord;
+      @include transit(all 0.3s);
+    }
+    &.active,
+    &:hover {
+      @include media(hover,1025){
+        box-shadow: 0 1px 7px 1px $border;
+        svg {
+          fill: $link;
+        }
+      }
+    }
+  }
+}
+
+.catalog {
+  &-bar {
+    float: left;
+    width: 300px;
+  }
+  .machine-items {
+    margin-left: 300px;
+  }
+}
+
+.machine-items {
+  ul {
+    font-size: 0;
+    padding: 5px 15px;
+    li {
+      .incomes & { width: 20%; }
+      .catalog-list[data-view="view_big"] & { width: 50%; }
+      .catalog-list[data-view="view_small"] & { width: 25%; }
+      display: inline-block;
+      vertical-align: top;
+      @extend %boxSize;
+      padding: 10px;
+      font-size: 1.1rem;
+      & > div {
+        position: relative;
+        @include transit(all 0.3s);
+        &:hover {
+          @include media(hover,1025){
+            @include boxShadow(0,8px,20px,0,rgba(162,174,191,0.6));
+            @include translate(0,-10px);
+          }
+        }
+      }
+      a {
+        @extend %fullBlock;
+        background-color: #fff;
+        color: #000;
+        padding-bottom: 3.1rem;
+        border-bottom: 1px solid $border;
+        h4 {
+          padding: 1.5rem 7%;
+          font-weight: 500;
+        }
+      }
+      figure {
+        display: block;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .incomes & { padding-top: 66.7%; }
+        .catalog-list[data-view="view_big"] & { padding-top: 50%; }
+        .catalog-list[data-view="view_small"] & { padding-top: 66.7%; }
+      }
+      button {
+        position: absolute;
+        bottom: 1.2rem;
+        left: 7%;
+        background-color: transparent;
+        border: 1px solid $border;
+        border-radius: 3px;
+        padding: 5px 11px;
+        font-weight: 300;
+        font-size: 0.95rem;
+        color: $text;
+        @include transit(all 0.3s);
+        &:hover {
+          @include media(hover,1025){
+            background-color: $border;
+          }
+        }
+      }
+    }
+  }
+}
