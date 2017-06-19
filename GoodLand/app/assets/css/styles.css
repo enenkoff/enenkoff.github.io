@@ -496,12 +496,13 @@ a {
 
 /*-------- page --------*/
 .page {
-  padding-top: 40px;
+  padding-top: 65px;
   position: relative; }
   .page h1 {
     text-align: center;
     font-family: PFDin_100;
-    color: #2A1C6E; }
+    color: #2A1C6E;
+    font-size: 3.65rem; }
 
 /*-------- error page --------*/
 .error-page {
@@ -985,9 +986,7 @@ a {
   font-weight: 300;
   position: relative; }
   .custom-form .check-field label {
-    padding-left: 40px;
     position: relative;
-    line-height: 22px;
     display: block;
     margin-bottom: 10px;
     cursor: pointer; }
@@ -996,21 +995,38 @@ a {
       position: absolute;
       top: 0;
       left: 0;
-      width: 20px;
-      height: 20px;
       border: 1px solid #a2aebf; }
     .custom-form .check-field label:after {
       content: "";
       position: absolute;
       top: 1px;
       left: 1px;
-      width: 20px;
-      height: 20px;
       opacity: 0;
       background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%20254%20254%22%20shape-rendering%3D%22geometricPrecision%22%20image-rendering%3D%22optimizeQuality%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m3%2093c-5-10-2-22%208-27%2010-5%2022-2%2027%208l67%20121%20113-185c6-9%2018-12%2027-7%209%206%2012%2018%207%2027l-130%20214c-2%203-4%205-7%207-10%205-22%202-27-8l-84-151z%22%20fill%3D%22%232644bc%22%20fill-rule%3D%22nonzero%22/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: 15px 15px;
-      background-position: 3px 2px; }
+      background-repeat: no-repeat; }
+    .drop-section .custom-form .check-field label {
+      font-size: 0.9rem;
+      line-height: 16px;
+      padding-left: 30px; }
+      .drop-section .custom-form .check-field label:before {
+        width: 14px;
+        height: 14px; }
+      .drop-section .custom-form .check-field label:after {
+        width: 13px;
+        height: 13px;
+        background-size: 10px 10px;
+        background-position: 2px 2px; }
+    #modal .custom-form .check-field label {
+      line-height: 22px;
+      padding-left: 40px; }
+      #modal .custom-form .check-field label:before {
+        width: 20px;
+        height: 20px; }
+      #modal .custom-form .check-field label:after {
+        width: 20px;
+        height: 20px;
+        background-size: 15px 15px;
+        background-position: 3px 2px; }
   .custom-form .check-field input {
     position: absolute;
     top: 0;
@@ -1021,6 +1037,32 @@ a {
     opacity: 0; }
     .custom-form .check-field input:checked ~ label:after {
       opacity: 1; }
+
+.custom-form .range-box {
+  font-size: 0;
+  padding-bottom: 35px; }
+  .custom-form .range-box label {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 15%;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center; }
+  .custom-form .range-box input {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 35%;
+    border: 1px solid #d1d7df;
+    margin: 0;
+    line-height: 32px;
+    font-size: 1rem;
+    text-align: center;
+    font-style: normal;
+    padding: 0 5px; }
+    .custom-form .range-box input:focus {
+      background-color: #fff; }
+  .custom-form .range-box .noUi-target {
+    margin: 25px 0 0; }
 
 .fields {
   padding: 0 35px; }
@@ -1436,10 +1478,87 @@ a {
 
 .catalog-bar {
   float: left;
-  width: 300px; }
+  width: 250px; }
+  .catalog-bar .drop-section {
+    padding: 0 20px;
+    margin-bottom: 35px; }
+  .catalog-bar .title {
+    position: relative;
+    font-size: 1.15rem;
+    padding-right: 90px;
+    margin-bottom: 1rem; }
+  .catalog-bar button {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 45px;
+    font-weight: 300;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: none;
+    color: #d1d7df; }
+  .catalog-bar .arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 1px;
+    right: 0;
+    width: 30px;
+    height: 20px; }
+    .catalog-bar .arrow:after, .catalog-bar .arrow:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      height: 2px;
+      background-color: #616161;
+      margin-top: 4px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    .catalog-bar .arrow:after {
+      right: 50%;
+      -webkit-transform-origin: right center;
+      -moz-transform-origin: right center;
+      -ms-transform-origin: right center;
+      -o-transform-origin: right center;
+      transform-origin: right center;
+      -webkit-transform: rotate(41deg);
+      -moz-transform: rotate(41deg);
+      -ms-transform: rotate(41deg);
+      -o-transform: rotate(41deg);
+      transform: rotate(41deg); }
+    .catalog-bar .arrow:before {
+      left: 50%;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -ms-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
+      -webkit-transform: rotate(-41deg);
+      -moz-transform: rotate(-41deg);
+      -ms-transform: rotate(-41deg);
+      -o-transform: rotate(-41deg);
+      transform: rotate(-41deg); }
+    .catalog-bar .arrow .sbToggle.sbToggleOpen:after,
+    .catalog-bar .arrow .sbToggle.sbToggleOpen:before {
+      margin-top: -4px; }
+    .catalog-bar .arrow .sbToggle.sbToggleOpen:after {
+      -webkit-transform: rotate(-41deg);
+      -moz-transform: rotate(-41deg);
+      -ms-transform: rotate(-41deg);
+      -o-transform: rotate(-41deg);
+      transform: rotate(-41deg); }
+    .catalog-bar .arrow .sbToggle.sbToggleOpen:before {
+      -webkit-transform: rotate(41deg);
+      -moz-transform: rotate(41deg);
+      -ms-transform: rotate(41deg);
+      -o-transform: rotate(41deg);
+      transform: rotate(41deg); }
 
-.catalog .machine-items {
-  margin-left: 300px; }
+.catalog-list {
+  margin-left: 250px; }
 
 .machine-items ul {
   font-size: 0;

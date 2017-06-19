@@ -121,6 +121,131 @@
                                                 <label for="item02">Уборочная техника (346)</label>
                                             </div>
                                         </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item03">
+                                                <label for="item03">Посевная техника (34)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item04">
+                                                <label for="item04">Почвообработка (8)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item05">
+                                                <label for="item05">Внесение удобрений (32)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item06">
+                                                <label for="item06">Кормозаготовка (34)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item07">
+                                                <label for="item07">Элеваторы, зернотоки (4)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item08">
+                                                <label for="item08">Прицепы, бункеры (45)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item09">
+                                                <label for="item09">Запчасти и расходка (344)</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                            <div class="drop-section">
+                                <form action="#" class="custom-form">
+                                    <div class="title">
+                                        <h5>Год выпуска</h5>
+                                        <button id="reset_keypress" type="reset">Сброс</button>
+                                        <i class="arrow"></i>
+                                    </div>
+                                    <div class="range-box">
+                                        <div class="layout">
+                                            <label for="range-key-1">от</label>
+                                            <input maxlength="4" id="range-key-1" value="1976">
+                                            <label for="range-key-2">до</label>
+                                            <input maxlength="4" id="range-key-2" value="2017">
+                                        </div>
+                                        <div id="keypress"></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="drop-section">
+                                <form action="#" class="custom-form">
+                                    <div class="title">
+                                        <h5>Бренд</h5>
+                                        <button type="reset">Сброс</button>
+                                        <i class="arrow"></i>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item11">
+                                                <label for="item11">Oros (1)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item12">
+                                                <label for="item12">OLIMAC (6)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item13">
+                                                <label for="item13">Köckerling (7)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item14">
+                                                <label for="item14">Bergmann (8)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item15">
+                                                <label for="item15">Амкодор (6)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item16">
+                                                <label for="item16">Воронежсельмаш (1)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item17">
+                                                <label for="item17">Сибсельмаш (4)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item18">
+                                                <label for="item18">Agrale (5)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-field">
+                                                <input type="checkbox" id="item19">
+                                                <label for="item19">Husqvarna AB (1)</label>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </form>
                             </div>
@@ -459,102 +584,65 @@
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 
 
-    <!-- fullpage scripts -->
+    <!-- range scripts -->
 
-    <script type="text/javascript" src="assets/js/scrolloverflow.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.fullpage.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript" src="assets/js/nouislider.min.js"></script>
+    <link href="assets/css/nouislider.css" rel="stylesheet">
     <script>
         $(document).ready(function() {
 
-            function startRules() {
-                // =preloader
-                $('html').addClass('ovh')
-                $('body').imagesLoaded({ background: true }, function () {
-                    $('#preloader').fadeOut(600);
-                    $('html').removeClass('ovh')
+            var keypressSlider = document.getElementById('keypress');
+            var resetSlider = document.getElementById('reset_keypress');
+            var input0 = document.getElementById('range-key-1');
+            var input1 = document.getElementById('range-key-2');
+            var inputs = [input0, input1];
+            var inputsStart = [input0.value, input1.value];
+
+            console.log(inputsStart)
+
+            noUiSlider.create(keypressSlider, {
+                start: [1976, 2017],
+                connect: true,
+                step: 1,
+                range: {
+                    'min': 1950,
+                    'max': 2017
+                }
+            });
+
+            keypressSlider.noUiSlider.on('update', function( values, handle ) {
+                inputs[handle].value = parseInt(values[handle]);
+            });
+            resetSlider.addEventListener('click', function() {
+                keypressSlider.noUiSlider.set(inputsStart);
+            });
+
+            function setSliderHandle(i, value) {
+                var r = [null,null];
+                r[i] = value;
+                keypressSlider.noUiSlider.set(r);
+            }
+
+            inputs.forEach(function(input, handle) {
+
+                input.addEventListener('change', function(){
+                    setSliderHandle(handle, this.value);
                 });
 
-                // =search
-                $('#search').focus(function () {
-                    $('#searching').addClass('active')
-                });
-                $(document).click(function(e){
-                    var targ = $(e.target)
-                    if(targ.parents('.searching-form').length==0){
-                        $('#searching').removeClass('active')
+                input.addEventListener('keydown', function( e ) {
+
+                    var values = keypressSlider.noUiSlider.get();
+                    var value = Number(values[handle]);
+
+                    // 13 is enter,
+                    switch ( e.which ) {
+                        case 13:
+                            setSliderHandle(handle, this.value);
+                            break;
                     }
                 });
+            });
 
-                // =scroll in sidebar
-                var nav = $('#nav');
-                nav.mCustomScrollbar({theme: 'minimal-dark'});
-
-                // =custom selectors
-                $(".custom-select").each(function () {
-                    $(this).selectbox();
-                    $(this).parents('fieldset').find('.sbOptions').mCustomScrollbar({theme: 'minimal-dark'});
-                });
-
-
-                $('.custom-form').each(function () {
-                    var thisForm = $(this);
-                    thisForm.validate({
-                        rules: {
-                            name: {required: true},
-                            tel: {required: true},
-                            mail: {required: true},
-                            type: {required: true},
-                            age: {required: true},
-                            whatWeTransport: {required: true},
-                            question: {required: true}
-                        },
-                        messages: {
-                            name: {required: ""},
-                            tel: {required: ""},
-                            mail: {required: ""},
-                            type: {required: ""},
-                            age: {required: ""},
-                            whatWeTransport: {required: ""},
-                            question: {required: ""}
-                        },
-                        errorClass: 'invalid',
-                        errorPlacement: $.noop,
-                        submitHandler:function (form) {
-                            $('#modal').find('.modal-thanks').addClass('active');
-//                            if (form.valid()){
-//                                form.submit();
-//                            }
-                            return false;
-                        }
-                    })
-                })
-            }
-
-
-            if($('html').hasClass('mobile')){
-                startRules()
-            }
-            else {
-                $('#fullpage').fullpage({
-                    scrollOverflow: true,
-                    scrollingSpeed: 1200,
-                    responsiveWidth: 1025,
-                    normalScrollElements: '#modal, #sidebar',
-                    afterRender: function(){
-                        startRules();
-                    },
-                    onLeave: function(index, nextIndex, direction){
-
-                    },
-                    afterLoad: function(anchorLink, index){
-
-                    },
-                    afterResize: function(){
-
-                    }
-                });
-            }
 
         });
     </script>

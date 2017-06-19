@@ -32,10 +32,80 @@
 .catalog {
   &-bar {
     float: left;
-    width: 300px;
+    width: 250px;
+    .drop-section {
+      padding: 0 20px;
+      margin-bottom: 35px;
+    }
+    .title {
+      position: relative;
+      font-size: 1.15rem;
+      padding-right: 90px;
+      margin-bottom: 1rem;
+    }
+    button {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      right: 45px;
+      font-weight: 300;
+      font-size: 0.9rem;
+      background-color: transparent;
+      border: none;
+      color: $border;
+    }
+    .arrow {
+      position: absolute;
+      cursor: pointer;
+      top: 1px;
+      right: 0;
+      width: 30px;
+      height: 20px;
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 12px;
+        height: 2px;
+        background-color: #616161;
+        margin-top: 4px;
+        @include transit(all 0.3s);
+      }
+      &:after {
+        right: 50%;
+        -webkit-transform-origin:right center;
+        -moz-transform-origin:right center;
+        -ms-transform-origin:right center;
+        -o-transform-origin:right center;
+        transform-origin:right center;
+        @include transform(rotate(41deg));
+
+      }
+      &:before {
+        left: 50%;
+        -webkit-transform-origin:left center;
+        -moz-transform-origin:left center;
+        -ms-transform-origin:left center;
+        -o-transform-origin:left center;
+        transform-origin:left center;
+        @include transform(rotate(-41deg));
+      }
+
+      .sbToggle.sbToggleOpen:after,
+      .sbToggle.sbToggleOpen:before{
+        margin-top: -4px;
+      }
+      .sbToggle.sbToggleOpen:after{
+        @include transform(rotate(-41deg));
+      }
+      .sbToggle.sbToggleOpen:before {
+        @include transform(rotate(41deg));
+      }
+    }
   }
-  .machine-items {
-    margin-left: 300px;
+  &-list {
+    margin-left: 250px;
   }
 }
 

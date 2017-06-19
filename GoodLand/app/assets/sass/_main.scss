@@ -138,12 +138,13 @@ button[type="submit"].gradient {@extend .gradient};
 /*-------- page --------*/
 
 .page {
-  padding-top: 40px;
+  padding-top: 65px;
   position: relative;
   h1 {
     text-align: center;
     font-family: PFDin_100;
     color: $header;
+    font-size: 3.65rem;
   }
 }
 
