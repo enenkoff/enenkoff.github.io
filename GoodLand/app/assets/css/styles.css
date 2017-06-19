@@ -1231,7 +1231,7 @@ a {
 /* blog-box */
 /* =sharing */
 .sharing {
-  padding-bottom: 50px; }
+  padding: 20px 0; }
   .sharing ul {
     margin: 0 auto;
     text-align: center; }
@@ -1266,6 +1266,26 @@ a {
             color: #2644BC; } }
 
 /* sharing */
+/* =text block */
+.text-block {
+  padding: 40px 0;
+  color: #000;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1.04rem; }
+  .text-block h3 {
+    font-family: PFDin_500;
+    font-size: 1.7rem;
+    margin-bottom: 1.3rem; }
+  .text-block a {
+    font-style: italic;
+    color: #2644BC;
+    font-weight: 400; }
+    @media screen and (min-width: 1025px) {
+      .text-block a:hover {
+        text-decoration: underline; } }
+
+/* text block */
 #mobile-nav {
   display: none;
   background-color: #ffffff;
