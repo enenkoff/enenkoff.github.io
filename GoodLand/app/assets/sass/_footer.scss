@@ -1,0 +1,115 @@
+.footer {
+  background-color: $darklink;
+  font-size: 0;
+  color: #fff;
+  &-slogan {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    width: 25%;
+    text-align: center;
+    @extend %boxSize;
+    img {
+      display: inline-block;
+      width: 170px;
+      height: 220px;
+    }
+  }
+  &-content {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    width: 75%;
+    @extend %boxSize;
+    padding: 70px 0 20px 20px;
+  }
+  &-head {
+    padding-right: 30%;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 4.5rem;
+  }
+  &-nav {
+    margin-bottom: 20px;
+    & > ul {
+      float: left;
+      @extend %boxSize;
+      position: relative;
+      padding-right: 20px;
+      width: 33.33%;
+      padding-top: 35px;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 20px;
+        height: 1px;
+        background-color: #2736a2;
+      }
+    }
+    &-list {
+      li {
+        margin-bottom: 0.5rem;
+      }
+      a {
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 300;
+        &:hover {
+          @include media(hover,1025){
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &-contacts {
+      li {
+        font-size: 1.1rem;
+        font-weight: 300;
+        overflow: hidden;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        i {
+          float: left;
+          height: 32px;
+          width: 32px;
+          margin-right: 18px;
+        }
+        p {
+          margin-left: 50px;
+          padding: 4px 0;
+        }
+      }
+      a {
+        color: inherit;
+        &:hover {
+          @include media(hover,1025){
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+  }
+  &-copyright {
+    margin-right: 20px;
+    border-top: 1px solid #2736a2;
+    font-weight: 100;
+    color: $darkbord;
+    font-size: 0.96rem;
+    padding: 30px 0;
+    a {
+      color: inherit;
+      &:hover {
+        @include media(hover,1025){
+          text-decoration: underline;
+        }
+      }
+    }
+    p {
+      &:first-child {float: left}
+      &:last-child {float: right}
+    }
+  }
+}
