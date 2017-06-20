@@ -1,0 +1,244 @@
+.gallery-item-description {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 15px;
+  li {
+    display: table-cell;
+    vertical-align: middle;
+    strong {
+      display: block;
+      font-family: PFDin_400;
+      color: $text;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    span {
+      display: block;
+      line-height: 1.5;
+      font-family: PFDin_400;
+      color: #000;
+      font-size: 1.1rem;
+    }
+    .btn {
+      width: 100%;
+      padding: 18px 10px;
+    }
+    a {
+      i,span {display: inline-block}
+      i {
+        width: 15px;
+        height: 15px;
+      }
+      span {
+        position: relative;
+        &:after {
+          content: "";
+          top: 100%;
+          left: 0;
+          right: 0;
+          border-top: 1px dashed $darkbord;
+          height: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+.gallery-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: 44.4444%;
+  figure {
+    @extend %fullBlock;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.hidden {display: none; z-index: 1}
+  }
+}
+.gallery-main {
+  position: absolute;
+  width: 66.6667%;
+  bottom: 2px;
+  top: 0;
+  left: 0;
+  figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  button {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    background-color: #fff;
+    border: none;
+    width: 40px;
+    height: 80px;
+    cursor: pointer;
+    margin-top: -40px;
+    outline: none;
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 34px;
+      height: 2px;
+      margin-top: -1px;
+      background-color: $darkbord;
+      @include transit(all 0.3s);
+    }
+    &.next {
+      right: 0;
+      &:after,
+      &:before {
+        transform-origin:right center;
+        right: 12px;
+      }
+      &:after {
+        @include transform(rotate(-63deg));
+      }
+      &:before {
+        @include transform(rotate(63deg));
+      }
+    }
+    &.prev {
+      left: 0;
+      &:after,
+      &:before {
+        transform-origin:left center;
+        left: 12px;
+      }
+      &:after {
+        @include transform(rotate(63deg));
+      }
+      &:before {
+        @include transform(rotate(-63deg));
+      }
+    }
+    &:hover {
+      @include media(hover,1025){
+        &:after,
+        &:before {background-color: $link}
+      }
+    }
+  }
+}
+.gallery-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+  button {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    background-color: #fff;
+    border: none;
+    font-size: 1rem;
+    display: none;
+    width: 40px;
+    height: 20px;
+    margin-left: -20px;
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      height: 2px;
+      background-color: $darkbord;
+      margin-top: 4px;
+      @include transit(all 0.3s);
+    }
+    &:after {
+      right: 50%;
+      transform-origin:right center;
+
+    }
+    &:before {
+      left: 50%;
+      transform-origin:left center;
+    }
+    &.down {
+      top: 0;
+      &:after,
+      &:before{
+        margin-top: -4px;
+      }
+      &:after{
+        @include transform(rotate(-41deg));
+      }
+      &:before {
+        @include transform(rotate(41deg));
+      }
+    }
+    &.up {
+      bottom: 0;
+      &:after {
+        @include transform(rotate(41deg));
+      }
+      &:before {
+        @include transform(rotate(-41deg));
+      }
+    }
+    &:hover {
+      @include media(hover,1025){
+        &:after,
+        &:before {background-color: $link}
+      }
+    }
+  }
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    li {
+      float: left;
+      width: 50%;
+      padding-top: 33.3333%;
+      position: relative;
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @extend %boxSize;
+        padding: 0 0 2px 2px;
+        figure {
+          cursor: pointer;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.5);
+            opacity: 0;
+            @include transit(all 0.3s);
+          }
+          &.current {
+            &:before {opacity: 1}
+          }
+          &:hover {
+            @include media(hover,1025){
+              &:before {opacity: 1}
+            }
+          }
+        }
+      }
+    }
+  }
+}
