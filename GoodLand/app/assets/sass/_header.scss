@@ -7,6 +7,7 @@
     background-color: #fff;
     border-radius: 30px;
     overflow: hidden;
+    @include boxShadow(0,0,4px,0,rgba(162,174,191,0.3));
     .label {
       position: absolute;
       top: 0;

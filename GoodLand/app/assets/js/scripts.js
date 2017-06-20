@@ -79,6 +79,14 @@ $(document).ready(function(){
 
     });
 
+    // drops
+
+    $('.drop-section .arrow').click(function () {
+        var thisDrop = $(this).parents('.drop-section');
+        thisDrop.toggleClass('active');
+        thisDrop.find('.drop-box').slideToggle(300);
+    })
+
 
     // burger
 

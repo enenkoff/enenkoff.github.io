@@ -33,15 +33,19 @@
   &-bar {
     float: left;
     width: 250px;
-    .drop-section {
-      padding: 0 20px;
-      margin-bottom: 35px;
-    }
+    padding: 20px 0;
     .title {
       position: relative;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       padding-right: 90px;
       margin-bottom: 1rem;
+
+    }
+    .drop-box {
+      display: none;
+      li {
+        margin-bottom: 14px;
+      }
     }
     button {
       position: absolute;
@@ -52,15 +56,17 @@
       font-size: 0.9rem;
       background-color: transparent;
       border: none;
-      color: $border;
+      color: $darkbord;
+      display: none;
+      outline: none;
     }
     .arrow {
       position: absolute;
-      cursor: pointer;
       top: 1px;
       right: 0;
       width: 30px;
       height: 20px;
+      cursor: pointer;
       &:after,
       &:before {
         content: "";
@@ -68,7 +74,7 @@
         top: 50%;
         width: 12px;
         height: 2px;
-        background-color: #616161;
+        background-color: $darkbord;
         margin-top: 4px;
         @include transit(all 0.3s);
       }
@@ -92,20 +98,33 @@
         @include transform(rotate(-41deg));
       }
 
-      .sbToggle.sbToggleOpen:after,
-      .sbToggle.sbToggleOpen:before{
-        margin-top: -4px;
-      }
-      .sbToggle.sbToggleOpen:after{
-        @include transform(rotate(-41deg));
-      }
-      .sbToggle.sbToggleOpen:before {
-        @include transform(rotate(41deg));
+
+    }
+    .drop-section {
+      padding: 0 20px;
+      margin-bottom: 35px;
+      &.active {
+        button {
+          display: block;
+        }
+        .arrow {
+          &:after,
+          &:before{
+            margin-top: -4px;
+          }
+          &:after{
+            @include transform(rotate(-41deg));
+          }
+          &:before {
+            @include transform(rotate(41deg));
+          }
+        }
       }
     }
   }
   &-list {
     margin-left: 250px;
+    margin-bottom: 40px;
   }
 }
 
@@ -129,6 +148,9 @@
           @include media(hover,1025){
             @include boxShadow(0,8px,20px,0,rgba(162,174,191,0.6));
             @include translate(0,-10px);
+            a {
+              .options {opacity: 1}
+            }
           }
         }
       }
@@ -136,11 +158,43 @@
         @extend %fullBlock;
         background-color: #fff;
         color: #000;
-        padding-bottom: 3.1rem;
         border-bottom: 1px solid $border;
+        .catalog-list[data-view="view_small"] &,
+        .incomes & {padding-bottom: 3.1rem;}
+        .description {position: relative}
+        .options {
+          @include transit(all 0.3s);
+          display: flex;
+          opacity: 0;
+          justify-content: space-between;
+          align-items: center;
+          background-color: rgba($darklink,0.8);
+          color: #f9f6ef;
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          right: 0;
+          font-size: 0.95rem;
+          font-weight: 100;
+          padding: 10px 0;
+          .catalog-list[data-view="view_small"] & {
+            flex-wrap: wrap;
+            line-height: 1.4;
+          }
+          dl { padding: 0 15px; }
+          dt, dd {display: inline-block}
+        }
         h4 {
-          padding: 1.5rem 7%;
           font-weight: 500;
+          .incomes & {
+            padding: 1.5rem 7%;
+          }
+          .catalog-list[data-view="view_big"] & {
+            padding: 1.5rem 140px 1.5rem 15px;
+          }
+          .catalog-list[data-view="view_small"] & {
+            padding: 1.5rem 15px;
+          }
         }
       }
       figure {
@@ -156,7 +210,6 @@
       button {
         position: absolute;
         bottom: 1.2rem;
-        left: 7%;
         background-color: transparent;
         border: 1px solid $border;
         border-radius: 3px;
@@ -165,6 +218,16 @@
         font-size: 0.95rem;
         color: $text;
         @include transit(all 0.3s);
+
+        .incomes & {
+          left: 7%;
+        }
+        .catalog-list[data-view="view_small"] & {
+          left: 15px;
+        }
+        .catalog-list[data-view="view_big"] & {
+          right: 15px;
+        }
         &:hover {
           @include media(hover,1025){
             background-color: $border;

@@ -199,7 +199,7 @@ textarea {
 
 .content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .footer-slogan, .footer-content, .footer-nav > ul, .custom-form textarea,
 .custom-form input:not([type=checkbox]),
-.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, .machine-list ul li, .view i, .machine-items ul li, #mobile-nav {
+.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, .pagination a, .pagination span, .machine-list ul li, .view i, .machine-items ul li, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -558,7 +558,10 @@ a {
   z-index: 15;
   background-color: #fff;
   border-radius: 30px;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 4px 0 rgba(162, 174, 191, 0.3);
+  -moz-box-shadow: 0 0 4px 0 rgba(162, 174, 191, 0.3);
+  box-shadow: 0 0 4px 0 rgba(162, 174, 191, 0.3); }
   .searching fieldset .label {
     position: absolute;
     top: 0;
@@ -727,6 +730,14 @@ a {
   font-size: 17px; }
   .nav-menu a.active {
     color: #2644BC; }
+    .nav-menu a.active:before {
+      background-color: #2644BC;
+      content: "";
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 24px;
+      width: 30px; }
     .nav-menu a.active ~ .submenu {
       display: block; }
   @media screen and (min-width: 1025px) {
@@ -740,11 +751,6 @@ a {
     font-size: 15px;
     padding: 5px 12px 5px 46px; }
     .nav-menu .submenu a.active:before {
-      background-color: #2644BC;
-      content: "";
-      height: 3px;
-      left: 0;
-      position: absolute;
       top: 14px;
       width: 38px; }
 
@@ -1007,7 +1013,7 @@ a {
     .drop-section .custom-form .check-field label {
       font-size: 0.9rem;
       line-height: 16px;
-      padding-left: 30px; }
+      padding-left: 25px; }
       .drop-section .custom-form .check-field label:before {
         width: 14px;
         height: 14px; }
@@ -1039,8 +1045,7 @@ a {
       opacity: 1; }
 
 .custom-form .range-box {
-  font-size: 0;
-  padding-bottom: 35px; }
+  font-size: 0; }
   .custom-form .range-box label {
     display: inline-block;
     vertical-align: bottom;
@@ -1058,7 +1063,8 @@ a {
     font-size: 1rem;
     text-align: center;
     font-style: normal;
-    padding: 0 5px; }
+    padding: 0 5px;
+    color: #a2aebf; }
     .custom-form .range-box input:focus {
       background-color: #fff; }
   .custom-form .range-box .noUi-target {
@@ -1253,6 +1259,38 @@ a {
         text-decoration: underline; } }
 
 /* text block */
+/* =pagination */
+.pagination {
+  margin: 40px 0;
+  font-weight: 300; }
+  .catalog-list .pagination {
+    padding: 0 25px;
+    margin-bottom: 60px; }
+  .pagination a, .pagination span {
+    float: left;
+    line-height: 40px;
+    min-width: 40px;
+    padding: 0 10px;
+    text-align: center;
+    color: #a2aebf; }
+  .pagination a {
+    border: 1px solid #d1d7df;
+    font-size: 1.8rem; }
+    .pagination a.next {
+      border-radius: 0 3px 3px 0; }
+    .pagination a.prev {
+      border-radius: 3px 0 0 3px; }
+    @media screen and (min-width: 1025px) {
+      .pagination a:hover {
+        background-color: #d1d7df; } }
+  .pagination span {
+    font-size: 1.15rem; }
+  .pagination .current {
+    border-style: solid none;
+    border-color: #d1d7df;
+    border-width: 1px; }
+
+/* pagination */
 .section_bottom .fp-tableCell {
   vertical-align: bottom; }
 
@@ -1478,15 +1516,17 @@ a {
 
 .catalog-bar {
   float: left;
-  width: 250px; }
-  .catalog-bar .drop-section {
-    padding: 0 20px;
-    margin-bottom: 35px; }
+  width: 250px;
+  padding: 20px 0; }
   .catalog-bar .title {
     position: relative;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     padding-right: 90px;
     margin-bottom: 1rem; }
+  .catalog-bar .drop-box {
+    display: none; }
+    .catalog-bar .drop-box li {
+      margin-bottom: 14px; }
   .catalog-bar button {
     position: absolute;
     cursor: pointer;
@@ -1496,21 +1536,23 @@ a {
     font-size: 0.9rem;
     background-color: transparent;
     border: none;
-    color: #d1d7df; }
+    color: #a2aebf;
+    display: none;
+    outline: none; }
   .catalog-bar .arrow {
     position: absolute;
-    cursor: pointer;
     top: 1px;
     right: 0;
     width: 30px;
-    height: 20px; }
+    height: 20px;
+    cursor: pointer; }
     .catalog-bar .arrow:after, .catalog-bar .arrow:before {
       content: "";
       position: absolute;
       top: 50%;
       width: 12px;
       height: 2px;
-      background-color: #616161;
+      background-color: #a2aebf;
       margin-top: 4px;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
@@ -1541,16 +1583,20 @@ a {
       -ms-transform: rotate(-41deg);
       -o-transform: rotate(-41deg);
       transform: rotate(-41deg); }
-    .catalog-bar .arrow .sbToggle.sbToggleOpen:after,
-    .catalog-bar .arrow .sbToggle.sbToggleOpen:before {
+  .catalog-bar .drop-section {
+    padding: 0 20px;
+    margin-bottom: 35px; }
+    .catalog-bar .drop-section.active button {
+      display: block; }
+    .catalog-bar .drop-section.active .arrow:after, .catalog-bar .drop-section.active .arrow:before {
       margin-top: -4px; }
-    .catalog-bar .arrow .sbToggle.sbToggleOpen:after {
+    .catalog-bar .drop-section.active .arrow:after {
       -webkit-transform: rotate(-41deg);
       -moz-transform: rotate(-41deg);
       -ms-transform: rotate(-41deg);
       -o-transform: rotate(-41deg);
       transform: rotate(-41deg); }
-    .catalog-bar .arrow .sbToggle.sbToggleOpen:before {
+    .catalog-bar .drop-section.active .arrow:before {
       -webkit-transform: rotate(41deg);
       -moz-transform: rotate(41deg);
       -ms-transform: rotate(41deg);
@@ -1558,7 +1604,8 @@ a {
       transform: rotate(41deg); }
 
 .catalog-list {
-  margin-left: 250px; }
+  margin-left: 250px;
+  margin-bottom: 40px; }
 
 .machine-items ul {
   font-size: 0;
@@ -1590,15 +1637,52 @@ a {
           -moz-transform: translate(0, -10px);
           -ms-transform: translate(0, -10px);
           -o-transform: translate(0, -10px);
-          transform: translate(0, -10px); } }
+          transform: translate(0, -10px); }
+          .machine-items ul li > div:hover a .options {
+            opacity: 1; } }
     .machine-items ul li a {
       background-color: #fff;
       color: #000;
-      padding-bottom: 3.1rem;
       border-bottom: 1px solid #d1d7df; }
+      .catalog-list[data-view="view_small"] .machine-items ul li a,
+      .incomes .machine-items ul li a {
+        padding-bottom: 3.1rem; }
+      .machine-items ul li a .description {
+        position: relative; }
+      .machine-items ul li a .options {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        display: flex;
+        opacity: 0;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(43, 22, 100, 0.8);
+        color: #f9f6ef;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        font-size: 0.95rem;
+        font-weight: 100;
+        padding: 10px 0; }
+        .catalog-list[data-view="view_small"] .machine-items ul li a .options {
+          flex-wrap: wrap;
+          line-height: 1.4; }
+        .machine-items ul li a .options dl {
+          padding: 0 15px; }
+        .machine-items ul li a .options dt, .machine-items ul li a .options dd {
+          display: inline-block; }
       .machine-items ul li a h4 {
-        padding: 1.5rem 7%;
         font-weight: 500; }
+        .incomes .machine-items ul li a h4 {
+          padding: 1.5rem 7%; }
+        .catalog-list[data-view="view_big"] .machine-items ul li a h4 {
+          padding: 1.5rem 140px 1.5rem 15px; }
+        .catalog-list[data-view="view_small"] .machine-items ul li a h4 {
+          padding: 1.5rem 15px; }
     .machine-items ul li figure {
       display: block;
       width: 100%;
@@ -1614,7 +1698,6 @@ a {
     .machine-items ul li button {
       position: absolute;
       bottom: 1.2rem;
-      left: 7%;
       background-color: transparent;
       border: 1px solid #d1d7df;
       border-radius: 3px;
@@ -1627,6 +1710,12 @@ a {
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s; }
+      .incomes .machine-items ul li button {
+        left: 7%; }
+      .catalog-list[data-view="view_small"] .machine-items ul li button {
+        left: 15px; }
+      .catalog-list[data-view="view_big"] .machine-items ul li button {
+        right: 15px; }
       @media screen and (min-width: 1025px) {
         .machine-items ul li button:hover {
           background-color: #d1d7df; } }

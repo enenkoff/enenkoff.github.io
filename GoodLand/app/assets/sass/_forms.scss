@@ -54,7 +54,7 @@
       .drop-section & {
         font-size: 0.9rem;
         line-height: 16px;
-        padding-left: 30px;
+        padding-left: 25px;
         &:before {
           width: 14px;
           height: 14px;
@@ -96,7 +96,7 @@
   }
   .range-box {
     font-size: 0;
-    padding-bottom: 35px;
+
     label {
       display: inline-block;
       vertical-align: bottom;
@@ -116,6 +116,7 @@
       text-align: center;
       font-style: normal;
       padding: 0 5px;
+      color: $darkbord;
       &:focus {background-color: #fff}
     }
     .noUi-target {

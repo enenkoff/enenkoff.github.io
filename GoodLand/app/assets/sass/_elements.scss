@@ -207,3 +207,44 @@
 }
 
 /* text block */
+
+/* =pagination */
+
+.pagination {
+  margin: 40px 0;
+  font-weight: 300;
+  .catalog-list & {
+    padding: 0 25px;
+    margin-bottom: 60px;
+  }
+  a,span {
+    float: left;
+    line-height: 40px;
+    @extend %boxSize;
+    min-width: 40px;
+    padding: 0 10px;
+    text-align: center;
+    color: $darkbord;
+  }
+  a {
+    border: 1px solid $border;
+    font-size: 1.8rem;
+    &.next {border-radius: 0 3px 3px 0}
+    &.prev {border-radius: 3px 0 0 3px}
+    &:hover {
+      @include media(hover,1025){
+        background-color: $border;
+      }
+    }
+  }
+  span {
+    font-size: 1.15rem;
+  }
+  .current {
+    border-style: solid none;
+    border-color: $border;
+    border-width: 1px;
+  }
+}
+
+/* pagination */

@@ -74,6 +74,15 @@
     font-size: 17px;
     &.active {
       color: $link;
+      &:before {
+        background-color: $link;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        top: 24px;
+        width: 30px;
+      }
       & ~ .submenu {display: block}
     }
     &:hover {
@@ -90,11 +99,6 @@
       padding: 5px 12px 5px 46px;
       &.active {
         &:before {
-          background-color: $link;
-          content: "";
-          height: 3px;
-          left: 0;
-          position: absolute;
           top: 14px;
           width: 38px;
         }
