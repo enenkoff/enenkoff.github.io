@@ -508,7 +508,8 @@ a {
     font-family: PFDin_400;
     font-size: 1.24rem;
     text-transform: uppercase;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    text-align: center; }
 
 /*-------- error page --------*/
 .error-page {
@@ -1186,13 +1187,13 @@ a {
       padding: 10px; }
       .blog-box ul li > div {
         width: 100%;
-        padding-top: 100%;
+        padding-top: 9rem;
         position: relative; }
       .blog-box ul li a {
         position: absolute;
         top: 0;
         left: 0;
-        padding: 40px;
+        padding: 30px 40px;
         background: url("../images/border-h-dashed.png") 0 0 repeat-x, url("../images/border-v-dashed.png") 0 0 repeat-y, url("../images/border-h-dashed.png") 0 100% repeat-x, url("../images/border-v-dashed.png") 100% 0 repeat-y;
         -webkit-box-shadow: 0 0 0 1px transparent inset;
         -moz-box-shadow: 0 0 0 1px transparent inset;
@@ -1228,6 +1229,10 @@ a {
             box-shadow: 0 0 0 1px #2644BC inset; }
             .blog-box ul li a:hover h4 {
               color: #2644BC; } }
+  .blog-box__squares ul li > div {
+    padding-top: 100%; }
+  .blog-box__squares ul li a {
+    padding: 40px; }
 
 /* blog-box */
 /* =sharing */
@@ -1358,6 +1363,8 @@ a {
       display: inline-block;
       vertical-align: top;
       width: 66.66667%; }
+      .expert-opinion .opinion-wrap article h2 {
+        text-align: left; }
       .expert-opinion .opinion-wrap article blockquote {
         font-family: PFDin_400;
         color: #2b1664;
@@ -1500,6 +1507,9 @@ a {
     font-size: 2.8rem;
     text-align: center;
     margin-bottom: 3.3rem; }
+
+.page .incomes {
+  padding: 3rem 0 1rem; }
 
 .about-box {
   padding-top: 80px; }
