@@ -55,6 +55,17 @@ $(document).ready(function(){
         $('html').addClass('ovh');
     });
 
+    // drops
+
+    function drops() {
+        $('.show_drop').click(function () {
+            var $dropBlock = $(this).parents('li');
+            $dropBlock.classToggle('active');
+            $dropBlock.find('.drops-content').slideToggle(300)
+        })
+    }
+
+
     // validate forms
 
     function validator() {
@@ -171,6 +182,7 @@ $(document).ready(function(){
         focusSearch();
         documentClick();
         validator();
+        drops();
     }
 
     // resize functions

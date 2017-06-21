@@ -279,3 +279,75 @@
 
 /* opinion */
 
+
+/* =drops */
+
+.drops {
+  li {
+    position: relative;
+    margin: 0 0 20px 60px;
+    background-color: #fff;
+    border-bottom: 1px solid $darkbord;
+    button {
+      position: absolute;
+      top: 0;
+      right: 100%;
+      width: 60px;
+      height: 60px;
+      background-color: $darkbord;
+      border: none;
+      &:before {
+        content: "+";
+        position: absolute;
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 300;
+        left: 0;
+        top: 0;
+        line-height: 60px;
+        width: 60px;
+        text-align: center;
+      }
+    }
+    &.active {
+      button {
+        &:before {
+          content: "\2013";
+          line-height: 62px;
+        }
+      }
+    }
+    dl {
+      height: 59px;
+      overflow: hidden;
+      color: #616161;
+      font-family: PFDin_400;
+      font-size: 1.25rem;
+      dt, dd {
+        float: left;
+        width: 50%;
+        @extend %boxSize;
+        padding: 10px 20px;
+        line-height: 39px;
+      }
+      dt {
+        text-transform: uppercase;
+      }
+
+    }
+    .drops-content {
+      display: none;
+      color: #000;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      padding: 30px 20px 8px;
+      strong {font-weight: 500}
+      p {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+/* drops */
+

@@ -32,6 +32,7 @@
     color: #fff;
     font-size: 3.8rem;
     margin-bottom: 1.6rem;
+    padding-right: 20%;
     a {
       color: inherit;
       &:hover {
@@ -41,7 +42,13 @@
       }
     }
   }
-
+  h2 {
+    font-family: PFDin_300;
+    font-size: 2.8rem;
+    text-align: center;
+    padding-top: 4.2rem;
+    margin: 0 0 3.3rem;
+  }
 
 }
 
@@ -75,6 +82,13 @@
         }
       }
     }
+  }
+  .btn {
+    width: 265px;
+    font-size: 1rem;
+    line-height: 60px;
+    padding: 0;
+    display: block;
   }
 }
 
@@ -140,31 +154,195 @@
 }
 
 .incomes {
-
   .home-page & {
-    padding: 4.2rem 0 1rem;
-    h2 {
-      font-family: PFDin_300;
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 3.3rem;
-    }
+    padding: 0 0 1rem;
+
   }
   .page & {
     padding: 3rem 0 1rem;
   }
-
 }
 
+.vacancies {
+  .home-page & {
+    padding: 4.2rem 0 1rem;
+  }
+  &-box {
+    font-size: 0;
+    .title {
+      display: inline-block;
+      width: 33.3333%;
+      vertical-align: top;
+      font-family: PFDin_300;
+      font-size: 1.7rem;
+    }
+    .drops {
+      display: inline-block;
+      width: 66.6667%;
+      vertical-align: top;
+      font-size: 0.9rem;
+    }
 
+  }
+}
+
+.causes {
+  padding: 120px 0;
+  &-wrap {
+    .question {
+      float: left;
+      width: 25%;
+      @extend %boxSize;
+      font-family: PFDin_300;
+      font-size: 1.7rem;
+      line-height: 1.4;
+      padding: 50px 0;
+      background: transparent url("../images/question-sign.png") center 0/auto 100% no-repeat;
+    }
+    ul {
+      float: left;
+      width: 75%;
+      counter-reset: cause;
+      li {
+        float: left;
+        width: 33.3333%;
+        @extend %boxSize;
+        position: relative;
+        padding: 110px 20px 0 0;
+        color: #000;
+        font-weight: 300;
+        line-height: 1.5;
+        font-size: 1.05rem;
+        &:before {
+          content: counter(cause, decimal);
+          counter-increment: cause;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 65px;
+          height: 65px;
+          text-align: center;
+          line-height: 65px;
+          color: #fff;
+          font-family: PFDin_400;
+          font-size: 1.8rem;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 65px;
+          left: 5px;
+          width: 0;
+          height: 0;
+          border-style: none solid solid;
+          border-width: 10px;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          transform-origin: center top;
+          @include transform(rotate(-45deg));
+        }
+        &:nth-child(1){
+          &:before {background-color: $link}
+          &:after {border-bottom-color: $link}
+        }
+        &:nth-child(2){
+          &:before {background-color: #282f92}
+          &:after {border-bottom-color: #282f92}
+        }
+        &:nth-child(3){
+          &:before {background-color: $header}
+          &:after {border-bottom-color: $header}
+        }
+        h5 {
+          font-family: PFDin_400;
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.responsibilities {
+  &-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    li {
+      width: 265px;
+      color: #000;
+      line-height: 1.5;
+      font-size: 1.05rem;
+      font-weight: 300;
+      figure {
+        position: relative;
+        width: 100%;
+        padding-top: 66.6666%;
+        background-color: $bg;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .querl {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          background-color: #fff;
+          &:after {
+            content: "";
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background-color: $darklink;
+            transform-origin: left top;
+            top: 0;
+            left: 0;
+            @include transform(rotate(45deg));
+          }
+        }
+      }
+      h5 {
+        font-family: PFDin_500;
+        font-size: 1.45rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
 
 .about-box {
   padding-top: 80px;
   &-wrap {
-    background: $linkhover url('../images/bg-about.jpg') 0 0/cover no-repeat;
+    background-color: $header;
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &.halfbg {
+      position: relative;
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-position: 0 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+      & > .content {
+        position: relative;
+        z-index: 1;
+      }
+    }
   }
   &-content {
     padding-bottom: 100px;
+    .halfbg & {padding-bottom: 50px}
     .profile {
       margin-top: -60px;
       width: 340px;
