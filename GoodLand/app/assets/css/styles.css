@@ -199,12 +199,12 @@ textarea {
 
 .content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .footer-slogan, .footer-content, .footer-nav > ul, .custom-form textarea,
 .custom-form input:not([type=checkbox]),
-.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, .pagination a, .pagination span, .machine-list ul li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, .one-comment-main, .one-comment-text, #mobile-nav {
+.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .pagination a, .pagination span, .machine-list ul li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, .one-comment-main, .one-comment-text, .blog-box ul li, .blog-box ul li a, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-#preloader .loader, svg, .btn span svg, .btn span img, .btn i svg, .btn i img, .error-page_text span i svg, #modal .bg, .blog-box ul li a, .video div, .machine-items ul li a, .gallery-wrap figure {
+#preloader .loader, svg, .btn span svg, .btn span img, .btn i svg, .btn i img, .error-page_text span i svg, #modal .bg, .video div, .machine-items ul li a, .gallery-wrap figure, .blog-box ul li a {
   width: 100%;
   height: 100%;
   display: block; }
@@ -1264,64 +1264,6 @@ a {
 
 /* flex links */
 /* =blog-box */
-.blog-box {
-  padding: 10px 30px; }
-  .blog-box ul {
-    overflow: hidden; }
-    .blog-box ul li {
-      width: 25%;
-      float: left;
-      vertical-align: top;
-      padding: 10px; }
-      .blog-box ul li > div {
-        width: 100%;
-        padding-top: 9rem;
-        position: relative; }
-      .blog-box ul li a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 30px 40px;
-        background: url("../images/border-h-dashed.png") 0 0 repeat-x, url("../images/border-v-dashed.png") 0 0 repeat-y, url("../images/border-h-dashed.png") 0 100% repeat-x, url("../images/border-v-dashed.png") 100% 0 repeat-y;
-        -webkit-box-shadow: 0 0 0 1px transparent inset;
-        -moz-box-shadow: 0 0 0 1px transparent inset;
-        box-shadow: 0 0 0 1px transparent inset; }
-        .blog-box ul li a time {
-          font-family: PFDin_400;
-          display: block;
-          width: 80px;
-          color: #6E7078;
-          font-size: 0.9rem;
-          margin-bottom: 2.8rem;
-          padding-bottom: 1rem;
-          border-bottom: 3px solid #2b1664; }
-          .blog-box ul li a time strong {
-            display: block;
-            font-weight: normal;
-            font-size: 2.6rem;
-            line-height: 0.8;
-            margin-bottom: 3px; }
-        .blog-box ul li a h4 {
-          font-family: PFDin_500;
-          font-size: 1.25rem;
-          color: #000;
-          -webkit-transition: all 0.3s;
-          -moz-transition: all 0.3s;
-          -ms-transition: all 0.3s;
-          -o-transition: all 0.3s;
-          transition: all 0.3s; }
-        @media screen and (min-width: 1025px) {
-          .blog-box ul li a:hover {
-            -webkit-box-shadow: 0 0 0 1px #2644BC inset;
-            -moz-box-shadow: 0 0 0 1px #2644BC inset;
-            box-shadow: 0 0 0 1px #2644BC inset; }
-            .blog-box ul li a:hover h4 {
-              color: #2644BC; } }
-  .blog-box__squares ul li > div {
-    padding-top: 100%; }
-  .blog-box__squares ul li a {
-    padding: 40px; }
-
 /* blog-box */
 /* =sharing */
 .sharing {
@@ -1388,6 +1330,8 @@ a {
 .pagination {
   margin: 40px 0;
   font-weight: 300; }
+  .comments-box .pagination {
+    padding: 0 40px; }
   .catalog-list .pagination {
     padding: 0 25px;
     margin-bottom: 60px; }
@@ -2186,7 +2130,7 @@ a {
               opacity: 1; } }
 
 .comments-box {
-  padding: 20px 40px; }
+  padding: 20px 0; }
 
 .one-comment {
   margin-bottom: 60px; }
@@ -2275,6 +2219,93 @@ a {
       @media screen and (min-width: 1025px) {
         .one-comment-text .comment-source:hover span {
           text-decoration: underline; } }
+
+.blog {
+  padding: 0 25px; }
+  .blog-tags ul {
+    padding: 5px 0;
+    margin: 0 -5px; }
+  .blog-tags li {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    margin: 5px; }
+    .blog-tags li a {
+      display: block;
+      border: 1px solid #a2aebf;
+      padding: 5px 12px;
+      border-radius: 5px;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: inherit; }
+      .blog-tags li a.current {
+        background-color: #a2aebf;
+        color: #fff; }
+      @media screen and (min-width: 1025px) {
+        .blog-tags li a:hover {
+          background-color: #a2aebf;
+          color: #fff; } }
+  .blog-box {
+    padding: 10px 30px; }
+    .blog .blog-box {
+      padding: 0; }
+    .blog-box ul {
+      overflow: hidden; }
+      .blog .blog-box ul {
+        margin: 0 -10px; }
+      .blog-box ul li {
+        width: 25%;
+        float: left;
+        vertical-align: top;
+        padding: 10px; }
+        .blog-box ul li > div {
+          width: 100%;
+          padding-top: 9rem;
+          position: relative; }
+        .blog-box ul li a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 30px 40px;
+          background: url("../images/border-h-dashed.png") 0 0 repeat-x, url("../images/border-v-dashed.png") 0 0 repeat-y, url("../images/border-h-dashed.png") 0 100% repeat-x, url("../images/border-v-dashed.png") 100% 0 repeat-y;
+          -webkit-box-shadow: 0 0 0 1px transparent inset;
+          -moz-box-shadow: 0 0 0 1px transparent inset;
+          box-shadow: 0 0 0 1px transparent inset; }
+          .blog-box ul li a time {
+            font-family: PFDin_400;
+            display: block;
+            width: 80px;
+            color: #6E7078;
+            font-size: 0.9rem;
+            margin-bottom: 2.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #2b1664; }
+            .blog-box ul li a time strong {
+              display: block;
+              font-weight: normal;
+              font-size: 2.6rem;
+              line-height: 0.8;
+              margin-bottom: 3px; }
+          .blog-box ul li a h4 {
+            font-family: PFDin_500;
+            font-size: 1.25rem;
+            color: #000;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s; }
+          @media screen and (min-width: 1025px) {
+            .blog-box ul li a:hover {
+              -webkit-box-shadow: 0 0 0 1px #2644BC inset;
+              -moz-box-shadow: 0 0 0 1px #2644BC inset;
+              box-shadow: 0 0 0 1px #2644BC inset; }
+              .blog-box ul li a:hover h4 {
+                color: #2644BC; } }
+    .blog-box_squares ul li > div {
+      padding-top: 100%; }
+    .blog-box_squares ul li a {
+      padding: 40px; }
 
 #mobile-nav {
   display: none;

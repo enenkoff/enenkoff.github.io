@@ -1,0 +1,113 @@
+.blog {
+  padding: 0 25px;
+  &-tags {
+    ul {
+      //text-align: justify;
+      padding: 5px 0;
+      margin: 0 -5px;
+    }
+    li {
+      display: inline-block;
+      vertical-align: top;
+      white-space: nowrap;
+      margin: 5px;
+      a {
+        display: block;
+        border: 1px solid $darkbord;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-weight: 300;
+        font-size: 0.95rem;
+        color: inherit;
+        &.current {
+          background-color: $darkbord;
+          color: #fff;
+        }
+        &:hover {
+          @include media(hover,1025){
+            background-color: $darkbord;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &-box {
+    padding: 10px 30px;
+    .blog & {
+      padding: 0;
+    }
+    ul {
+      .blog & {
+        margin: 0 -10px;
+      }
+      overflow: hidden;
+      li {
+        width: 25%;
+        float: left;
+        @extend %boxSize;
+        vertical-align: top;
+        padding: 10px;
+        & > div {
+          width: 100%;
+          padding-top: 9rem;
+          position: relative;
+        }
+        a {
+          position: absolute;
+          @extend %fullBlock;
+          top: 0;
+          left: 0;
+          @extend %boxSize;
+          padding: 30px 40px;
+          background: url("../images/border-h-dashed.png") 0 0 repeat-x,
+          url("../images/border-v-dashed.png") 0 0 repeat-y,
+          url("../images/border-h-dashed.png") 0 100% repeat-x,
+          url("../images/border-v-dashed.png") 100% 0 repeat-y;
+          @include boxShadowInset(0,0,0,1px,transparent,inset);
+          time {
+            font-family: PFDin_400;
+            display: block;
+            width: 80px;
+            color: $text;
+            font-size: 0.9rem;
+            margin-bottom: 2.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid $darklink;
+            strong {
+              display: block;
+              font-weight: normal;
+              font-size: 2.6rem;
+              line-height: 0.8;
+              margin-bottom: 3px;
+            }
+          }
+          h4 {
+            font-family: PFDin_500;
+            font-size: 1.25rem;
+            color: #000;
+            @include transit(all 0.3s);
+          }
+          &:hover {
+            @include media(hover,1025){
+              @include boxShadowInset(0,0,0,1px,$link,inset);
+              h4 {color: $link}
+            }
+          }
+        }
+      }
+    }
+    &_squares {
+      ul {
+        li {
+          & > div {
+            padding-top: 100%;
+          }
+          a {
+            padding: 40px;
+          }
+        }
+      }
+    }
+  }
+}
