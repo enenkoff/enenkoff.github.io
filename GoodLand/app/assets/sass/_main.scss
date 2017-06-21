@@ -102,6 +102,20 @@ svg {@extend %fullBlock}
   }
   & > * {position: relative; z-index: 1}
 }
+.bg__halfbg {
+  & > * {position: relative; z-index: 1}
+  .halfbg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
 .gradient {
   color: #fff;
   background: $link;
@@ -152,6 +166,12 @@ button[type="submit"].gradient {@extend .gradient};
   }
   .profile-content & {
     margin: -0.4rem 0 1.5rem;
+    .one-comment-author & {
+      height: 0.6rem;
+      width: 130px;
+      opacity: 0;
+      margin: -0.6rem 40px 100px;
+    }
   }
 }
 

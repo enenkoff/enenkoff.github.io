@@ -1,0 +1,104 @@
+.comments-box {
+  padding: 20px 40px;
+}
+.one-comment {
+  margin-bottom: 60px;
+  &-author {
+    float: left;
+    width: 26%;
+    .profile {
+      img {
+        display: block;
+        width: 210px;
+        height: auto;
+        & ~ .profile-content {
+          .divider {
+            opacity: 1;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      &-content {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  &-main {
+    float: left;
+    width: 74%;
+    @extend %boxSize;
+    padding-left: 100px;
+    padding-right: 40px;
+    position: relative;
+    .querl {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      &:after {
+        content: "";
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        background-color: $darklink;
+        transform-origin: left top;
+        top: 0;
+        left: 0;
+        @include transform(rotate(45deg));
+      }
+    }
+  }
+  &-text {
+    color: #000;
+    &:before {
+      content: "";
+      right: 100%;
+      top: 140px;
+      width: 0;
+      height: 0;
+      border-style: none solid solid;
+      border-color: #fff transparent;
+      border-width: 75px;
+      position: absolute;
+      transform-origin: right bottom;
+      @include transform(rotate(45deg));
+    }
+    &:after {
+      content: "";
+      left: 100%;
+      width: 40px;
+      top: 40px;
+      bottom: 0;
+      background-color: #fff;
+      position: absolute;
+    }
+    position: relative;
+    background-color: #fff;
+    @extend %boxSize;
+    padding: 60px 20px 60px 60px;
+    line-height: 1.6;
+    font-weight: 300;
+    .comment-source {
+      display: inline-block;
+      margin-top: 30px;
+      color: $link;
+      img, span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      img {
+        width: 40px;
+        height: auto;
+        margin-right: 10px;
+      }
+      &:hover {
+        @include media(hover,1025){
+          span {text-decoration: underline;}
+        }
+      }
+    }
+  }
+}

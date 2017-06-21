@@ -199,7 +199,7 @@ textarea {
 
 .content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .footer-slogan, .footer-content, .footer-nav > ul, .custom-form textarea,
 .custom-form input:not([type=checkbox]),
-.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, .pagination a, .pagination span, .machine-list ul li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, #mobile-nav {
+.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, .pagination a, .pagination span, .machine-list ul li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, .one-comment-main, .one-comment-text, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -472,6 +472,21 @@ a {
     position: relative;
     z-index: 1; }
 
+.bg__halfbg > * {
+  position: relative;
+  z-index: 1; }
+
+.bg__halfbg .halfbg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 .gradient, button[type="submit"].gradient {
   color: #fff;
   background: #2644BC;
@@ -518,6 +533,11 @@ a {
     width: 7%; }
   .profile-content .divider {
     margin: -0.4rem 0 1.5rem; }
+    .one-comment-author .profile-content .divider {
+      height: 0.6rem;
+      width: 130px;
+      opacity: 0;
+      margin: -0.6rem 40px 100px; }
 
 /*-------- page --------*/
 .page {
@@ -2164,6 +2184,97 @@ a {
           @media screen and (min-width: 1025px) {
             .gallery-list ul li div figure:hover:before {
               opacity: 1; } }
+
+.comments-box {
+  padding: 20px 40px; }
+
+.one-comment {
+  margin-bottom: 60px; }
+  .one-comment-author {
+    float: left;
+    width: 26%; }
+    .one-comment-author .profile img {
+      display: block;
+      width: 210px;
+      height: auto; }
+      .one-comment-author .profile img ~ .profile-content .divider {
+        opacity: 1;
+        margin-bottom: 30px; }
+    .one-comment-author .profile-content {
+      font-size: 1.2rem;
+      line-height: 1.5; }
+  .one-comment-main {
+    float: left;
+    width: 74%;
+    padding-left: 100px;
+    padding-right: 40px;
+    position: relative; }
+    .one-comment-main .querl {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      overflow: hidden; }
+      .one-comment-main .querl:after {
+        content: "";
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        background-color: #2b1664;
+        transform-origin: left top;
+        top: 0;
+        left: 0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
+  .one-comment-text {
+    color: #000;
+    position: relative;
+    background-color: #fff;
+    padding: 60px 20px 60px 60px;
+    line-height: 1.6;
+    font-weight: 300; }
+    .one-comment-text:before {
+      content: "";
+      right: 100%;
+      top: 140px;
+      width: 0;
+      height: 0;
+      border-style: none solid solid;
+      border-color: #fff transparent;
+      border-width: 75px;
+      position: absolute;
+      transform-origin: right bottom;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .one-comment-text:after {
+      content: "";
+      left: 100%;
+      width: 40px;
+      top: 40px;
+      bottom: 0;
+      background-color: #fff;
+      position: absolute; }
+    .one-comment-text .comment-source {
+      display: inline-block;
+      margin-top: 30px;
+      color: #2644BC; }
+      .one-comment-text .comment-source img, .one-comment-text .comment-source span {
+        display: inline-block;
+        vertical-align: middle; }
+      .one-comment-text .comment-source img {
+        width: 40px;
+        height: auto;
+        margin-right: 10px; }
+      @media screen and (min-width: 1025px) {
+        .one-comment-text .comment-source:hover span {
+          text-decoration: underline; } }
 
 #mobile-nav {
   display: none;
