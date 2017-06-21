@@ -55,6 +55,55 @@ $(document).ready(function(){
         $('html').addClass('ovh');
     });
 
+    // validate forms
+
+    function validator() {
+        $('.custom-form').each(function () {
+            var thisForm = $(this);
+            thisForm.validate({
+                rules: {
+                    name: {required: true},
+                    tel: {required: true},
+                    mail: {required: true},
+                    type: {required: true},
+                    age: {required: true},
+                    address: {required: true},
+                    tech_type: {required: true},
+                    brand: {required: true},
+                    year: {required: true},
+                    load_file: {required: true},
+                    condition: {required: true},
+                    whatWeTransport: {required: true},
+                    question: {required: true}
+                },
+                messages: {
+                    name: {required: ""},
+                    tel: {required: ""},
+                    mail: {required: ""},
+                    type: {required: ""},
+                    age: {required: ""},
+                    address: {required: ""},
+                    tech_type: {required: ""},
+                    brand: {required: ""},
+                    year: {required: ""},
+                    load_file: {required: ""},
+                    condition: {required: ""},
+                    whatWeTransport: {required: ""},
+                    question: {required: ""}
+                },
+                errorClass: 'invalid',
+                errorPlacement: $.noop,
+                submitHandler:function (form) {
+                    $('#modal').find('.modal-thanks').addClass('active');
+//                            if (form.valid()){
+//                                form.submit();
+//                            }
+                    return false;
+                }
+            })
+        })
+    }
+
     // close modal
 
     $('#modal').find('.close').click(function(e){
@@ -121,6 +170,7 @@ $(document).ready(function(){
         scrollInSidebar();
         focusSearch();
         documentClick();
+        validator();
     }
 
     // resize functions

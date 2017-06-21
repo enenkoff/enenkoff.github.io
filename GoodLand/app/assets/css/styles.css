@@ -199,7 +199,7 @@ textarea {
 
 .content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .footer-slogan, .footer-content, .footer-nav > ul, .custom-form textarea,
 .custom-form input:not([type=checkbox]),
-.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, .pagination a, .pagination span, .machine-list ul li, .view i, .machine-items ul li, .gallery-list ul li div, #mobile-nav {
+.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .blog-box ul li, .blog-box ul li a, .pagination a, .pagination span, .machine-list ul li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -446,6 +446,31 @@ a {
 
 .bg__def {
   background-color: #f0f3f5; }
+
+.bg__triangle {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 8rem; }
+  .bg__triangle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 300%;
+    background-color: #fff;
+    transform-origin: top right;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg); }
+  .bg__triangle > * {
+    position: relative;
+    z-index: 1; }
 
 .gradient, button[type="submit"].gradient {
   color: #fff;
@@ -946,6 +971,7 @@ a {
     #modal .modal-thanks.active {
       display: block; }
 
+.sell-box-form h5,
 .modal-form h5 {
   padding: 0 40px;
   text-transform: uppercase;
@@ -954,17 +980,21 @@ a {
   color: #6E7078;
   margin-bottom: 40px; }
 
+.sell-box-form section,
 .modal-form section {
   padding-top: 40px;
   display: none; }
+  .sell-box-form section.current,
   .modal-form section.current {
     display: block; }
 
+.sell-box-form button[type=submit],
 .modal-form button[type=submit] {
   width: 100%;
   display: block;
   text-align: center;
   padding: 10px 0; }
+  .sell-box-form button[type=submit] i,
   .modal-form button[type=submit] i {
     display: inline-block;
     width: 40px;
@@ -994,6 +1024,44 @@ a {
   .custom-form input:not([type=checkbox]):focus,
   .custom-form input:not([type=radio]):focus {
     background-color: #fff9e1; }
+  .custom-form textarea.invalid,
+  .custom-form input:not([type=checkbox]).invalid,
+  .custom-form input:not([type=radio]).invalid {
+    color: #fe5722; }
+  .custom-form textarea.valid,
+  .custom-form input:not([type=checkbox]).valid,
+  .custom-form input:not([type=radio]).valid {
+    color: #398e3d; }
+
+.custom-form .load-field {
+  position: relative;
+  background-color: #f0f3f5;
+  border: 1px dashed #a2aebf;
+  margin-bottom: 10px; }
+  .custom-form .load-field input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    border: none; }
+  .custom-form .load-field label {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 300;
+    color: #2644BC;
+    padding: 12px 0;
+    font-size: 0.95rem; }
+    .custom-form .load-field label i, .custom-form .load-field label span {
+      display: inline-block;
+      vertical-align: middle; }
+    .custom-form .load-field label i {
+      width: 22px;
+      height: 34px;
+      margin-right: 5px; }
 
 .custom-form .check-field {
   font-weight: 300;
@@ -1805,6 +1873,56 @@ a {
         .machine-items ul li button:hover {
           background-color: #d1d7df; } }
 
+.sell-box {
+  padding: 60px 0; }
+  .sell-box-form {
+    float: left;
+    width: 50%;
+    background-color: #fff;
+    padding-top: 40px;
+    -webkit-box-shadow: 0 0 35px 0 rgba(43, 22, 100, 0.1);
+    -moz-box-shadow: 0 0 35px 0 rgba(43, 22, 100, 0.1);
+    box-shadow: 0 0 35px 0 rgba(43, 22, 100, 0.1); }
+  .sell-box-stages {
+    float: left;
+    width: 50%;
+    padding: 60px 0 60px 60px; }
+    .sell-box-stages ul {
+      counter-reset: item; }
+    .sell-box-stages li {
+      position: relative;
+      padding-left: 100px;
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 45px;
+      color: #000; }
+      .sell-box-stages li:before {
+        background-color: #2A1C6E;
+        border-radius: 50%;
+        color: #ffffff;
+        content: counter(item, decimal);
+        counter-increment: item;
+        font-family: PFDin_300;
+        font-size: 2rem;
+        height: 60px;
+        left: 0;
+        line-height: 60px;
+        position: absolute;
+        text-align: center;
+        top: 10px;
+        width: 60px; }
+      .sell-box-stages li h5 {
+        font-family: PFDin_400;
+        font-size: 1.65rem;
+        line-height: 1.5;
+        margin-bottom: 10px; }
+      .sell-box-stages li a {
+        color: #2644BC; }
+        @media screen and (min-width: 1025px) {
+          .sell-box-stages li a:hover {
+            text-decoration: underline; } }
+
 .gallery-item-description {
   display: table;
   width: 100%;
@@ -2001,6 +2119,12 @@ a {
     @media screen and (min-width: 1025px) {
       .gallery-list button:hover:after, .gallery-list button:hover:before {
         background-color: #2644BC; } }
+    .gallery-list button.hid {
+      opacity: 0.5;
+      cursor: default; }
+      @media screen and (min-width: 1025px) {
+        .gallery-list button.hid:hover:after, .gallery-list button.hid:hover:before {
+          background-color: #a2aebf; } }
   .gallery-list ul {
     position: absolute;
     top: 0;

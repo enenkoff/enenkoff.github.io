@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <linearGradient id="laquo0" gradientUnits="userSpaceOnUse" x1="0" x2="11900">
-            <stop stop-color="#2644bc"/>
-            <stop offset="1" stop-color="#2b1664"/>
-        </linearGradient>
-    </defs>
     <symbol id="icon_bigView" viewBox="0 0 254 254">
         <g>
             <path d="m0 0h111.12v60.33h-111.12z"/>
@@ -35,6 +29,10 @@
         <path d="m3 93c-5-10-2-22 8-27 10-5 22-2 27 8l67 121 113-185c6-9 18-12 27-7 9 6 12 18 7 27l-130 214c-2 3-4 5-7 7-10 5-22 2-27-8l-84-151z"
               fill="#2644bc" fill-rule="nonzero"/>
     </symbol>
+    <symbol id="icon_clinch" viewBox="0 0 2000 3171">
+        <path d="m1901 1770v-1040c0-541-429-793-901-520-440 253-921 651-900 1213v1040c0 533 510 746 900 520 215-124 301-317 301-520v-1387c0-188-159-255-335-153-170 98-266 224-266 481v1059"
+              fill="none" stroke="#2644bc" stroke-linejoin="round" stroke-linecap="round" stroke-width="198"/>
+    </symbol>
     <symbol id="icon_close" viewBox="0 0 254 254">
         <path d="m19 251c-4 4-12 4-16 0-4-4-4-12 0-16l108-108-108-108c-4-4-4-12 0-16 4-4 12-4 16 0l108 108 108-108c4-4 12-4 16 0 4 4 4 12 0 16l-108 108 108 108c4 4 4 12 0 16-4 4-12 4-16 0l-108-108-108 108"
               fill-rule="nonzero"/>
@@ -57,11 +55,6 @@
             <path d="m177 94l-15-15-24 24v-88h-22v88l-24-24-15 15 50 47z"/>
             <path d="m165 147l-21 20h-34l-21-20h-68v81h212v-81h-68m47 61h-169v-41h38l21 20h51l21-20h38v41"/>
         </g>
-    </symbol>
-    <symbol id="icon_laquo" viewBox="0 0 11900 9909">
-
-        <path d="m8659 9909l-3380-4955 3380-4954h3241l-3288 4954 3288 4955h-3241m-5279 0l-3380-4955 3380-4954h3241l-3310 4954 3310 4955h-3241"
-              fill="url(#laquo0)" fill-rule="nonzero"/>
     </symbol>
     <symbol id="icon_longArrow" viewBox="0 0 356 254">
         <path d="m74 181c3 3 3 9 0 12-3 3-9 3-12 0l-60-60c0 0-1-1-1-1 0-1-1-1-1-2 0 0 0-1 0-1 0 0 0-1 0-1 0 0 0-1 0-1 0 0 0-1 0-1 0-1 1-1 1-2 0 0 1-1 1-1l60-60c3-3 9-3 12 0 3 3 3 9 0 12l-45 45h318c5 0 8 4 8 8 0 5-4 8-8 8h-318l45 45"

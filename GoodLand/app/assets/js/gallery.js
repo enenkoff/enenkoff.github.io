@@ -65,18 +65,36 @@ $(document).ready(function(){
         $maxLevels,
         $itemsTopLevel = 0;
 
+    function activeButtons(){
+
+        if($itemsTopLevel == 0){
+            $listImgBox.find('button.down').addClass('hid');
+            $listImgBox.find('button.up').removeClass('hid')
+        }
+        else if ($itemsTopLevel == Math.ceil($maxLevels)){
+            $listImgBox.find('button.down').removeClass('hid');
+            $listImgBox.find('button.up').addClass('hid')
+        }
+        else {
+            $listImgBox.find('button').removeClass('hid');
+        }
+    }
+
+
     function itemsBoxPosition() {
 
         $itemsBoxHeight = $listImgBox.find('li:first').find('div').height();
         $itemsTop = -$itemsTopLevel*($itemsBoxHeight + 2);
 
         $listImgBox.find('ul').animate({'top':$itemsTop},'200');
+        activeButtons()
     }
 
     if($items_count > 8){
         $listImgBox.find('button').show();
         $maxLevels = ($items_count - 8)/2;
-        itemsBoxPosition();
+        activeButtons()
+        // itemsBoxPosition();
     }
 
     $listImgBox.find('button').click(function () {

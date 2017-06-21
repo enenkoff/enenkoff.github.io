@@ -196,6 +196,16 @@
         &:before {background-color: $link}
       }
     }
+    &.hid {
+      opacity: 0.5;
+      cursor: default;
+      &:hover {
+        @include media(hover,1025){
+          &:after,
+          &:before {background-color: $darkbord}
+        }
+      }
+    }
   }
   ul {
     position: absolute;
