@@ -1324,6 +1324,22 @@ a {
     margin-bottom: 20px; }
     .text-block p:last-child {
       margin: 0; }
+  .text-block strong {
+    font-weight: 500; }
+  .text-block ul {
+    margin-bottom: 20px; }
+    .text-block ul li {
+      padding-left: 45px;
+      position: relative;
+      margin-bottom: 5px; }
+      .text-block ul li:before {
+        content: "";
+        height: 3px;
+        width: 30px;
+        position: absolute;
+        left: 0;
+        top: 12px;
+        background-color: #2644BC; }
 
 /* text block */
 /* =pagination */
