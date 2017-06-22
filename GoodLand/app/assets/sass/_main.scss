@@ -29,7 +29,7 @@ svg {@extend %fullBlock}
   @extend %boxSize;
   padding: 0 15px;
   &_lg {max-width: 1200px;}
-  &_bg {max-width: 985px;}
+  &_bg {max-width: 1100px; padding: 0 100px;}
   &_md {max-width: 930px;}
   &_sm {max-width: 830px;}
   &_xs {max-width: 640px;}
@@ -76,6 +76,22 @@ svg {@extend %fullBlock}
     .btn {
       display: inline-block;
       min-width: 180px;
+    }
+  }
+  &-grey {
+    background-color: $darkbord;
+    color: #fff;
+    display: inline-block;
+    text-transform: none;
+    font-weight: 300;
+    font-family: Roboto,sans-serif;
+    padding: 10px 25px;
+    border-radius: 5px;
+    &:hover {
+      @include media(hover,1025){
+        background-color: $shadow;
+
+      }
     }
   }
 }
@@ -180,6 +196,15 @@ button[type="submit"].gradient {@extend .gradient};
 .page {
   padding-top: 65px;
   position: relative;
+  &.full_margin {
+    padding-top: 1px;
+    position: relative;
+    z-index: 1;
+    & ~ .footer {
+      position: relative;
+      z-index: 1;
+    }
+  }
   h1 {
     text-align: center;
     font-family: PFDin_100;
@@ -194,7 +219,18 @@ button[type="submit"].gradient {@extend .gradient};
     margin-bottom: 2rem;
     text-align: center;
   }
+  .big-logo {
+    h2 {
+      font-family: PFDin_300;
+      font-size: 2.8rem;
+      text-align: center;
+      padding-top: 4.2rem;
+      margin: 0 0 3.3rem;
+      text-transform: none;
+    }
+  }
 }
+
 
 
 /*-------- error page --------*/

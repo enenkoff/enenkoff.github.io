@@ -46,6 +46,9 @@
 
 .flex-links {
   padding: 2rem 0;
+  &.no-attached {
+    padding: 3rem 0;
+  }
   &-cells {
     font-size: 0;
   }
@@ -99,13 +102,6 @@
 }
 
 /* flex links */
-
-
-/* =blog-box */
-
-
-
-/* blog-box */
 
 /* =sharing */
 
@@ -173,6 +169,7 @@
     }
   }
   p {
+    min-height: 1rem;
     margin-bottom: 20px;
     &:last-child {margin: 0}
   }
@@ -192,6 +189,51 @@
         top: 12px;
         background-color: $link;
       }
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  iframe {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    height: 450px;
+  }
+  blockquote {
+    background-color: $bg;
+    color: $darklink;
+    font-family: PFDin_400;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    margin: 70px 0;
+    padding: 50px 20px 50px 180px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 30px;
+      width: 120px;
+      height: 100px;
+      background: transparent url("../images/svg/laquos.svg") 0 0/100% 100% no-repeat;
+    }
+  }
+  table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    tr {
+      border-bottom: 1px solid $darkbord;
+      &:first-child {border-top: 1px solid $darkbord;}
+    }
+    td {
+      width: 50%;
+      padding: 10px 20px;
+      border-right: 1px solid $darkbord;
+      &:last-child {border: none}
     }
   }
 }

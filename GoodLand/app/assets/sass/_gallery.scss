@@ -48,6 +48,9 @@
   }
 }
 .gallery {
+  &.big-logo {
+    padding-top: 40px;
+  }
   .home-page & {margin-bottom: 40px}
 }
 .gallery-wrap {

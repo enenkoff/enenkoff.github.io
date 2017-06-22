@@ -65,6 +65,17 @@ $(document).ready(function(){
         })
     }
 
+    // window-height margin
+
+    function fullMargin() {
+
+        var WinHeight = $(window).height();
+        $('.full_margin').css('margin-top',WinHeight);
+        $('.adverse_margin').css('margin-top',-0.5*WinHeight);
+
+    }
+
+
 
     // validate forms
 
@@ -185,9 +196,17 @@ $(document).ready(function(){
         drops();
     }
 
+    if($('.full_margin').length > 0){
+        fullMargin()
+    }
+
     // resize functions
 
     $(window).resize(function(){
+
+        if($('.full_margin').length > 0){
+            fullMargin()
+        }
 
     })
 

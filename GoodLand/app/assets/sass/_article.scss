@@ -1,0 +1,81 @@
+.article-data {
+  padding-top: 40px;
+  margin: 0 auto;
+  font-weight: 300;
+  position: relative;
+  font-size: 0.95rem;
+  max-width: 1100px;
+  @extend %boxSize;
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 40px;
+    right: 40px;
+    background-color: #fff;
+    position: absolute;
+  }
+  .querl {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    &:after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      background-color: $darklink;
+      transform-origin: left top;
+      top: 0;
+      left: 0;
+      @include transform(rotate(45deg));
+    }
+  }
+  & > div {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 100px 40px;
+    align-items: center;
+  }
+  time, h5, ul {
+    width: 30%;
+  }
+  h5 {
+    font-size: inherit;
+    font-weight: 300;
+    text-align: center;
+  }
+  ul {
+    text-align: right;
+    font-size: 0.8rem;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 45px;
+      i,span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      i {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+  img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
