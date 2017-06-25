@@ -199,7 +199,7 @@ textarea {
 
 .content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .footer-slogan, .footer-content, .footer-nav > ul, .custom-form textarea,
 .custom-form input:not([type=checkbox]),
-.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .pagination a, .pagination span, .drops li dl dt, .drops li dl dd, .machine-list ul li, .causes-wrap .question, .causes-wrap ul li, .dependence-wrap-text, .dependence-wrap-pics li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, .one-comment-main, .one-comment-text, .blog-box ul li, .blog-box ul li a, .article-data, #mobile-nav {
+.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .pagination a, .pagination span, .drops li dl dt, .drops li dl dd, .machine-list ul li, .causes-wrap .question, .causes-wrap ul li, .dependence-wrap-text, .dependence-wrap-pics li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, .one-comment-main, .one-comment-text, .blog-box ul li, .blog-box ul li a, .article-data, .contacts-list ul li, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -2779,6 +2779,17 @@ a {
     left: 0;
     right: 0;
     margin: auto; }
+
+.contacts-list ul li {
+  float: left;
+  width: 25%;
+  padding: 0 10px; }
+  .contacts-list ul li i {
+    float: left;
+    width: 30px;
+    height: 30px; }
+  .contacts-list ul li p {
+    margin-left: 40px; }
 
 #mobile-nav {
   display: none;

@@ -1,0 +1,18 @@
+.contacts-list {
+  ul {
+    li {
+      float: left;
+      width: 25%;
+      @extend %boxSize;
+      padding: 0 10px;
+      i {
+        float: left;
+        width: 30px;
+        height: 30px;
+      }
+      p {
+        margin-left: 40px;
+      }
+    }
+  }
+}
