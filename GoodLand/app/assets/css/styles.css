@@ -199,12 +199,12 @@ textarea {
 
 .content, .btn, .searching fieldset .label, .searching fieldset button[type="reset"], .searching fieldset input, .sidebar, .footer-slogan, .footer-content, .footer-nav > ul, .custom-form textarea,
 .custom-form input:not([type=checkbox]),
-.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .pagination a, .pagination span, .drops li dl dt, .drops li dl dd, .machine-list ul li, .causes-wrap .question, .causes-wrap ul li, .dependence-wrap-text, .dependence-wrap-pics li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, .one-comment-main, .one-comment-text, .blog-box ul li, .blog-box ul li a, .article-data, .contacts-list ul li, #mobile-nav {
+.custom-form input:not([type=radio]), .fields .field-50, .fields .field-100, .sign-up form fieldset, .sign-up form fieldset input, .pagination a, .pagination span, .drops li dl dt, .drops li dl dd, .machine-list ul li, .causes-wrap .question, .causes-wrap ul li, .dependence-wrap-text, .dependence-wrap-pics li, .view i, .machine-items ul li, .sell-box-stages, .gallery-list ul li div, .one-comment-main, .one-comment-text, .blog-box ul li, .blog-box ul li a, .article-data, .contacts-list ul li, .persons ul li, #mobile-nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-#preloader .loader, svg, .btn span svg, .btn span img, .btn i svg, .btn i img, .error-page_text span i svg, #modal .bg, .video div, .machine-items ul li a, .gallery-wrap figure, .blog-box ul li a {
+#preloader .loader, svg, .btn span svg, .btn span img, .btn i svg, .btn i img, .error-page_text span i svg, #modal .bg, .video div, .machine-items ul li a, .gallery-wrap figure, .blog-box ul li a, .contact-map .map_box {
   width: 100%;
   height: 100%;
   display: block; }
@@ -1018,6 +1018,7 @@ a {
     #modal .modal-thanks.active {
       display: block; }
 
+.map_box-form h5,
 .sell-box-form h5,
 .modal-form h5 {
   padding: 0 40px;
@@ -1027,20 +1028,24 @@ a {
   color: #6E7078;
   margin-bottom: 40px; }
 
+.map_box-form section,
 .sell-box-form section,
 .modal-form section {
   padding-top: 40px;
   display: none; }
+  .map_box-form section.current,
   .sell-box-form section.current,
   .modal-form section.current {
     display: block; }
 
+.map_box-form button[type=submit],
 .sell-box-form button[type=submit],
 .modal-form button[type=submit] {
   width: 100%;
   display: block;
   text-align: center;
   padding: 10px 0; }
+  .map_box-form button[type=submit] i,
   .sell-box-form button[type=submit] i,
   .modal-form button[type=submit] i {
     display: inline-block;
@@ -2790,6 +2795,55 @@ a {
     height: 30px; }
   .contacts-list ul li p {
     margin-left: 40px; }
+
+.contact-map {
+  height: 500px; }
+  .contact-map .map_box {
+    position: relative; }
+    .contact-map .map_box .map_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    .contact-map .map_box-form {
+      padding-top: 40px;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      width: 585px;
+      bottom: -65px; }
+
+.persons ul {
+  font-size: 0; }
+  .persons ul li {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    font-size: 1rem; }
+    .persons ul li img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 0.9; }
+      @media screen and (min-width: 1025px) {
+        .persons ul li img:hover {
+          -webkit-filter: grayscale(0);
+          -moz-filter: grayscale(0);
+          -o-filter: grayscale(0);
+          filter: grayscale(0);
+          opacity: 1; } }
 
 #mobile-nav {
   display: none;

@@ -105,6 +105,172 @@
                         </ul>
                     </div>
                 </div>
+                <div class="contact-map">
+                    <div class="map_box">
+                        <div id="map" class="map_container">
+                            <script type="text/javascript">
+                                var map;
+                                function initMap() {
+
+                                    var icon = './assets/images/mark_goodland.png';
+
+                                    var mapOptions = {
+                                        zoom: 17,
+                                        scrollwheel: false,
+                                        center: new google.maps.LatLng(48.553043, 44.451381)
+                                    };
+                                    map = new google.maps.Map(document.getElementById('map'), mapOptions );
+
+                                    var marker = new google.maps.Marker({
+                                        position: {lat: 48.553093, lng: 44.447792},
+                                        map: map,
+                                        title: 'GoodLand',
+                                        icon: icon
+                                    });
+
+                                }
+                            </script>
+                            <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+                        </div>
+                        <div class="map_box-form">
+                            <h5>Напишите нам</h5>
+                            <form action="#" class="custom-form">
+                                <div class="fields layout">
+                                    <fieldset class="field-100">
+                                        <textarea rows="2" placeholder="Ваш вопрос"></textarea>
+                                    </fieldset>
+                                    <fieldset class="field-100">
+                                        <input type="text" name="name" placeholder="*Имя">
+                                    </fieldset>
+                                    <fieldset class="field-100">
+                                        <input type="text" name="mail" placeholder="*E-mail">
+                                    </fieldset>
+                                    <p>*Обязательные поля</p>
+                                </div>
+                                <button type="submit" class="gradient gradient_alone">
+                                    <i>
+                                        <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_sendform"></use> </svg>
+                                    </i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="dependence">
+                    <div class="content content_lg">
+                        <div class="dependence-wrap">
+                            <div class="dependence-wrap-text">
+                                <p>Расстояние &mdash; не помеха, мы доставим для вас технику и комплектующие в любую точку мира, работаем только с проверенным ТК</p>
+                                <a href="#">Подробнее о доставке</a>
+                            </div>
+                            <ul class="dependence-wrap-pics">
+                                <li><a href="#"><figure><img src="assets/images/teml-logo-grey.png" alt="logo"></figure></a></li>
+                                <li><a href="#"><figure><img src="assets/images/teml-logo-grey.png" alt="logo"></figure></a></li>
+                                <li><a href="#"><figure><img src="assets/images/teml-logo-grey.png" alt="logo"></figure></a></li>
+                                <li><a href="#"><figure><img src="assets/images/teml-logo-grey.png" alt="logo"></figure></a></li>
+                                <li><a href="#"><figure><img src="assets/images/teml-logo-grey.png" alt="logo"></figure></a></li>
+                                <li><a href="#"><figure><img src="assets/images/teml-logo-grey.png" alt="logo"></figure></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-links">
+                    <div class="content content_lg">
+                        <div class="flex-links-wrapper gradient">
+                            <a href="catalog-all.html" class="btn">
+                                <i>
+                                    <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"/> </svg>
+                                </i>
+                                <span>смотреть технику в наличии</span>
+                            </a>
+                            <a href="#" class="btn request" data-form="assortment">
+                                <i>
+                                    <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"/> </svg>
+                                </i>
+                                <span>запрос на подбор техники</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="persons">
+                    <div class="content content_lg">
+                        <ul>
+                            <li>
+                                <img src="assets/images/temp-person01.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person02.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person02.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person03.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person02.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person03.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person02.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person01.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person03.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person03.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person03.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                            <li>
+                                <img src="assets/images/temp-person03.jpg" alt="photo">
+                                <h5>Александр Ермохин</h5>
+                                <p>менеджер</p>
+                                <p>+7(927)510-22-31</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="sharing">
                     <div class="content content_bg">
                         <ul>
