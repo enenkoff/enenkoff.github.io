@@ -268,7 +268,8 @@
     &.prev {border-radius: 3px 0 0 3px}
     &:hover {
       @include media(hover,1025){
-        background-color: $border;
+        //background-color: $border;
+        color: $link;
       }
     }
   }

@@ -207,6 +207,7 @@
         .catalog-list[data-view="view_big"] & { padding-top: 50%; }
         .catalog-list[data-view="view_small"] & { padding-top: 66.7%; }
       }
+      .price,
       button {
         position: absolute;
         bottom: 1.2rem;
@@ -228,6 +229,8 @@
         .catalog-list[data-view="view_big"] & {
           right: 15px;
         }
+      }
+      button {
         &:hover {
           @include media(hover,1025){
             background-color: $border;

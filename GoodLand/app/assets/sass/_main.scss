@@ -44,7 +44,7 @@ svg {@extend %fullBlock}
   border-radius: 0;
   text-align: center;
   font-family: PFDin_100;
-  padding: 11px 10px;
+  padding: 18px 10px;
   border: none;
   @include transit(all 0.3s);
   .gradient & {
@@ -130,6 +130,7 @@ svg {@extend %fullBlock}
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    &.fixed {background-attachment: fixed}
   }
 }
 .gradient {
@@ -186,7 +187,7 @@ button[type="submit"].gradient {@extend .gradient};
       height: 0.6rem;
       width: 130px;
       opacity: 0;
-      margin: -0.6rem 40px 100px;
+      margin: -0.3rem 40px 100px;
     }
   }
 }
@@ -203,6 +204,9 @@ button[type="submit"].gradient {@extend .gradient};
     & ~ .footer {
       position: relative;
       z-index: 1;
+    }
+    &.simple {
+      padding-top: 105px;
     }
   }
   h1 {

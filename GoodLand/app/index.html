@@ -72,9 +72,6 @@
             <div class="callback">
                 <a href="tel:+78442431019" class="tel">+7 (8442) 43-10-19</a>
                 <button class="request btn" data-form="cost">
-                    <i>
-                        <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"></use> </svg>
-                    </i>
                     <span>запрос на подбор</span>
                 </button>
             </div>
@@ -129,7 +126,11 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/traktors.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/traktors-hover.png" alt="img">
+                                    </div>
+
                                     <figcaption>Тракторы</figcaption>
                                 </figure>
                             </a>
@@ -137,7 +138,10 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/harvest.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/harvest-hover.png" alt="img">
+                                    </div>
                                     <figcaption>Уборочная техника</figcaption>
                                 </figure>
                             </a>
@@ -145,7 +149,10 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/sowing.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/sowing-hover.png" alt="img">
+                                    </div>
                                     <figcaption>Посевная техника</figcaption>
                                 </figure>
                             </a>
@@ -153,7 +160,10 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/ground.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/ground-hover.png" alt="img">
+                                    </div>
                                     <figcaption>Почвообработка</figcaption>
                                 </figure>
                             </a>
@@ -161,7 +171,10 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/manure.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/manure-hover.png" alt="img">
+                                    </div>
                                     <figcaption>Внесение удобрений</figcaption>
                                 </figure>
                             </a>
@@ -169,7 +182,10 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/fodder.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/fodder-hover.png" alt="img">
+                                    </div>
                                     <figcaption>Кормозаготовка</figcaption>
                                 </figure>
                             </a>
@@ -177,7 +193,10 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/elevator.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/elevator-hover.png" alt="img">
+                                    </div>
                                     <figcaption>Элеваторы, зернотоки</figcaption>
                                 </figure>
                             </a>
@@ -185,7 +204,10 @@
                         <li>
                             <a href="catalog-tractors.html">
                                 <figure>
-                                    <img src="assets/images/traktor.png" alt="img">
+                                    <div class="figure">
+                                        <img src="assets/images/tractors/trailer.jpg" alt="img">
+                                        <img class="onhover" src="assets/images/tractors/trailer-hover.png" alt="img">
+                                    </div>
                                     <figcaption>Прицепы, бункеры</figcaption>
                                 </figure>
                             </a>
@@ -223,8 +245,8 @@
                                         <a href="tractor.html">
                                             <figure style="background-image: url('assets/images/traktor-item-2.jpg')"></figure>
                                             <h4>Мини-трактор Название, 2010</h4>
+                                            <span class="price">6 500 000 &#8381;</span>
                                         </a>
-                                        <button>Запрос цены</button>
                                     </div>
                                 </li>
                                 <li>
@@ -307,15 +329,9 @@
                     <div class="content content_lg">
                         <div class="flex-links-wrapper gradient">
                             <a href="catalog-all.html" class="btn">
-                                <i>
-                                    <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"></use> </svg>
-                                </i>
                                 <span>смотреть технику в наличии</span>
                             </a>
                             <a href="#" class="btn request" data-form="assortment">
-                                <i>
-                                    <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"></use> </svg>
-                                </i>
                                 <span>запрос на подбор техники</span>
                             </a>
                         </div>
@@ -518,10 +534,16 @@
                                     <label for="delivery">Требуется доставка</label>
                                 </div>
                             </fieldset>
-                            <fieldset class="field-100">
+                            <fieldset class="field-100 delivery-depend hidden">
                                 <input type="text" placeholder="Куда доставить?">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree">
+                                    <label for="agree">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -540,6 +562,12 @@
                                 <input type="text" name="mail" placeholder="*E-mail">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree1">
+                                    <label for="agree1">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -585,6 +613,12 @@
                                 <input type="text" placeholder="Куда доставить?">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree2">
+                                    <label for="agree2">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -619,6 +653,12 @@
                                 <input type="text" placeholder="Куда">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree3">
+                                    <label for="agree3">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -692,6 +732,8 @@
                 $('.custom-form').each(function () {
                     var thisForm = $(this);
                     thisForm.validate({
+                        onfocusout: false,
+                        ignore: ".ignore",
                         rules: {
                             name: {required: true},
                             tel: {required: true},
@@ -720,6 +762,19 @@
                             return false;
                         }
                     })
+                })
+
+                function deliveryChange(){
+                    if($('#delivery').prop('checked')){
+                        $('.delivery-depend').removeClass('hidden')
+                    }
+                    else {
+                        $('.delivery-depend').addClass('hidden')
+                    }
+                }
+                deliveryChange();
+                $('#delivery').change(function(){
+                    deliveryChange();
                 })
             }
 

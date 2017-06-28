@@ -70,9 +70,6 @@
             <div class="callback">
                 <a href="tel:+78442431019" class="tel">+7 (8442) 43-10-19</a>
                 <button class="request btn" data-form="cost">
-                    <i>
-                        <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"></use> </svg>
-                    </i>
                     <span>запрос на подбор</span>
                 </button>
             </div>
@@ -388,16 +385,22 @@
                                 <input type="text" name="name" placeholder="*Имя">
                                 <input type="text" name="tel" placeholder="*Телефон">
                                 <input type="text" name="mail" placeholder="*E-mail">
-                                <input type="text" placeholder="Когда перезвонить?">
+                                <input type="text" class="ignore" placeholder="Когда перезвонить?">
                                 <div class="check-field">
                                     <input type="checkbox" id="delivery">
                                     <label for="delivery">Требуется доставка</label>
                                 </div>
                             </fieldset>
-                            <fieldset class="field-100">
+                            <fieldset class="field-100 delivery-depend hidden">
                                 <input type="text" placeholder="Куда доставить?">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree">
+                                    <label for="agree">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -416,6 +419,12 @@
                                 <input type="text" name="mail" placeholder="*E-mail">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree1">
+                                    <label for="agree1">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -461,6 +470,12 @@
                                 <input type="text" placeholder="Куда доставить?">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree2">
+                                    <label for="agree2">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -495,6 +510,12 @@
                                 <input type="text" placeholder="Куда">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree3">
+                                    <label for="agree3">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>

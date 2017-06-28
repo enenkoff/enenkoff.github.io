@@ -62,15 +62,12 @@
             <div class="callback">
                 <a href="tel:+78442431019" class="tel">+7 (8442) 43-10-19</a>
                 <button class="request btn" data-form="cost">
-                    <i>
-                        <svg> <use xlink:href="assets/images/svg/sprite.svg#icon_book"></use> </svg>
-                    </i>
                     <span>запрос на подбор</span>
                 </button>
             </div>
         </aside>
         <div class="main page bg__halfbg">
-            <div class="halfbg" style="background-image: url('assets/images/bg_comments.jpg')"></div>
+            <div class="halfbg fixed" style="background-image: url('assets/images/bg_comments.jpg')"></div>
             <section class="section">
                 <div class="content">
                     <h1>Отзывы</h1>
@@ -92,7 +89,7 @@
                                 <span class="querl"></span>
                                 <div class="one-comment-text">
                                     <p>Мы купили у Гудленд уже три трактора и остались очень довольны  состоянием техники, сервисом (доставка, организация продажи). Отдельное спасибо менеджеру Ивану за профессионализм. Дороговизна посетителя сайта 4-го поколения заставляет непрерывно улучшать «продажность» такого сайта. Ведь если посетитель не купил, деньги на его привлечение потрачены впустую. Отсюда вечная гонка за конверсию и капкан юзабилити.</p>
-                                    <a href="#" class="comment-source">
+                                    <a href="#" target="_blank" class="comment-source">
                                         <img src="assets/images/teml-logo.png" alt="logo">
                                         <span>Официальный отзыв</span>
                                     </a>
@@ -114,7 +111,7 @@
                                 <span class="querl"></span>
                                 <div class="one-comment-text">
                                     <p>Мы купили у Гудленд уже три трактора и остались очень довольны  состоянием техники, сервисом (доставка, организация продажи). Отдельное спасибо менеджеру Ивану за профессионализм. Дороговизна посетителя сайта 4-го поколения заставляет непрерывно улучшать «продажность» такого сайта. Ведь если посетитель не купил, деньги на его привлечение потрачены впустую. Отсюда вечная гонка за конверсию и капкан юзабилити.</p>
-                                    <a href="#" class="comment-source">
+                                    <a href="#" target="_blank" class="comment-source">
                                         <img src="assets/images/teml-logo.png" alt="logo">
                                         <span>Официальный отзыв</span>
                                     </a>
@@ -267,10 +264,16 @@
                                     <label for="delivery">Требуется доставка</label>
                                 </div>
                             </fieldset>
-                            <fieldset class="field-100">
+                            <fieldset class="field-100 delivery-depend hidden">
                                 <input type="text" placeholder="Куда доставить?">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree">
+                                    <label for="agree">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -289,6 +292,12 @@
                                 <input type="text" name="mail" placeholder="*E-mail">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree1">
+                                    <label for="agree1">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -334,6 +343,12 @@
                                 <input type="text" placeholder="Куда доставить?">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree2">
+                                    <label for="agree2">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
@@ -368,6 +383,12 @@
                                 <input type="text" placeholder="Куда">
                             </fieldset>
                             <p>*Обязательные поля</p>
+                            <fieldset class="field-100">
+                                <div class="check-field">
+                                    <input type="checkbox" id="agree3">
+                                    <label for="agree3">Согласен на обработку персональных данных</label>
+                                </div>
+                            </fieldset>
                         </div>
                         <button type="submit" class="gradient gradient_alone">
                             <i>
