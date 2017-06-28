@@ -1,17 +1,38 @@
 .contacts-list {
+  padding: 55px 0;
   ul {
     li {
       float: left;
       width: 25%;
       @extend %boxSize;
       padding: 0 10px;
+      font-weight: 300;
+      font-size: 1.05rem;
+      color: #000;
       i {
         float: left;
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
       }
       p {
-        margin-left: 40px;
+        margin-left: 50px;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+        &:hover {
+          @include media(hover,1025){
+            color: $link;
+          }
+        }
+        &.mp {
+          color: $link;
+          &:hover {
+            @include media(hover,1025){
+              text-decoration: underline;
+            }
+          }
+        }
       }
     }
   }
@@ -19,6 +40,7 @@
 
 .contact-map {
   height: 500px;
+  margin-bottom: 135px;
   .map_box {
     @extend %fullBlock;
     position: relative;
@@ -41,20 +63,26 @@
 }
 
 .persons {
+  padding: 20px 0;
+  margin-bottom: 40px;
+  color: #000;
   ul {
     font-size: 0;
+    margin: 0 -5px;
     li {
       width: 20%;
       display: inline-block;
       vertical-align: top;
       @extend %boxSize;
-      padding: 5px;
+      padding: 5px 5px 30px;
       font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.4;
       img {
         display: block;
         width: 100%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 28px;
         @include transit(all 0.3s);
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -70,6 +98,11 @@
             opacity: 1;
           }
         }
+      }
+      h5 {
+        font-size: 1.05rem;
+        font-weight: 400;
+        margin-bottom: 5px;
       }
 
     }

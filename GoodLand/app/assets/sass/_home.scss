@@ -323,6 +323,9 @@
 
 .dependence {
   padding-bottom: 100px;
+  &-contact {
+    padding-bottom: 50px;
+  }
   &-wrap {
     font-size: 0;
     &-text {
@@ -334,6 +337,22 @@
       color: $darklink;
       @extend %boxSize;
       padding-right: 40px;
+      .btn-grey {
+        border: 1px solid $border;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: $shadow;
+        margin-top: 30px;
+        &:hover {
+          @include media(hover,1025){
+            background-color: $shadow;
+            color: #fff;
+            border-color: $shadow;
+          }
+        }
+      }
     }
     &-pics {
       display: inline-block;

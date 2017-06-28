@@ -1826,6 +1826,8 @@ a {
 
 .dependence {
   padding-bottom: 100px; }
+  .dependence-contact {
+    padding-bottom: 50px; }
   .dependence-wrap {
     font-size: 0; }
     .dependence-wrap-text {
@@ -1836,6 +1838,19 @@ a {
       font-family: PFDin_400;
       color: #2b1664;
       padding-right: 40px; }
+      .dependence-wrap-text .btn-grey {
+        border: 1px solid #d1d7df;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #7e8ca1;
+        margin-top: 30px; }
+        @media screen and (min-width: 1025px) {
+          .dependence-wrap-text .btn-grey:hover {
+            background-color: #7e8ca1;
+            color: #fff;
+            border-color: #7e8ca1; } }
     .dependence-wrap-pics {
       display: inline-block;
       width: 50%;
@@ -2785,19 +2800,36 @@ a {
     right: 0;
     margin: auto; }
 
-.contacts-list ul li {
-  float: left;
-  width: 25%;
-  padding: 0 10px; }
-  .contacts-list ul li i {
+.contacts-list {
+  padding: 55px 0; }
+  .contacts-list ul li {
     float: left;
-    width: 30px;
-    height: 30px; }
-  .contacts-list ul li p {
-    margin-left: 40px; }
+    width: 25%;
+    padding: 0 10px;
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: #000; }
+    .contacts-list ul li i {
+      float: left;
+      width: 28px;
+      height: 28px; }
+    .contacts-list ul li p {
+      margin-left: 50px;
+      line-height: 1.5; }
+    .contacts-list ul li a {
+      color: inherit; }
+      @media screen and (min-width: 1025px) {
+        .contacts-list ul li a:hover {
+          color: #2644BC; } }
+      .contacts-list ul li a.mp {
+        color: #2644BC; }
+        @media screen and (min-width: 1025px) {
+          .contacts-list ul li a.mp:hover {
+            text-decoration: underline; } }
 
 .contact-map {
-  height: 500px; }
+  height: 500px;
+  margin-bottom: 135px; }
   .contact-map .map_box {
     position: relative; }
     .contact-map .map_box .map_container {
@@ -2814,36 +2846,47 @@ a {
       width: 585px;
       bottom: -65px; }
 
-.persons ul {
-  font-size: 0; }
-  .persons ul li {
-    width: 20%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 5px;
-    font-size: 1rem; }
-    .persons ul li img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-      filter: grayscale(100%);
-      opacity: 0.9; }
-      @media screen and (min-width: 1025px) {
-        .persons ul li img:hover {
-          -webkit-filter: grayscale(0);
-          -moz-filter: grayscale(0);
-          -o-filter: grayscale(0);
-          filter: grayscale(0);
-          opacity: 1; } }
+.persons {
+  padding: 20px 0;
+  margin-bottom: 40px;
+  color: #000; }
+  .persons ul {
+    font-size: 0;
+    margin: 0 -5px; }
+    .persons ul li {
+      width: 20%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px 5px 30px;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.4; }
+      .persons ul li img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 28px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.9; }
+        @media screen and (min-width: 1025px) {
+          .persons ul li img:hover {
+            -webkit-filter: grayscale(0);
+            -moz-filter: grayscale(0);
+            -o-filter: grayscale(0);
+            filter: grayscale(0);
+            opacity: 1; } }
+      .persons ul li h5 {
+        font-size: 1.05rem;
+        font-weight: 400;
+        margin-bottom: 5px; }
 
 #mobile-nav {
   display: none;
