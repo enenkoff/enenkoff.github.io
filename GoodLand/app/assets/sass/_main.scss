@@ -1,11 +1,13 @@
 
 html {
+  font-size: 16px;
   &.ovh {overflow: hidden !important;}
+  @include media(media,1400){
+    font-size: 15px;
+  }
 }
 body {
-  @extend html;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   color: $text;
 }
 body, input, textarea, button, select {font-family: 'Roboto', sans-serif;}
@@ -28,7 +30,12 @@ svg {@extend %fullBlock}
   margin: 0 auto;
   @extend %boxSize;
   padding: 0 15px;
-  &_lg {max-width: 1200px;}
+  &_lg {
+    max-width: 1200px;
+    @include media(media,1400){
+      max-width: 1000px;
+    }
+  }
   &_bg {max-width: 1100px; padding: 0 100px;}
   &_md {max-width: 930px;}
   &_sm {max-width: 830px;}
