@@ -54,6 +54,7 @@
     }
     @include media(media,1023){
       padding-top: 30px;
+      padding-right: 0;
     }
   }
   h2 {
@@ -65,10 +66,10 @@
   }
   @include media(media,1023){
     .fp-scrollable {
-      overflow: visible;
+      //overflow: visible;
     }
     .fp-scroller {
-      overflow: visible;
+      padding-top: 35px;
     }
     .iScrollVerticalScrollbar {
       display: none;
@@ -134,8 +135,10 @@
   background-color: #fff;
   width: 100%;
   height: 50%;
+  @extend %boxSize;
   @include media(media,1023){
     height: 100%;
+    padding-top: 62px;
   }
   ul {
     width: 100%;
@@ -260,6 +263,9 @@
 
 .causes {
   padding: 120px 0;
+  @include media(media,1023){
+    padding: 90px 0;
+  }
   &-wrap {
     .question {
       float: left;
@@ -268,11 +274,21 @@
       font-family: PFDin_300;
       font-size: 1.7rem;
       line-height: 1.4;
-      padding: 50px 0;
+      padding: 50px 20px 50px 0;
       background: transparent url("../images/question-sign.png") center 0/auto 100% no-repeat;
+      @include media(media,1023){
+        width: 100%;
+        margin-bottom: 60px;
+        text-align: center;
+      }
     }
     ul {
-      &.width_75 {width: 75%;}
+      &.width_75 {
+        width: 75%;
+        @include media(media,1023){
+          width: 100%;
+        }
+      }
       &.width_100 {width: 100%;}
       float: left;
       counter-reset: cause;
@@ -285,6 +301,9 @@
         font-weight: 300;
         line-height: 1.5;
         font-size: 1.05rem;
+        @include media(media,1200){
+          padding-top: 90px;
+        }
         &:before {
           content: counter(cause, decimal);
           counter-increment: cause;
@@ -383,11 +402,25 @@
       padding-top: 12%;
       position: relative;
       margin-bottom: 370px;
+      @include media(media,1023){
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 30px;
+        text-align: center;
+      }
       img {
         position: absolute;
         width: 100%;
         top: 50%;
         @include translate(0,-50%);
+        @include media(media,1023){
+          display: inline-block;
+          width: 70%;
+          height: auto;
+          top: 0;
+          position: relative;
+          @include translate(0,-15%);
+        }
       }
     }
   }
@@ -477,6 +510,9 @@
       line-height: 1.5;
       font-size: 1.05rem;
       font-weight: 300;
+      @include media(media,1400){
+        width: 23%;
+      }
       figure {
         position: relative;
         width: 100%;

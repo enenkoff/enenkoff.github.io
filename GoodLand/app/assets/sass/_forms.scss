@@ -107,6 +107,10 @@
         font-size: 0.9rem;
         line-height: 16px;
         padding-left: 25px;
+        @include media(media,1400){
+          font-size: 0.8rem;
+          line-height: 1.4;
+        }
         &:before {
           width: 14px;
           height: 14px;

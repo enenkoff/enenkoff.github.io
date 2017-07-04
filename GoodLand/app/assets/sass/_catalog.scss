@@ -2,6 +2,9 @@
   position: absolute;
   top: 15px;
   right: 40px;
+  @include media(media,1023){
+    top: 85px;
+  }
   i {
     display: inline-block;
     width: 36px;
@@ -17,7 +20,12 @@
       fill: $darkbord;
       @include transit(all 0.3s);
     }
-    &.active,
+    &.active {
+      box-shadow: 0 1px 7px 1px $border;
+      svg {
+        fill: $link;
+      }
+    }
     &:hover {
       @include media(hover,1025){
         box-shadow: 0 1px 7px 1px $border;
@@ -34,6 +42,9 @@
     float: left;
     width: 250px;
     padding: 20px 0;
+    @include media(media,1400){
+      width: 200px;
+    }
     .title {
       position: relative;
       font-size: 1.1rem;
@@ -50,7 +61,7 @@
     button {
       position: absolute;
       cursor: pointer;
-      top: 0;
+      top: 2px;
       right: 45px;
       font-weight: 300;
       font-size: 0.9rem;
@@ -103,6 +114,10 @@
     .drop-section {
       padding: 0 20px;
       margin-bottom: 35px;
+      @include media(media,1400){
+        padding: 0 10px;
+        margin-bottom: 30px;
+      }
       &.active {
         button {
           display: block;
@@ -125,6 +140,9 @@
   &-list {
     margin-left: 250px;
     margin-bottom: 40px;
+    @include media(media,1400){
+      margin-left: 205px;
+    }
   }
 }
 
@@ -142,8 +160,18 @@
           width: 33.33%;
         }
       }
-      .catalog-list[data-view="view_big"] & { width: 50%; }
-      .catalog-list[data-view="view_small"] & { width: 25%; }
+      .catalog-list[data-view="view_big"] & {
+        width: 50%;
+        @include media(media,1200){
+          width: 100%;
+        }
+      }
+      .catalog-list[data-view="view_small"] & {
+        width: 25%;
+        @include media(media,1200){
+          width: 50%;
+        }
+      }
       display: inline-block;
       vertical-align: top;
       @extend %boxSize;
@@ -188,6 +216,9 @@
           .catalog-list[data-view="view_small"] & {
             flex-wrap: wrap;
             line-height: 1.4;
+            @include media(media,1400){
+              font-size: 0.8rem;
+            }
           }
           dl { padding: 0 15px; }
           dt, dd {display: inline-block}
@@ -202,6 +233,9 @@
           }
           .catalog-list[data-view="view_small"] & {
             padding: 1.5rem 15px;
+            @include media(media,1400){
+              font-size: 0.9rem;
+            }
           }
         }
       }

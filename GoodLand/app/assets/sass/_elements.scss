@@ -212,6 +212,9 @@
     margin: 70px 0;
     padding: 50px 20px 50px 180px;
     position: relative;
+    @include media(media,1023){
+      padding-left: 120px;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -220,6 +223,11 @@
       width: 120px;
       height: 100px;
       background: transparent url("../images/svg/laquos.svg") 0 0/100% 100% no-repeat;
+      @include media(media,1023){
+        width: 60px;
+        height: 50px;
+        top: 35px;
+      }
     }
   }
   table {
@@ -289,6 +297,9 @@
 
 .expert-opinion {
   padding: 60px 0 40px;
+  @include media(media,1200){
+    padding: 25px 0;
+  }
   .opinion-wrap {
     font-size: 0;
     .profile {
@@ -319,6 +330,9 @@
           margin: 0 0 -68px -60px;
           position: absolute;
           width: 120px;
+          @include media(media,1200){
+            width: 75px;
+          }
         }
       }
     }

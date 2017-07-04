@@ -64,6 +64,7 @@
           position: absolute;
           @extend %fullBlock;
           top: 0;
+          overflow: hidden;
           left: 0;
           @extend %boxSize;
           padding: 30px 40px;
@@ -72,6 +73,12 @@
           url("../images/border-h-dashed.png") 0 100% repeat-x,
           url("../images/border-v-dashed.png") 100% 0 repeat-y;
           @include boxShadowInset(0,0,0,1px,transparent,inset);
+          @include media(media,1600){
+            padding: 8%;
+          }
+          @include media(media,1200){
+            padding: 3% 4%;
+          }
           time {
             font-family: PFDin_400;
             display: block;
@@ -116,12 +123,21 @@
               h4 {color: $link}
             }
           }
+          &:before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            right: 2px;
+            bottom: 1px;
+            height: 30%;
+          }
         }
       }
     }
     &_squares {
       ul {
         li {
+
           & > div {
             padding-top: 100%;
           }
@@ -129,6 +145,34 @@
             padding: 40px;
             @include media(media,1600){
               padding: 8%;
+            }
+          }
+        }
+      }
+    }
+    &.bg__white {
+      ul {
+        li {
+          a {
+            &:before {
+              background: rgba(255,255,255,0.5);
+              background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+              background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 60%);
+              background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 60%);
+            }
+          }
+        }
+      }
+    }
+    &.bg__def {
+      ul {
+        li {
+          a {
+            &:before {
+              background: rgba($bg,0.5);
+              background: -moz-linear-gradient(top, rgba($bg,0) 0%, rgba($bg,1) 60%);
+              background: -webkit-linear-gradient(top, rgba($bg,0) 0%,rgba($bg,1) 60%);
+              background: linear-gradient(to bottom, rgba($bg,0) 0%,rgba($bg,1) 60%);
             }
           }
         }

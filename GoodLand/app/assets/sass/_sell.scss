@@ -1,17 +1,30 @@
 .sell-box {
   padding: 60px 0;
+  @include media(media,900){
+    padding: 30px 0;
+  }
   &-form {
     float: left;
     width: 50%;
     background-color: #fff;
     padding-top: 40px;
     @include boxShadow(0,0,35px,0,rgba($darklink,0.1));
+    @include media(media,900){
+      width: 100%;
+      margin-bottom: 60px;
+    }
   }
   &-stages {
     float: left;
     width: 50%;
     @extend %boxSize;
     padding: 60px 0 60px 60px;
+    @include media(media,1200){
+      padding: 40px 0 40px 40px;
+    }
+    @include media(media,900){
+      width: 100%;
+    }
     ul {
       counter-reset: item;
     }
@@ -23,6 +36,9 @@
       line-height: 1.5;
       margin-bottom: 45px;
       color: #000;
+      @include media(media,1200){
+        padding-left: 65px;
+      }
       &:before {
         background-color: $header;
         border-radius: 50%;
@@ -38,12 +54,21 @@
         text-align: center;
         top: 10px;
         width: 60px;
+        @include media(media,1200){
+          width: 45px;
+          height: 45px;
+          line-height: 45px;
+          font-size: 1.8rem;
+        }
       }
       h5 {
         font-family: PFDin_400;
         font-size: 1.65rem;
         line-height: 1.5;
         margin-bottom: 10px;
+        @include media(media,1200){
+          line-height: 1.2;
+        }
       }
       a {
         color: $link;

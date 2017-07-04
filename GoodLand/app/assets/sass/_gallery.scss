@@ -14,6 +14,9 @@
       text-transform: uppercase;
       font-size: 0.95rem;
       line-height: 1.5;
+      @include media(media,1200){
+        font-size: 0.8rem;
+      }
     }
     span {
       display: block;
@@ -21,12 +24,21 @@
       font-family: PFDin_400;
       color: #000;
       font-size: 1.1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include media(media,1200){
+        font-size: 1rem;
+      }
       &.price {
         text-align: center;
+        white-space: nowrap;
         line-height: 60px;
         color: $darklink;
         font-size: 1.5rem;
         font-family: PFDin_500;
+        @include media(media,1023){
+          font-size: 1.3rem;
+        }
       }
     }
     .btn {

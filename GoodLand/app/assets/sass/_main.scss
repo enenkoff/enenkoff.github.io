@@ -235,6 +235,9 @@ button[type="submit"].gradient {@extend .gradient};
 .page {
   padding-top: 65px;
   position: relative;
+  @include media(media,1023){
+    padding-top: 100px;
+  }
   &.full_margin {
     padding-top: 1px;
     position: relative;

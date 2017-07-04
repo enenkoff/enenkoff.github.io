@@ -9,6 +9,15 @@
       font-weight: 300;
       font-size: 1.05rem;
       color: #000;
+      @include media(media,1200){
+        font-size: 0.9rem;
+      }
+      @include media(media,1023){
+        font-size: 1.2rem;
+        width: 50%;
+        min-height: 60px;
+        margin-bottom: 20px;
+      }
       i {
         float: left;
         width: 28px;
@@ -41,6 +50,9 @@
 .contact-map {
   height: 500px;
   margin-bottom: 135px;
+  @include media(media,1200){
+    height: 410px;
+  }
   .map_box {
     @extend %fullBlock;
     position: relative;
@@ -58,6 +70,12 @@
       left: 50%;
       width: 585px;
       bottom: -65px;
+      @include media(media,1400){
+        width: 460px;
+      }
+      @include media(media,1200){
+        width: 380px;
+      }
     }
   }
 }
@@ -78,6 +96,9 @@
       font-size: 1rem;
       font-weight: 300;
       line-height: 1.4;
+      @include media(media,1023){
+        width: 25%;
+      }
       img {
         display: block;
         width: 100%;
