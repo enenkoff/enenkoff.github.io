@@ -43,10 +43,31 @@ svg {@extend %fullBlock}
       padding: 0 30px;
     }
   }
-  &_bg {max-width: 1100px; padding: 0 100px;}
-  &_md {max-width: 930px;}
-  &_sm {max-width: 830px;}
-  &_xs {max-width: 640px;}
+  &_bg {
+    max-width: 1100px;
+    padding: 0 100px;
+    @include media(media,1400){
+      padding: 0 30px;
+    }
+  }
+  &_md {
+    max-width: 930px;
+    @include media(media,1200){
+      padding: 0 30px;
+    }
+  }
+  &_sm {
+    max-width: 830px;
+    @include media(media,1023){
+      padding: 0 30px;
+    }
+  }
+  &_xs {
+    max-width: 640px;
+    @include media(media,1023){
+      padding: 0 30px;
+    }
+  }
 }
 .btn {
   text-transform: uppercase;

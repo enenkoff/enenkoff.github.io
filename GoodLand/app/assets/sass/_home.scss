@@ -38,6 +38,7 @@
 }
 
 .home-page {
+
   h1 {
     color: #fff;
     font-size: 3.8rem;
@@ -76,7 +77,9 @@
 
 }
 .fp-section {
-  .fp-tableCell {
+  .fp-tableCell,
+  .fp-scroller,
+  .fp-scrollable {
     background: inherit;
   }
 }
@@ -542,6 +545,9 @@
   }
   &-content {
     padding-bottom: 100px;
+    @include media(media,1023){
+      padding-top: 30px;
+    }
     .small-box & {padding-bottom: 50px}
     .profile {
       margin-top: -60px;
@@ -549,15 +555,34 @@
       float: left;
       background-color: #fff;
       color: #212121;
+      @include media(media,1023){
+        float: none;
+        width: 100%;
+        font-size: 0;
+        margin-top: 0;
+      }
       img {
         display: block;
         width: 100%;
         height: auto;
+        @include media(media,1023){
+          display: inline-block;
+          width: 50%;
+          vertical-align: middle;
+        }
       }
       &-content {
         background-color: #fff;
         padding: 0 40px 40px;
         font-size: 0.9rem;
+        @include media(media,1023){
+          display: inline-block;
+          width: 50%;
+          vertical-align: middle;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
         h5 {
           font-size: 1.2rem;
           line-height: 1.5;
@@ -585,6 +610,10 @@
       font-family: "PFDin_400";
       font-size: 1.68rem;
       line-height: 1.4;
+      @include media(media,1023){
+        margin-left: 0;
+        padding-top: 40px;
+      }
       h3 {
         font-size: 3.5rem;
         margin-bottom: 4rem;

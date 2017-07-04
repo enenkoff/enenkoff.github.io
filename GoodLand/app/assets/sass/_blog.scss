@@ -52,6 +52,9 @@
         @extend %boxSize;
         vertical-align: top;
         padding: 10px;
+        @include media(media,1200){
+          width: 50%;
+        }
         & > div {
           width: 100%;
           padding-top: 9rem;
@@ -78,6 +81,15 @@
             margin-bottom: 2.8rem;
             padding-bottom: 1rem;
             border-bottom: 3px solid $darklink;
+            @include media(media,1600){
+              margin-bottom: 2rem;
+            }
+            @include media(media,1400){
+              margin-bottom: 1rem;
+            }
+            @include media(media,1200){
+              margin-bottom: 3rem;
+            }
             strong {
               display: block;
               font-weight: normal;
@@ -91,6 +103,12 @@
             font-size: 1.25rem;
             color: #000;
             @include transit(all 0.3s);
+            @include media(media,1400){
+              font-size: 1.15rem;
+            }
+            @include media(media,1200){
+              font-size: 1.6rem;
+            }
           }
           &:hover {
             @include media(hover,1025){
@@ -109,6 +127,9 @@
           }
           a {
             padding: 40px;
+            @include media(media,1600){
+              padding: 8%;
+            }
           }
         }
       }

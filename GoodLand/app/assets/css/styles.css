@@ -412,12 +412,24 @@ a {
   .content_bg {
     max-width: 1100px;
     padding: 0 100px; }
+    @media screen and (max-width: 1400px) {
+      .content_bg {
+        padding: 0 30px; } }
   .content_md {
     max-width: 930px; }
+    @media screen and (max-width: 1200px) {
+      .content_md {
+        padding: 0 30px; } }
   .content_sm {
     max-width: 830px; }
+    @media screen and (max-width: 1023px) {
+      .content_sm {
+        padding: 0 30px; } }
   .content_xs {
     max-width: 640px; }
+    @media screen and (max-width: 1023px) {
+      .content_xs {
+        padding: 0 30px; } }
 
 .btn {
   text-transform: uppercase;
@@ -1718,7 +1730,9 @@ a {
   .home-page .iScrollVerticalScrollbar {
     display: none; } }
 
-.fp-section .fp-tableCell {
+.fp-section .fp-tableCell,
+.fp-section .fp-scroller,
+.fp-section .fp-scrollable {
   background: inherit; }
 
 .search-tech {
@@ -2116,6 +2130,9 @@ a {
         z-index: 1; }
   .about-box-content {
     padding-bottom: 100px; }
+    @media screen and (max-width: 1023px) {
+      .about-box-content {
+        padding-top: 30px; } }
     .small-box .about-box-content {
       padding-bottom: 50px; }
     .about-box-content .profile {
@@ -2124,14 +2141,33 @@ a {
       float: left;
       background-color: #fff;
       color: #212121; }
+      @media screen and (max-width: 1023px) {
+        .about-box-content .profile {
+          float: none;
+          width: 100%;
+          font-size: 0;
+          margin-top: 0; } }
       .about-box-content .profile img {
         display: block;
         width: 100%;
         height: auto; }
+        @media screen and (max-width: 1023px) {
+          .about-box-content .profile img {
+            display: inline-block;
+            width: 50%;
+            vertical-align: middle; } }
       .about-box-content .profile-content {
         background-color: #fff;
         padding: 0 40px 40px;
         font-size: 0.9rem; }
+        @media screen and (max-width: 1023px) {
+          .about-box-content .profile-content {
+            display: inline-block;
+            width: 50%;
+            vertical-align: middle;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box; } }
         .about-box-content .profile-content h5 {
           font-size: 1.2rem;
           line-height: 1.5;
@@ -2153,6 +2189,10 @@ a {
       font-family: "PFDin_400";
       font-size: 1.68rem;
       line-height: 1.4; }
+      @media screen and (max-width: 1023px) {
+        .about-box-content article {
+          margin-left: 0;
+          padding-top: 40px; } }
       .about-box-content article h3 {
         font-size: 3.5rem;
         margin-bottom: 4rem; }
@@ -2855,6 +2895,9 @@ a {
         float: left;
         vertical-align: top;
         padding: 10px; }
+        @media screen and (max-width: 1200px) {
+          .blog-box ul li {
+            width: 50%; } }
         .blog-box ul li > div {
           width: 100%;
           padding-top: 9rem;
@@ -2877,6 +2920,15 @@ a {
             margin-bottom: 2.8rem;
             padding-bottom: 1rem;
             border-bottom: 3px solid #2b1664; }
+            @media screen and (max-width: 1600px) {
+              .blog-box ul li a time {
+                margin-bottom: 2rem; } }
+            @media screen and (max-width: 1400px) {
+              .blog-box ul li a time {
+                margin-bottom: 1rem; } }
+            @media screen and (max-width: 1200px) {
+              .blog-box ul li a time {
+                margin-bottom: 3rem; } }
             .blog-box ul li a time strong {
               display: block;
               font-weight: normal;
@@ -2892,6 +2944,12 @@ a {
             -ms-transition: all 0.3s;
             -o-transition: all 0.3s;
             transition: all 0.3s; }
+            @media screen and (max-width: 1400px) {
+              .blog-box ul li a h4 {
+                font-size: 1.15rem; } }
+            @media screen and (max-width: 1200px) {
+              .blog-box ul li a h4 {
+                font-size: 1.6rem; } }
           @media screen and (min-width: 1025px) {
             .blog-box ul li a:hover {
               -webkit-box-shadow: 0 0 0 1px #2644BC inset;
@@ -2903,6 +2961,9 @@ a {
       padding-top: 100%; }
     .blog-box_squares ul li a {
       padding: 40px; }
+      @media screen and (max-width: 1600px) {
+        .blog-box_squares ul li a {
+          padding: 8%; } }
 
 .article-data {
   padding-top: 40px;
