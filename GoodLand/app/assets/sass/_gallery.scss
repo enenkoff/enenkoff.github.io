@@ -6,6 +6,11 @@
   li {
     display: table-cell;
     vertical-align: middle;
+    @include media(media,579){
+      display: block;
+      margin-bottom: 5px;
+      text-align: center;
+    }
     strong {
       display: block;
       font-family: PFDin_400;
@@ -16,6 +21,9 @@
       line-height: 1.5;
       @include media(media,1200){
         font-size: 0.8rem;
+      }
+      @include media(media,579){
+        font-size: 1rem;
       }
     }
     span {
@@ -38,6 +46,9 @@
         font-family: PFDin_500;
         @include media(media,1023){
           font-size: 1.3rem;
+        }
+        @include media(media,579){
+          line-height: 40px;
         }
       }
     }
@@ -76,6 +87,9 @@
   overflow: hidden;
   position: relative;
   padding-top: 44.4444%;
+  @include media(media,579){
+    padding-top: 0;
+  }
   figure {
     @extend %fullBlock;
     background-position: center center;
@@ -90,6 +104,11 @@
   bottom: 2px;
   top: 0;
   left: 0;
+  @include media(media,579){
+    width: 100%;
+    padding-top: 66.6667%;
+    position: relative;
+  }
   figure {
     position: absolute;
     top: 0;
@@ -160,6 +179,11 @@
   width: 33.3333%;
   bottom: 2px;
   overflow: hidden;
+  @include media(media,579){
+    width: 100%;
+    position: relative;
+    padding-top: 133.334%;
+  }
   button {
     position: absolute;
     z-index: 2;
@@ -235,6 +259,7 @@
     top: 0;
     left: 0;
     width: 100%;
+
     li {
       float: left;
       width: 50%;

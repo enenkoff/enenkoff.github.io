@@ -42,6 +42,9 @@ svg {@extend %fullBlock}
     @include media(media,1200){
       padding: 0 30px;
     }
+    @include media(media,579){
+      padding: 0 20px;
+    }
   }
   &_bg {
     max-width: 1100px;
@@ -49,11 +52,17 @@ svg {@extend %fullBlock}
     @include media(media,1400){
       padding: 0 30px;
     }
+    @include media(media,579){
+      padding: 0 20px;
+    }
   }
   &_md {
     max-width: 930px;
     @include media(media,1200){
       padding: 0 30px;
+    }
+    @include media(media,579){
+      padding: 0 20px;
     }
   }
   &_sm {
@@ -61,11 +70,17 @@ svg {@extend %fullBlock}
     @include media(media,1023){
       padding: 0 30px;
     }
+    @include media(media,579){
+      padding: 0 20px;
+    }
   }
   &_xs {
     max-width: 640px;
     @include media(media,1023){
       padding: 0 30px;
+    }
+    @include media(media,579){
+      padding: 0 20px;
     }
   }
 }
@@ -218,9 +233,15 @@ button[type="submit"].gradient {@extend .gradient};
   &_offer {
     margin: 1.6rem 0;
     width: 7%;
+    @include media(media,767){
+      width: 100px;
+    }
   }
   .profile-content & {
     margin: -0.4rem 0 1.5rem;
+    @include media(media,767){
+      display: none;
+    }
     .one-comment-author & {
       height: 0.6rem;
       width: 130px;
@@ -256,6 +277,14 @@ button[type="submit"].gradient {@extend .gradient};
     color: $header;
     font-size: 3.65rem;
     margin-bottom: 3rem;
+    @include media(media,1023){
+      font-size: 3.2rem;
+      margin-bottom: 2rem;
+    }
+    @include media(media,579){
+      font-size: 2.5rem;
+
+    }
   }
   h2 {
     font-family: PFDin_400;

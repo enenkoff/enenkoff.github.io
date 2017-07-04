@@ -5,6 +5,10 @@
   @include media(media,1023){
     top: 85px;
   }
+  @include media(media,579){
+    top: 70px;
+    right: 15px;
+  }
   i {
     display: inline-block;
     width: 36px;
@@ -44,6 +48,10 @@
     padding: 20px 0;
     @include media(media,1400){
       width: 200px;
+    }
+    @include media(media,579){
+      float: none;
+      margin: 0 auto;
     }
     .title {
       position: relative;
@@ -143,6 +151,9 @@
     @include media(media,1400){
       margin-left: 205px;
     }
+    @include media(media,579){
+      margin-left: 0;
+    }
   }
 }
 
@@ -150,6 +161,9 @@
   ul {
     font-size: 0;
     padding: 5px 15px;
+    @include media(media,579){
+      padding: 0;
+    }
     li {
       .incomes & {
         width: 20%;
@@ -158,6 +172,12 @@
         }
         @include media(media,1023){
           width: 33.33%;
+        }
+        @include media(media,767){
+          width: 50%;
+        }
+        @include media(media,579){
+          width: 100%;
         }
       }
       .catalog-list[data-view="view_big"] & {
@@ -222,6 +242,9 @@
           }
           dl { padding: 0 15px; }
           dt, dd {display: inline-block}
+          @include media(media,579){
+            display: none;
+          }
         }
         h4 {
           font-weight: 500;

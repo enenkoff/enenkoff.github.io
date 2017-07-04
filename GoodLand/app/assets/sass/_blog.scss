@@ -38,6 +38,9 @@
   }
   &-box {
     padding: 10px 30px;
+    @include media(media,579){
+      padding: 10px;
+    }
     .blog & {
       padding: 0;
     }
@@ -54,6 +57,9 @@
         padding: 10px;
         @include media(media,1200){
           width: 50%;
+        }
+        @include media(media,579){
+          width: 100%;
         }
         & > div {
           width: 100%;
@@ -96,6 +102,9 @@
             }
             @include media(media,1200){
               margin-bottom: 3rem;
+            }
+            @include media(media,767){
+              margin-bottom: 1rem;
             }
             strong {
               display: block;

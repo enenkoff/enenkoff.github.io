@@ -11,6 +11,9 @@
   @include media(hover,1024){
     display: none;
   }
+  @include media(media,579){
+    padding: 0 20px;
+  }
   .logo {
     display: inline-block;
     vertical-align: middle;
@@ -19,6 +22,10 @@
       height: 42px;
       margin: 10px 0;
       width: 101px;
+      @include media(media,579){
+        height: 36px;
+        width: 85px;
+      }
     }
 
   }
@@ -29,6 +36,9 @@
     margin: 0 30px;
     font-size: 17px;
     font-family: PFDin_400;
+    @include media(media,579){
+      display: none;
+    }
   }
   .burger {
     position: absolute;
@@ -38,6 +48,9 @@
     bottom: 0;
     right: 30px;
     margin: auto;
+    @include media(media,579){
+      right: 20px;
+    }
     span {
       position: absolute;
       height: 4px;
