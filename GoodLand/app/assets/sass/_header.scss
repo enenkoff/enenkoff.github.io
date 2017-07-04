@@ -1,4 +1,7 @@
 .searching {
+  @include media(media,1023) {
+    display: none;
+  }
   fieldset {
     position: fixed;
     top: 15px;

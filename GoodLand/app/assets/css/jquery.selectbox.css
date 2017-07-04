@@ -141,3 +141,13 @@
 .sbOptions a.sbFocus{
     background-color: #fff9e1;
 }
+
+@media screen and (max-width:1200px){
+    .sbHolder,
+    .sbToggle {
+        height: 50px;
+    }
+    .sbSelector{
+        line-height: 50px;
+    }
+}

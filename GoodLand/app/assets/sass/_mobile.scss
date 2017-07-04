@@ -1,18 +1,131 @@
-#mobile-nav {
-  display: none;
-  background-color: #ffffff;
-  height: 100%;
-  margin: 0;
-  position: fixed;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 50%;
-  z-index: 14;
-  padding-top: 60px;
+.mobile-header {
   @extend %boxSize;
-  @include transit(all 0.4s);
-  @include translate(100%,0);
-  @include boxShadow(-1px,0,7px,0,rgba(0,0,0,0.2));
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 13;
+  @include boxShadow(0,0,7px,0,rgba(162, 174, 191, 0.5));
+  @include media(hover,1024){
+    display: none;
+  }
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    img {
+      display: block;
+      height: 42px;
+      margin: 10px 0;
+      width: 101px;
+    }
 
+  }
+  .tel {
+    display: inline-block;
+    vertical-align: middle;
+    color: $text;
+    margin: 0 30px;
+    font-size: 17px;
+    font-family: PFDin_400;
+  }
+  .burger {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    bottom: 0;
+    right: 30px;
+    margin: auto;
+    span {
+      position: absolute;
+      height: 4px;
+      width: 40px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: #011D4E;
+      border-radius: 4px;
+      -webkit-transition-property: transform;
+      -moz-transition-property: transform;
+      -ms-transition-property: transform;
+      -o-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.22s;
+      -moz-transition-duration: 0.22s;
+      -ms-transition-duration: 0.22s;
+      -o-transition-duration: 0.22s;
+      transition-duration: 0.22s;
+      -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -moz-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -ms-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        border-radius: 4px;
+        height: 4px;
+        top: -12px;
+        background-color: #011D4E;
+        -webkit-transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0s;
+        -moz-transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0s;
+        -ms-transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0s;
+        -o-transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0s;
+        transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 4px;
+        bottom: -12px;
+        background-color: #011D4E;
+        -webkit-transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+        -moz-transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+        -ms-transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+        -o-transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+        transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+
+      }
+    }
+    &.close {
+      span {
+        @include transform(rotate(225deg));
+        -webkit-transition-delay: 0.12s;
+        -moz-transition-delay: 0.12s;
+        -ms-transition-delay: 0.12s;
+        -o-transition-delay: 0.12s;
+        transition-delay: 0.12s;
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -ms-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        &:after {
+          bottom: 0;
+          @include transform(rotate(-90deg));
+          -webkit-transition: bottom 0.1s ease-out 0s, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+          -moz-transition: bottom 0.1s ease-out 0s, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+          -ms-transition: bottom 0.1s ease-out 0s, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+          -o-transition: bottom 0.1s ease-out 0s, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+          transition: bottom 0.1s ease-out 0s, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        }
+        &:before {
+          top: 0;
+          opacity: 0;
+          -webkit-transition: top 0.1s ease-out 0s, opacity 0.1s ease-out 0.12s;
+          -moz-transition: top 0.1s ease-out 0s, opacity 0.1s ease-out 0.12s;
+          -ms-transition: top 0.1s ease-out 0s, opacity 0.1s ease-out 0.12s;
+          -o-transition: top 0.1s ease-out 0s, opacity 0.1s ease-out 0.12s;
+          transition: top 0.1s ease-out 0s, opacity 0.1s ease-out 0.12s;
+        }
+      }
+    }
+  }
 }

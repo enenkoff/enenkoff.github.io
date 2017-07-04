@@ -186,24 +186,23 @@ $(document).ready(function(){
     $('.burger').click(function(){
         var $this = $(this);
         if($this.hasClass('close')){
-            $this.removeClass('close')
-            $('#mobile-nav').removeClass('active')
-            $('html').removeClass('ovh')
-            $('#header').removeClass('always_show')
+            $this.removeClass('close');
+            $('#sidebar').removeClass('active');
+            $('html').removeClass('ovh');
+            // $('#header').removeClass('always_show');
         }
         else {
-            $this.addClass('close')
-            $('#mobile-nav').addClass('active')
-            $('html').addClass('ovh')
-            $('#header').addClass('always_show')
+            $this.addClass('close');
+            $('#sidebar').addClass('active');
+            $('html').addClass('ovh');
+            // $('#header').addClass('always_show');
         }
     });
 
-    $('#mobile-nav .close').click(function(){
-        $('.burger').removeClass('close')
-        $('#mobile-nav').removeClass('active')
-        $('html').removeClass('ovh')
-        $('#header').removeClass('always_show')
+    $('.sidebar .bg').click(function () {
+        $('.burger').removeClass('close');
+        $('#sidebar').removeClass('active');
+        $('html').removeClass('ovh');
     });
 
 

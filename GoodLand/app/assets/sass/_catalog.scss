@@ -133,7 +133,15 @@
     font-size: 0;
     padding: 5px 15px;
     li {
-      .incomes & { width: 20%; }
+      .incomes & {
+        width: 20%;
+        @include media(media,1400){
+          width: 25%;
+        }
+        @include media(media,1023){
+          width: 33.33%;
+        }
+      }
       .catalog-list[data-view="view_big"] & { width: 50%; }
       .catalog-list[data-view="view_small"] & { width: 25%; }
       display: inline-block;

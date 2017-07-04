@@ -6,9 +6,12 @@
   position: fixed;
   top: 0;
   right: 0;
-  left: 199px;
+  left: 0;
   bottom: 0;
   z-index: 1;
+  @include media(hover,1024) {
+    left: 199px;
+  }
   div {
     @extend %fullBlock;
     z-index: 0;
@@ -48,6 +51,9 @@
         }
       }
     }
+    @include media(media,1023){
+      padding-top: 30px;
+    }
   }
   h2 {
     font-family: PFDin_300;
@@ -56,7 +62,23 @@
     padding-top: 4.2rem;
     margin: 0 0 3.3rem;
   }
+  @include media(media,1023){
+    .fp-scrollable {
+      overflow: visible;
+    }
+    .fp-scroller {
+      overflow: visible;
+    }
+    .iScrollVerticalScrollbar {
+      display: none;
+    }
+  }
 
+}
+.fp-section {
+  .fp-tableCell {
+    background: inherit;
+  }
 }
 
 .search-tech {
@@ -69,6 +91,9 @@
       width: 265px;
       font-size: 1rem;
       border-right: 1px solid $darkbord;
+      @include media(media,1200){
+        width: 230px;
+      }
       &:last-child {
         border: none;
       }
@@ -82,6 +107,9 @@
         text-align: center;
         line-height: 60px;
         @include transit(all 0.3s);
+        @include media(media,1200){
+          line-height: 50px;
+        }
         &:hover {
           @include media(hover,1025){
             background-color: $linkhover;
@@ -103,6 +131,9 @@
   background-color: #fff;
   width: 100%;
   height: 50%;
+  @include media(media,1023){
+    height: 100%;
+  }
   ul {
     width: 100%;
     height: 100%;
@@ -116,27 +147,44 @@
       border-style: solid;
       border-color: $border;
       border-width: 0 0 1px 1px;
+      @include media(media,1023){
+        width: 50%;
+        height: 25%;
+      }
       a {
         display: block;
         height: 100%;
         width: 100%;
         position: relative;
+        @include media(media,1400){
+          display: table;
+        }
         figure {
           display: block;
           text-align: center;
           vertical-align: middle;
           height: 100%;
+          @include media(media,1400){
+            display: table-cell;
+          }
           .figure {
             display: inline-block;
             position: relative;
             height: 70%;
             margin-top: 3%;
+            @include media(media,1400){
+              width: 80%;
+              height: auto;
+            }
             img {
               display: block;
               height: 100%;
               width: auto;
               @include transit(all 0.3s);
-
+              @include media(media,1400){
+                height: auto;
+                width: 100%;
+              }
             }
           }
         }
@@ -155,6 +203,9 @@
           color: #000;
           font-family: PFDin_500;
           font-size: 1.18rem;
+          @include media(media,1200){
+            font-size: 1rem;
+          }
         }
         &:hover {
           @include media(hover,1025){
@@ -165,6 +216,7 @@
             }
           }
         }
+
       }
     }
   }
