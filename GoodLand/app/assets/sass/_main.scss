@@ -63,6 +63,9 @@ svg {@extend %fullBlock}
     }
     @include media(media,579){
       padding: 0 20px;
+      .content & {
+        padding: 0;
+      }
     }
   }
   &_sm {
@@ -302,6 +305,9 @@ button[type="submit"].gradient {@extend .gradient};
       padding-top: 4.2rem;
       margin: 0 0 3.3rem;
       text-transform: none;
+      @include media(media,579){
+        font-size: 2.4rem;
+      }
     }
   }
 }

@@ -1,5 +1,8 @@
 .blog {
   padding: 0 25px;
+  @include media(media,767){
+    padding: 0;
+  }
   &-tags {
     ul {
       //text-align: justify;

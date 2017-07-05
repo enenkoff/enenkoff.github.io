@@ -428,7 +428,9 @@ a {
         padding: 0 30px; } }
     @media screen and (max-width: 579px) {
       .content_md {
-        padding: 0 20px; } }
+        padding: 0 20px; }
+        .content .content_md {
+          padding: 0; } }
   .content_sm {
     max-width: 830px; }
     @media screen and (max-width: 1023px) {
@@ -644,6 +646,9 @@ a {
     padding-top: 4.2rem;
     margin: 0 0 3.3rem;
     text-transform: none; }
+    @media screen and (max-width: 579px) {
+      .page .big-logo h2 {
+        font-size: 2.4rem; } }
 
 /*-------- error page --------*/
 .error-page {
@@ -1631,7 +1636,8 @@ a {
   .text-block h3 {
     font-family: PFDin_500;
     font-size: 1.7rem;
-    margin-bottom: 1.3rem; }
+    margin-bottom: 1.3rem;
+    line-height: 1.4; }
   .text-block a {
     font-style: italic;
     color: #2644BC;
@@ -1670,6 +1676,9 @@ a {
     width: 100%;
     margin-bottom: 40px;
     height: 450px; }
+    @media screen and (max-width: 579px) {
+      .text-block iframe {
+        height: 250px; } }
   .text-block blockquote {
     background-color: #f0f3f5;
     color: #2b1664;
@@ -1682,6 +1691,11 @@ a {
     @media screen and (max-width: 1023px) {
       .text-block blockquote {
         padding-left: 120px; } }
+    @media screen and (max-width: 767px) {
+      .text-block blockquote {
+        margin: 40px 0;
+        padding: 30px 10px 20px 40px;
+        font-size: 1.4rem; } }
     .text-block blockquote:before {
       content: "";
       position: absolute;
@@ -1695,6 +1709,12 @@ a {
           width: 60px;
           height: 50px;
           top: 35px; } }
+      @media screen and (max-width: 767px) {
+        .text-block blockquote:before {
+          width: 48px;
+          height: 40px;
+          left: 15px;
+          top: -12px; } }
   .text-block table {
     table-layout: fixed;
     border-collapse: collapse; }
@@ -3417,6 +3437,9 @@ a {
 
 .blog {
   padding: 0 25px; }
+  @media screen and (max-width: 767px) {
+    .blog {
+      padding: 0; } }
   .blog-tags ul {
     padding: 5px 0;
     margin: 0 -5px; }
@@ -3614,8 +3637,18 @@ a {
     justify-content: space-between;
     padding: 15px 100px 40px;
     align-items: center; }
+    @media screen and (max-width: 579px) {
+      .article-data > div {
+        padding: 15px 20px 30px;
+        display: block; } }
   .article-data time, .article-data h5, .article-data ul {
     width: 30%; }
+    @media screen and (max-width: 767px) {
+      .article-data time, .article-data h5, .article-data ul {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 5px; } }
   .article-data h5 {
     font-size: inherit;
     font-weight: 300;
@@ -3623,10 +3656,16 @@ a {
   .article-data ul {
     text-align: right;
     font-size: 0.8rem; }
+    @media screen and (max-width: 767px) {
+      .article-data ul {
+        text-align: center; } }
     .article-data ul li {
       display: inline-block;
       vertical-align: middle;
       margin-right: 45px; }
+      @media screen and (max-width: 767px) {
+        .article-data ul li {
+          margin: 0 10px; } }
       .article-data ul li i, .article-data ul li span {
         display: inline-block;
         vertical-align: middle; }
@@ -3646,6 +3685,9 @@ a {
 
 .contacts-list {
   padding: 55px 0; }
+  @media screen and (max-width: 579px) {
+    .contacts-list {
+      padding: 30px 0; } }
   .contacts-list ul li {
     float: left;
     width: 25%;
@@ -3662,6 +3704,9 @@ a {
         width: 50%;
         min-height: 60px;
         margin-bottom: 20px; } }
+    @media screen and (max-width: 579px) {
+      .contacts-list ul li {
+        width: 100%; } }
     .contacts-list ul li i {
       float: left;
       width: 28px;
@@ -3686,6 +3731,13 @@ a {
   @media screen and (max-width: 1200px) {
     .contact-map {
       height: 410px; } }
+  @media screen and (max-width: 767px) {
+    .contact-map {
+      height: auto;
+      margin-bottom: 100px; } }
+  @media screen and (max-width: 579px) {
+    .contact-map {
+      margin-bottom: 50px; } }
   .contact-map .map_box {
     position: relative; }
     .contact-map .map_box .map_container {
@@ -3694,6 +3746,10 @@ a {
       left: 0;
       width: 100%;
       height: 100%; }
+      @media screen and (max-width: 767px) {
+        .contact-map .map_box .map_container {
+          position: relative;
+          height: 350px; } }
     .contact-map .map_box-form {
       padding-top: 40px;
       background-color: #fff;
@@ -3707,6 +3763,12 @@ a {
       @media screen and (max-width: 1200px) {
         .contact-map .map_box-form {
           width: 380px; } }
+      @media screen and (max-width: 767px) {
+        .contact-map .map_box-form {
+          position: relative;
+          width: 100%;
+          left: 0;
+          bottom: 0; } }
 
 .persons {
   padding: 20px 0;
@@ -3726,6 +3788,12 @@ a {
       @media screen and (max-width: 1023px) {
         .persons ul li {
           width: 25%; } }
+      @media screen and (max-width: 767px) {
+        .persons ul li {
+          width: 33.33%; } }
+      @media screen and (max-width: 579px) {
+        .persons ul li {
+          width: 50%; } }
       .persons ul li img {
         display: block;
         width: 100%;
