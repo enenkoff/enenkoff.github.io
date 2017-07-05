@@ -115,7 +115,36 @@
     height: 100%;
   }
   li {
-
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 30px;
+      right: 30px;
+      height: 1px;
+      display: none;
+      background-color: $border;
+      z-index: 1;
+      @include media(media,1023) {
+        display: block;
+      }
+    }
+    &:first-child {
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 30px;
+        right: 30px;
+        height: 1px;
+        display: none;
+        background-color: $border;
+        @include media(media,1023) {
+          display: block;
+        }
+      }
+    }
   }
   a {
     font-family: "PFDin_400";
@@ -135,13 +164,29 @@
         position: absolute;
         top: 24px;
         width: 30px;
+        @include media(media,1023) {
+          top: 26px;
+        }
+        @include media(media,579){
+          display: none;
+        }
       }
+
       & ~ .submenu {display: block}
     }
+
     &:hover {
       @include media(hover,1025){
         color: $link;
       }
+    }
+    @include media(media,1023) {
+      padding: 16px 16px 16px 45px;
+      font-size: 19px;
+    }
+    @include media(media,579){
+      text-align: center;
+      padding-left: 16px;
     }
   }
   .submenu {
@@ -150,10 +195,26 @@
       text-transform: none;
       font-size: 15px;
       padding: 5px 12px 5px 46px;
+      @include media(media,1023) {
+        padding: 10px 12px 10px 45px;
+        font-size: 19px;
+        background-color: $bg;
+        font-family: PFDin_300;
+      }
+      @include media(media,579){
+        padding-left: 10px;
+      }
       &.active {
         &:before {
           top: 14px;
           width: 38px;
+          @include media(media,1023) {
+            top: 21px;
+            width: 32px;
+          }
+          @include media(media,579){
+            display: none;
+          }
         }
 
       }

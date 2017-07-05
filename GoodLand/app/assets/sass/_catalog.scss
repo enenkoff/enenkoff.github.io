@@ -20,6 +20,10 @@
     padding: 8px;
     margin: 0 5px;
     @include transit(all 0.3s);
+    @include media(media,579) {
+      width: 25px;
+      height: 25px;
+    }
     svg {
       fill: $darkbord;
       @include transit(all 0.3s);
@@ -294,6 +298,12 @@
         .catalog-list[data-view="view_big"] & {
           right: 15px;
         }
+      }
+      .price {
+        border: none;
+        color: $link;
+        font-weight: 500;
+        padding: 5px 0;
       }
       button {
         &:hover {

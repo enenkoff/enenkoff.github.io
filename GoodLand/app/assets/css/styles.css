@@ -583,6 +583,9 @@ a {
 .main {
   position: relative;
   z-index: 1; }
+  @media screen and (max-width: 579px) {
+    .main .has-mobile-padding {
+      padding: 30px 0 20px; } }
 
 .divider {
   height: 0.8rem;
@@ -940,6 +943,34 @@ a {
 .nav-menu nav {
   height: 100%; }
 
+.nav-menu li {
+  position: relative; }
+  .nav-menu li:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    display: none;
+    background-color: #d1d7df;
+    z-index: 1; }
+    @media screen and (max-width: 1023px) {
+      .nav-menu li:after {
+        display: block; } }
+  .nav-menu li:first-child:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    display: none;
+    background-color: #d1d7df; }
+    @media screen and (max-width: 1023px) {
+      .nav-menu li:first-child:before {
+        display: block; } }
+
 .nav-menu a {
   font-family: "PFDin_400";
   text-transform: uppercase;
@@ -958,11 +989,25 @@ a {
       position: absolute;
       top: 24px;
       width: 30px; }
+      @media screen and (max-width: 1023px) {
+        .nav-menu a.active:before {
+          top: 26px; } }
+      @media screen and (max-width: 579px) {
+        .nav-menu a.active:before {
+          display: none; } }
     .nav-menu a.active ~ .submenu {
       display: block; }
   @media screen and (min-width: 1025px) {
     .nav-menu a:hover {
       color: #2644BC; } }
+  @media screen and (max-width: 1023px) {
+    .nav-menu a {
+      padding: 16px 16px 16px 45px;
+      font-size: 19px; } }
+  @media screen and (max-width: 579px) {
+    .nav-menu a {
+      text-align: center;
+      padding-left: 16px; } }
 
 .nav-menu .submenu {
   display: none; }
@@ -970,9 +1015,25 @@ a {
     text-transform: none;
     font-size: 15px;
     padding: 5px 12px 5px 46px; }
+    @media screen and (max-width: 1023px) {
+      .nav-menu .submenu a {
+        padding: 10px 12px 10px 45px;
+        font-size: 19px;
+        background-color: #f0f3f5;
+        font-family: PFDin_300; } }
+    @media screen and (max-width: 579px) {
+      .nav-menu .submenu a {
+        padding-left: 10px; } }
     .nav-menu .submenu a.active:before {
       top: 14px;
       width: 38px; }
+      @media screen and (max-width: 1023px) {
+        .nav-menu .submenu a.active:before {
+          top: 21px;
+          width: 32px; } }
+      @media screen and (max-width: 579px) {
+        .nav-menu .submenu a.active:before {
+          display: none; } }
 
 .nav-menu .mCS-autoHide {
   position: relative; }
@@ -2657,6 +2718,10 @@ a {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
+    @media screen and (max-width: 579px) {
+      .view i {
+        width: 25px;
+        height: 25px; } }
     .view i svg {
       fill: #a2aebf;
       -webkit-transition: all 0.3s;
@@ -2927,6 +2992,11 @@ a {
       .catalog-list[data-view="view_big"] .machine-items ul li .price, .catalog-list[data-view="view_big"]
       .machine-items ul li button {
         right: 15px; }
+    .machine-items ul li .price {
+      border: none;
+      color: #2644BC;
+      font-weight: 500;
+      padding: 5px 0; }
     @media screen and (min-width: 1025px) {
       .machine-items ul li button:hover {
         background-color: #d1d7df; } }
