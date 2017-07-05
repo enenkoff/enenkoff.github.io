@@ -65,6 +65,9 @@
           width: 100%;
           padding-top: 9rem;
           position: relative;
+          @include media(media,579){
+            padding-top: 0;
+          }
         }
         a {
           position: absolute;
@@ -84,6 +87,10 @@
           }
           @include media(media,1200){
             padding: 3% 4%;
+          }
+          @include media(media,579){
+            position: static;
+            padding-bottom: 40px;
           }
           time {
             font-family: PFDin_400;
@@ -154,6 +161,9 @@
             padding: 40px;
             @include media(media,1600){
               padding: 8%;
+            }
+            @include media(media,579){
+              position: absolute;
             }
           }
         }

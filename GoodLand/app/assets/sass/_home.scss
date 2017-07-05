@@ -61,7 +61,7 @@
       font-size: 3.3rem;
     }
     @include media(media,579){
-      padding-top: 0;
+      padding-top: 50px;
       font-size: 2.5rem;
     }
   }
@@ -77,6 +77,7 @@
     }
     @include media(media,579){
       font-size: 2rem;
+      padding-top: 2rem;
     }
   }
   @include media(media,1023){
@@ -282,6 +283,9 @@
 .vacancies {
   .home-page & {
     padding: 4.2rem 0 1rem;
+    @include media(media,579){
+      padding: 0;
+    }
   }
   &-box {
     font-size: 0;
@@ -291,12 +295,23 @@
       vertical-align: top;
       font-family: PFDin_300;
       font-size: 1.7rem;
+      @include media(media,579){
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
     .drops {
       display: inline-block;
       width: 66.6667%;
       vertical-align: top;
       font-size: 0.9rem;
+      @include media(media,579){
+        display: block;
+        width: 100%;
+
+      }
     }
 
   }
@@ -306,6 +321,9 @@
   padding: 120px 0;
   @include media(media,1023){
     padding: 90px 0;
+  }
+  @include media(media,579){
+    padding: 30px 0;
   }
   &-wrap {
     .question {
@@ -321,6 +339,7 @@
         width: 100%;
         margin-bottom: 60px;
         text-align: center;
+        padding-right: 0;
       }
     }
     ul {
@@ -345,6 +364,7 @@
         @include media(media,1200){
           padding-top: 90px;
         }
+
         &:before {
           content: counter(cause, decimal);
           counter-increment: cause;
@@ -370,6 +390,10 @@
             height: 60px;
             line-height: 60px;
             border-radius: 50%;
+            @include media(media,579){
+              right: 0;
+              margin: auto;
+            }
           }
         }
       }
@@ -379,6 +403,10 @@
             width: 65px;
             height: 65px;
             line-height: 65px;
+            @include media(media,579){
+              right: 0;
+              margin: auto;
+            }
           }
           &:after {
             content: "";
@@ -393,6 +421,10 @@
             border-right-color: transparent;
             transform-origin: center top;
             @include transform(rotate(-45deg));
+            @include media(media,579){
+              left: auto;
+              right: 50%;
+            }
           }
         }
       }
@@ -410,6 +442,12 @@
           &:nth-child(3){
             &:before {background-color: $header}
             &:after {border-bottom-color: $header}
+          }
+          @include media(media,579){
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-right: 0;
           }
         }
       }
@@ -432,7 +470,12 @@
             &:before {background-color: $header}
             &:after {border-bottom-color: $header}
           }
-
+          @include media(media,579){
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-right: 0;
+          }
         }
 
       }
@@ -469,6 +512,9 @@
 
 .dependence {
   padding-bottom: 100px;
+  @include media(media,579){
+    padding-bottom: 30px;
+  }
   &-contact {
     padding-bottom: 50px;
   }
@@ -499,6 +545,12 @@
           }
         }
       }
+      @include media(media,579){
+        width: 100%;
+        display: block;
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
     }
     &-pics {
       display: inline-block;
@@ -509,6 +561,9 @@
         float: left;
         width: 33.3333%;
         @extend %boxSize;
+        @include media(media,579){
+          width: 50%;
+        }
         a {
           padding-top: 100%;
           position: relative;
@@ -536,6 +591,11 @@
           }
         }
       }
+      @include media(media,579){
+        width: 100%;
+        display: block;
+        overflow: hidden;
+      }
     }
   }
 }
@@ -545,6 +605,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    @include media(media,767){
+      display: block;
+      text-align: center;
+    }
     li {
       width: 265px;
       color: #000;
@@ -553,6 +617,16 @@
       font-weight: 300;
       @include media(media,1400){
         width: 23%;
+      }
+      @include media(media,767){
+        width: 46%;
+        margin: 0 1% 30px;
+        display: inline-block;
+      }
+      @include media(media,579){
+        width: 100%;
+        margin: 0 0 30px;
+        display: block;
       }
       figure {
         position: relative;
@@ -564,6 +638,9 @@
         background-size: cover;
         overflow: hidden;
         margin-bottom: 30px;
+        @include media(media,767){
+          margin-bottom: 10px;
+        }
         .querl {
           position: absolute;
           top: 0;

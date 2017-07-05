@@ -187,6 +187,9 @@
   line-height: 1.6;
   font-weight: 300;
   font-size: 1.04rem;
+  @include media(media,579){
+    padding: 0;
+  }
   h3 {
     font-family: PFDin_500;
     font-size: 1.7rem;
@@ -302,6 +305,9 @@
     padding: 0 10px;
     text-align: center;
     color: $darkbord;
+    @include media(media,579){
+      color: $darklink;
+    }
   }
   a {
     border: 1px solid $border;
@@ -314,6 +320,9 @@
         color: $link;
       }
     }
+    @include media(media,579){
+      border-color: $darklink;
+    }
   }
   span {
     font-size: 1.15rem;
@@ -322,6 +331,9 @@
     border-style: solid none;
     border-color: $border;
     border-width: 1px;
+    @include media(media,579){
+      border-color: $darklink;
+    }
   }
 }
 
@@ -344,14 +356,24 @@
       width: 33.3333%;
       font-weight: 300;
       line-height: 1.6;
+      @include media(media,579){
+        width: 100%;
+        padding-top: 20px;
+      }
       &-content {
         width: 200px;
+        @include media(media,579){
+          margin: 0 auto 20px;
+        }
       }
       figure {
         display: block;
         width: 200px;
         position: relative;
         margin-bottom: 20px;
+        @include media(media,579){
+          margin: 0 auto 20px;
+        }
         img {
           display: block;
           width: 100%;
@@ -374,6 +396,9 @@
       display: inline-block;
       vertical-align: top;
       width: 66.66667%;
+      @include media(media,579){
+        width: 100%;
+      }
       h2 {text-align: left;}
       blockquote {
         font-family: PFDin_400;
@@ -397,6 +422,9 @@
     margin: 0 0 20px 60px;
     background-color: #fff;
     border-bottom: 1px solid $darkbord;
+    @include media(media,579){
+      margin: 0 0 20px 40px;
+    }
     button {
       position: absolute;
       top: 0;
@@ -405,6 +433,10 @@
       height: 60px;
       background-color: $darkbord;
       border: none;
+      @include media(media,579){
+        width: 40px;
+        height: 40px;
+      }
       &:before {
         content: "+";
         position: absolute;
@@ -416,6 +448,10 @@
         line-height: 60px;
         width: 60px;
         text-align: center;
+        @include media(media,579){
+          width: 40px;
+          line-height: 40px;
+        }
       }
     }
     &.active {
@@ -423,6 +459,9 @@
         &:before {
           content: "\2013";
           line-height: 62px;
+          @include media(media,579){
+            line-height: 41px;
+          }
         }
       }
     }
@@ -432,12 +471,19 @@
       color: #616161;
       font-family: PFDin_400;
       font-size: 1.25rem;
+      @include media(media,579){
+        height: 39px;
+        font-size: 0.8rem;
+      }
       dt, dd {
         float: left;
         width: 50%;
         @extend %boxSize;
         padding: 10px 20px;
         line-height: 39px;
+        @include media(media,579){
+          padding: 0 10px;
+        }
       }
       dt {
         text-transform: uppercase;

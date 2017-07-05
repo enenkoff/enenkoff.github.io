@@ -1,17 +1,29 @@
 .comments-box {
   padding: 20px 0;
-  .home-page & {padding-top: 0}
+  .home-page & {
+    padding-top: 0;
+
+  }
+
 }
 .one-comment {
   margin-bottom: 60px;
   &-author {
     float: left;
     width: 26%;
+    @include media(media,767){
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
     .profile {
       img {
         display: block;
         width: 210px;
         height: auto;
+        @include media(media,767){
+          margin: 0 auto 10px;
+        }
         & ~ .profile-content {
           .divider {
             opacity: 1;
@@ -32,6 +44,13 @@
     padding-left: 100px;
     padding-right: 40px;
     position: relative;
+    @include media(media,767){
+      width: 100%;
+      padding-left: 0;
+    }
+    @include media(media,579){
+      padding-right: 20px;
+    }
     .querl {
       position: absolute;
       top: 0;
@@ -39,6 +58,10 @@
       width: 40px;
       height: 40px;
       overflow: hidden;
+      @include media(media,579){
+        width: 20px;
+        height: 20px;
+      }
       &:after {
         content: "";
         width: 80px;
@@ -49,6 +72,7 @@
         top: 0;
         left: 0;
         @include transform(rotate(45deg));
+
       }
     }
   }
@@ -66,6 +90,14 @@
       position: absolute;
       transform-origin: right bottom;
       @include transform(rotate(45deg));
+      @include media(media,767){
+        top: auto;
+        right: auto;
+        bottom: 100%;
+        left: 0;
+        @include transform(rotate(135deg));
+        border-width: 20px;
+      }
     }
     &:after {
       content: "";
@@ -75,6 +107,10 @@
       bottom: 0;
       background-color: #fff;
       position: absolute;
+      @include media(media,579){
+        width: 20px;
+        top: 20px;
+      }
     }
     position: relative;
     background-color: #fff;
@@ -84,6 +120,9 @@
     font-weight: 300;
     @include media(media,1023){
       padding: 40px 20px 40px 40px;
+    }
+    @include media(media,579){
+      padding: 30px 5px 30px 30px;
     }
     .comment-source {
       display: inline-block;

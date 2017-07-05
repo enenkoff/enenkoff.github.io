@@ -200,19 +200,20 @@ svg {@extend %fullBlock}
 }
 button[type="submit"].gradient {@extend .gradient};
 
-.hidden-in-mobile {
-  @include media(media,1024){
-    display: none !important;
-  }
-}
+
 .hidden-in-smarts {
   @include media(media,640){
     display: none !important;
   }
 }
+.hidden-in-mobile {
+  @include media(media,579){
+    display: none;
+  }
+}
 .show-in-mobile {
   display: none;
-  @include media(media,1024){
+  @include media(media,579){
     display: block;
   }
 }

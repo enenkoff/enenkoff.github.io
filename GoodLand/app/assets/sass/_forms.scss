@@ -184,11 +184,17 @@
 
 .fields {
   padding: 0 35px 10px;
+  @include media(media,579){
+    padding: 0 20px;
+  }
   .field-50 {
     float: left;
     width: 50%;
     @extend %boxSize;
     padding: 0 5px;
+    @include media(media,579){
+      width: 100%;
+    }
   }
   .field-100 {
     float: left;
