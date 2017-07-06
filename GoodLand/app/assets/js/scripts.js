@@ -78,11 +78,13 @@ $(document).ready(function(){
             $('.full_margin').css('margin-top',WinHeight);
             $('.adverse_margin').css('margin-top',-0.5*WinHeight);
         }
-
-
     }
 
+    // show filtres
 
+    $('.flt').click(function(){
+        $('.flt-box').toggleClass('show-filtres');
+    })
 
     // validate forms
 

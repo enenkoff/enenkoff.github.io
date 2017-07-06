@@ -57,6 +57,8 @@
     @include media(media,579){
       float: none;
       margin: 0 auto;
+      display: none;
+      .show-filtres & {display: block}
     }
     .title {
       position: relative;
