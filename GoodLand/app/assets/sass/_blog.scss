@@ -93,7 +93,7 @@
           }
           @include media(media,579){
             position: static;
-            padding-bottom: 40px;
+            &:before {display: none}
           }
           time {
             font-family: PFDin_400;

@@ -3,13 +3,24 @@
   width: 100%;
   table-layout: fixed;
   margin-bottom: 15px;
+  @include media(media,579){
+    margin-top: 20px;
+    font-size: 0;
+  }
   li {
     display: table-cell;
     vertical-align: middle;
     @include media(media,579){
-      display: block;
-      margin-bottom: 5px;
-      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+
+      margin-bottom: 15px;
+      text-align: left;
+      width: 50%;
+      &:first-child,
+      &:last-child {
+        width: 100%;
+      }
     }
     strong {
       display: block;
@@ -37,6 +48,9 @@
       @include media(media,1200){
         font-size: 1rem;
       }
+      @include media(media,579){
+        font-size: 1.1rem;
+      }
       &.price {
         text-align: center;
         white-space: nowrap;
@@ -56,6 +70,9 @@
       width: 100%;
     }
     a {
+      @include media(media,579){
+        font-size: 1.1rem;
+      }
       i,span {display: inline-block}
       i {
         width: 15px;
@@ -183,6 +200,7 @@
     width: 100%;
     position: relative;
     padding-top: 133.334%;
+    display: none;
   }
   button {
     position: absolute;

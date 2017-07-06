@@ -82,7 +82,7 @@
                 </div>
                 <div class="gallery">
                     <div class="content content_lg">
-                        <ul class="gallery-item-description">
+                        <ul class="gallery-item-description hidden-in-mobile">
                            <li>
                                <strong>Год выпуска:</strong>
                                <span>2010</span>
@@ -118,7 +118,7 @@
                                     <button class="prev"></button>
                                     <figure data-item="1" class="current" style="background-image: url('assets/images/temp-gallery-01.jpg')"></figure>
                                 </div>
-                                <div class="gallery-list">
+                                <div class="gallery-list hidden-in-mobile">
                                     <button class="up"></button>
                                     <button class="down"></button>
                                     <ul>
@@ -181,12 +181,42 @@
                                 </div>
                             </div>
                         </div>
+                        <ul class="gallery-item-description show-in-mobile">
+                            <li>
+                                <span class="price">6 500 000 &#8381;</span>
+                            </li>
+                            <li>
+                                <strong>Год выпуска:</strong>
+                                <span>2010</span>
+                            </li>
+                            <li>
+                                <strong>Наработка:</strong>
+                                <span>4000 мт/ч</span>
+                            </li>
+                            <li>
+                                <strong>Мощность:</strong>
+                                <span>120 л.с.</span>
+                            </li>
+
+                            <li>
+                                <strong>Локация:</strong>
+                                <a href="#">
+                                    <i><svg> <use xlink:href="assets/images/svg/sprite.svg#icon_place"></use> </svg></i>
+                                    <span>г. Камышин</span>
+                                </a>
+                            </li>
+                            <li>
+                                <strong>Бренд:</strong>
+                                <span>Миллеровосельмаш</span>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
 
             </section>
             <div class="bg__white">
-                <div class="text-block">
+                <div class="text-block has-mobile-padding">
                     <div class="content content_md">
                         <h3>Подзаголовок</h3>
                         <p>Не обязательный к заполнению текстовый блок, который может содержать полезную для соискателя информацию о коллективе или о компании. Здесь работают все стили текста блога. Ваш бизнес улучшит только понятный и простой в навигации сайт. На таком сайте клиент скачает прайсы, найдёт контакты, поймёт чем занимается компания, оставит заявку или даже оплатит покупку. Клиенту не понадобится ехать в офис компании, звонить, ждать или искать информацию в другом месте. Такой сайт улучшает бизнес владельца в глазах клиента. В XXI веке идеальный сайт онлайн решает 100% вопросов клиентов: от получения информации до сервисного обслуживания. <a href="#">Стиль ссылки в тексте</a>. Пример — сайт Google. Масштаб компании не позволяет общаться с клиентами, поэтому большинство операций автоматизировано.</p>
@@ -196,6 +226,7 @@
                 <div class="expert-opinion">
                     <div class="content content_lg">
                         <div class="opinion-wrap">
+                            <h2 class="show-in-mobile">Мнение эксперта</h2>
                             <div class="profile">
                                 <figure>
                                     <i>
@@ -209,7 +240,7 @@
                                 </div>
                             </div>
                             <article>
-                                <h2>Мнение эксперта</h2>
+                                <h2 class="hidden-in-mobile">Мнение эксперта</h2>
                                 <blockquote>Этот трактор мне понравился сразу — тихий, маленькая выработка, конечно было бы не плохо его немного перебрать и сменить масла. Могу точно сказать, что в умелых руках он прослужит долго и будет радовать владельца!</blockquote>
                             </article>
                         </div>
@@ -228,7 +259,7 @@
                             </div>
                             <div class="flex-links-main">
                                 <div class="flex-links-wrapper gradient">
-                                    <a href="catalog-all.html" class="btn">
+                                    <a href="catalog-all.html" class="btn hidden-in-mobile">
                                         <span>узнать стоимость</span>
                                     </a>
                                     <a href="#" class="btn request" data-form="assortment">

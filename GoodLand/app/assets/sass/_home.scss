@@ -12,6 +12,9 @@
   @include media(hover,1024) {
     left: 199px;
   }
+  @include media(media,767){
+    display: none;
+  }
   div {
     @extend %fullBlock;
     z-index: 0;
@@ -80,6 +83,12 @@
       padding-top: 2rem;
     }
   }
+  .section__01 {
+    @include media(hover,768){
+      background: none !important;
+    }
+
+  }
   @include media(media,1023){
     .fp-scrollable {
       //overflow: visible;
@@ -101,6 +110,9 @@
     }
     .section__01 {
       padding: 60px 0;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -109,11 +121,15 @@
   .fp-scroller,
   .fp-scrollable {
     background: inherit;
+    background-image: none;
   }
 }
 
 .search-tech {
   padding: 0.8rem 0;
+  @include media(media,579){
+    display: none;
+  }
   form {
     font-size: 0;
     fieldset {
@@ -504,6 +520,9 @@
           top: 0;
           position: relative;
           @include translate(0,-15%);
+        }
+        @include media(media,579){
+          width: 100%;
         }
       }
     }

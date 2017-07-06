@@ -183,7 +183,12 @@ svg {@extend %fullBlock}
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    &.fixed {background-attachment: fixed}
+    @include media(media,579){
+      display: none;
+    }
+    &.fixed {
+      background-attachment: fixed;
+    }
   }
 }
 .gradient {
@@ -205,13 +210,19 @@ button[type="submit"].gradient {@extend .gradient};
 
 
 .hidden-in-smarts {
-  @include media(media,640){
+  @include media(media,767){
     display: none !important;
   }
 }
 .hidden-in-mobile {
   @include media(media,579){
-    display: none;
+    display: none !important;
+  }
+}
+.show-in-smarts {
+  display: none;
+  @include media(media,767){
+    display: block;
   }
 }
 .show-in-mobile {
@@ -280,6 +291,13 @@ button[type="submit"].gradient {@extend .gradient};
     &.simple {
       padding-top: 105px;
     }
+    @include media(media,767){
+      margin-top: 0 !important;
+      .adverse_margin {
+        margin-top: 0 !important;
+        padding-top: 100px;
+      }
+    }
   }
   h1 {
     text-align: center;
@@ -312,7 +330,9 @@ button[type="submit"].gradient {@extend .gradient};
       margin: 0 0 3.3rem;
       text-transform: none;
       @include media(media,579){
-        font-size: 2.4rem;
+        font-size: 2rem;
+        padding-top: 20px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -324,56 +344,29 @@ button[type="submit"].gradient {@extend .gradient};
 
 .error-page {
   text-align: center;
-  padding-bottom: 40px;
-  .section__plaid {
-    margin-top: 75px;
-    overflow: hidden;
-    padding: 75px 0 5px;
-    position: relative;
-    @include media(media,1024){
-      margin-top: 60px;
-      padding-top: 60px;
+  h1 {
+    padding: 3rem 1rem 1rem;
+    font-family: PFDin_500;
+    line-height: 1;
+    font-size: 17rem;
+    @include media(media,1023){
+      font-size: 12rem;
     }
-    @include media(media,640){
-      padding-top: 40px;
+    @include media(media,579){
+      font-size: 8rem;
     }
   }
-  &_text {
-    text-align: center;
-    font-size: 250px;
-    //color: $darklink;
-    font-weight: 100;
-
-    margin-bottom: 40px;
+  h2 {
+    font-family: PFDin_500;
     line-height: 1;
-    @include media(media,640){
-      font-size: 175px;
+    font-size: 3rem;
+    margin-bottom: 10rem;
+    @include media(media,1023){
+      font-size: 2rem;
     }
-    span {
-      vertical-align: middle;
-      display: inline-block;
-      position: relative;
-      margin: 0 -25px;
-      @include media(media,640){
-        margin: 0 -22px;
-      }
-      i {
-        bottom: 47px;
-        height: 72px;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        width: 60px;
-        @include media(media,640){
-          bottom: 30px;
-          height: 55px;
-          width: 45px;
-        }
-        svg {
-          @extend %fullBlock;
-        }
-      }
+    @include media(media,579){
+      font-size: 1.5rem;
+      line-height: 1.3;
     }
   }
 }

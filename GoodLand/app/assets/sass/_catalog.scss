@@ -8,6 +8,7 @@
   @include media(media,579){
     top: 70px;
     right: 15px;
+    display: none;
   }
   i {
     display: inline-block;
@@ -257,6 +258,9 @@
           }
           .catalog-list[data-view="view_big"] & {
             padding: 1.5rem 140px 1.5rem 15px;
+            @include media(media,579){
+              padding: 1.5rem 15px 60px;
+            }
           }
           .catalog-list[data-view="view_small"] & {
             padding: 1.5rem 15px;
@@ -297,6 +301,10 @@
         }
         .catalog-list[data-view="view_big"] & {
           right: 15px;
+          @include media(media,579){
+            right: auto;
+            left: 15px;
+          }
         }
       }
       .price {

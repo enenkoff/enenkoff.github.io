@@ -6,6 +6,9 @@
   font-size: 0.95rem;
   max-width: 1100px;
   @extend %boxSize;
+  @include media(media,767){
+    padding-top: 0;
+  }
   &:before {
     content: "";
     top: 0;
@@ -23,6 +26,9 @@
     height: 40px;
     overflow: hidden;
     .simple & {display: none}
+    @include media(media,767){
+      display: none;
+    }
     &:after {
       content: "";
       width: 80px;
@@ -42,6 +48,9 @@
     justify-content: space-between;
     padding: 15px 100px 40px;
     align-items: center;
+    @include media(media,767){
+      display: block;
+    }
     @include media(media,579){
       padding: 15px 20px 30px;
       display: block;
@@ -53,7 +62,7 @@
       width: 100%;
       display: block;
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
   }
   h5 {
@@ -94,5 +103,10 @@
     left: 0;
     right: 0;
     margin: auto;
+    @include media(media,767){
+      position: static;
+      display: block;
+      margin: 0 auto 20px;
+    }
   }
 }
