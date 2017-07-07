@@ -1795,6 +1795,10 @@ a {
     width: 100%;
     height: auto;
     margin-bottom: 40px; }
+    @media screen and (max-width: 579px) {
+      .text-block img {
+        width: 100vw;
+        margin-left: -20px; } }
   .text-block iframe {
     display: block;
     width: 100%;
@@ -1802,7 +1806,9 @@ a {
     height: 450px; }
     @media screen and (max-width: 579px) {
       .text-block iframe {
-        height: 250px; } }
+        height: 250px;
+        width: 100vw;
+        margin-left: -20px; } }
   .text-block blockquote {
     background-color: #f0f3f5;
     color: #2b1664;
@@ -1973,7 +1979,7 @@ a {
   border-bottom: 1px solid #a2aebf; }
   @media screen and (max-width: 579px) {
     .drops li {
-      margin: 0 0 20px 40px; } }
+      margin: 0 0 20px 0; } }
   .drops li button {
     position: absolute;
     top: 0;
@@ -1985,7 +1991,9 @@ a {
     @media screen and (max-width: 579px) {
       .drops li button {
         width: 40px;
-        height: 40px; } }
+        height: 40px;
+        left: 0;
+        right: auto; } }
     .drops li button:before {
       content: "+";
       position: absolute;
@@ -2016,7 +2024,10 @@ a {
     @media screen and (max-width: 579px) {
       .drops li dl {
         height: 39px;
-        font-size: 0.8rem; } }
+        font-size: 0.8rem;
+        margin-left: 40px;
+        display: flex;
+        align-items: center; } }
     .drops li dl dt, .drops li dl dd {
       float: left;
       width: 50%;
@@ -2024,7 +2035,8 @@ a {
       line-height: 39px; }
       @media screen and (max-width: 579px) {
         .drops li dl dt, .drops li dl dd {
-          padding: 0 10px; } }
+          padding: 0 10px;
+          line-height: 1.2; } }
     .drops li dl dt {
       text-transform: uppercase; }
   .drops li .drops-content {
@@ -3721,7 +3733,9 @@ a {
     padding: 10px 30px; }
     @media screen and (max-width: 579px) {
       .blog-box {
-        padding: 10px; } }
+        padding: 10px; }
+        .blog-box .content {
+          padding: 0; } }
     .blog .blog-box {
       padding: 0; }
     @media screen and (max-width: 579px) {
@@ -4026,6 +4040,14 @@ a {
         display: block;
         margin: 0 auto 20px; } }
 
+@media screen and (max-width: 767px) {
+  .page .article-box h1 {
+    font-size: 2.3rem; } }
+
+@media screen and (max-width: 579px) {
+  .page .article-box h1 {
+    font-size: 1.7rem; } }
+
 .contacts-list {
   padding: 55px 0; }
   @media screen and (max-width: 579px) {
@@ -4112,6 +4134,12 @@ a {
           width: 100%;
           left: 0;
           bottom: 0; } }
+      .contact-map .map_box-form button {
+        text-transform: uppercase;
+        line-height: 45px; }
+        @media screen and (max-width: 579px) {
+          .contact-map .map_box-form button {
+            line-height: 35px; } }
 
 .persons {
   padding: 20px 0;

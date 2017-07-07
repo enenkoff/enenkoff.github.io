@@ -53,6 +53,9 @@
     padding: 10px 30px;
     @include media(media,579){
       padding: 10px;
+      .content {
+        padding: 0;
+      }
     }
     .blog & {
       padding: 0;

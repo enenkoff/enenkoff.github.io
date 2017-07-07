@@ -114,3 +114,15 @@
     }
   }
 }
+.article-box {
+  h1 {
+    .page & {
+      @include media(media,767){
+        font-size: 2.3rem;
+      }
+      @include media(media,579){
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
