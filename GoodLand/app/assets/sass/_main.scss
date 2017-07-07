@@ -158,6 +158,9 @@ svg {@extend %fullBlock}
   position: relative;
   overflow: hidden;
   padding-bottom: 8rem;
+  @include media(media,767){
+    padding-bottom: 2rem;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -172,6 +175,9 @@ svg {@extend %fullBlock}
     -o-transform-origin:top right;
     transform-origin:top right;
     @include transform(rotate(60deg));
+    @include media(media,579){
+      top: 60px;
+    }
   }
   & > * {position: relative; z-index: 1}
 }

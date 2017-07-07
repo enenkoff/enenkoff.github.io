@@ -93,7 +93,8 @@
                     </div>
                 </div>
             </section>
-            <section class="section section_top bg__def">
+
+            <section class="section section_top bg__def section__02 ">
                 <div class="vacancies">
                     <div class="content content_lg">
                         <div class="vacancies-box">
@@ -645,14 +646,7 @@
                 nav.mCustomScrollbar({theme: 'minimal-dark'});
 
 
-                // =drops
-                $('.show_drop').click(function () {
-                    var $dropBlock = $(this).parents('li');
-                    $dropBlock.toggleClass('active');
-                    $dropBlock.find('.drops-content').slideToggle(300,function () {
-                        $.fn.fullpage.reBuild();
-                    })
-                })
+
 
                 // =validator
                 $('.custom-form').each(function () {
@@ -707,6 +701,13 @@
 
             if($('html').hasClass('mobile')){
                 startRules()
+
+                // =drops
+                $('.show_drop').click(function () {
+                    var $dropBlock = $(this).parents('li');
+                    $dropBlock.toggleClass('active');
+                    $dropBlock.find('.drops-content').slideToggle(300)
+                });
             }
             else {
                 $('#fullpage').fullpage({
@@ -716,6 +717,16 @@
                     normalScrollElements: '#modal, #sidebar',
                     afterRender: function(){
                         startRules();
+                        // =drops
+                        $('.show_drop').click(function () {
+                            var $dropBlock = $(this).parents('li');
+                            $dropBlock.toggleClass('active');
+                            $dropBlock.find('.drops-content').slideToggle(300,function () {
+                                if(!$('html').hasClass('mobile')){
+                                    $.fn.fullpage.reBuild();
+                                }
+                            })
+                        });
                     },
                     onLeave: function(index, nextIndex, direction){
 

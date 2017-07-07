@@ -510,6 +510,9 @@ a {
   position: relative;
   overflow: hidden;
   padding-bottom: 8rem; }
+  @media screen and (max-width: 767px) {
+    .bg__triangle {
+      padding-bottom: 2rem; } }
   .bg__triangle:before {
     content: "";
     position: absolute;
@@ -528,6 +531,9 @@ a {
     -ms-transform: rotate(60deg);
     -o-transform: rotate(60deg);
     transform: rotate(60deg); }
+    @media screen and (max-width: 579px) {
+      .bg__triangle:before {
+        top: 60px; } }
   .bg__triangle > * {
     position: relative;
     z-index: 1; }
@@ -2307,7 +2313,7 @@ a {
   padding: 4.2rem 0 1rem; }
   @media screen and (max-width: 579px) {
     .home-page .vacancies {
-      padding: 0; } }
+      padding: 2rem 0 0; } }
 
 .vacancies-box {
   font-size: 0; }
@@ -3124,7 +3130,9 @@ a {
         margin-bottom: 60px; } }
     @media screen and (max-width: 579px) {
       .sell-box-form {
-        padding-top: 20px; } }
+        padding-top: 20px;
+        width: auto;
+        margin: 0 -20px; } }
   .sell-box-stages {
     float: right;
     width: 50%;
@@ -3245,6 +3253,9 @@ a {
         @media screen and (max-width: 1023px) {
           .gallery-item-description li span.price {
             font-size: 1.3rem; } }
+        @media screen and (max-width: 767px) {
+          .gallery-item-description li span.price {
+            font-family: inherit; } }
         @media screen and (max-width: 579px) {
           .gallery-item-description li span.price {
             line-height: 40px; } }

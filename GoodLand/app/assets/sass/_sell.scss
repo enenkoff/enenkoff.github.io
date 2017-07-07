@@ -15,6 +15,8 @@
     }
     @include media(media,579){
       padding-top: 20px;
+      width: auto;
+      margin: 0 -20px;
     }
   }
   &-stages {
