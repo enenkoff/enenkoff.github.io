@@ -518,6 +518,10 @@ a {
     width: 100%;
     height: 300%;
     background-color: #fff;
+    -webkit-transform-origin: top right;
+    -moz-transform-origin: top right;
+    -ms-transform-origin: top right;
+    -o-transform-origin: top right;
     transform-origin: top right;
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
@@ -855,7 +859,9 @@ a {
           left: -50%; } }
   @media screen and (max-width: 579px) {
     .sidebar {
-      padding-top: 55px; } }
+      padding-top: 55px;
+      padding-bottom: 110px;
+      background-color: #fff; } }
   .sidebar .bg {
     position: absolute;
     top: 0;
@@ -1212,9 +1218,8 @@ a {
             margin-right: 10px; } }
         @media screen and (max-width: 579px) {
           .footer-nav-contacts li i {
-            float: none;
             display: block;
-            margin: 0 0 15px;
+            margin: 0 20px 15px 0;
             height: 30px;
             width: 30px; } }
       .footer-nav-contacts li p {
@@ -1225,7 +1230,7 @@ a {
             margin-left: 40px; } }
         @media screen and (max-width: 579px) {
           .footer-nav-contacts li p {
-            margin-left: 0; } }
+            margin-left: 50px; } }
     .footer-nav-contacts a {
       color: inherit; }
       @media screen and (min-width: 1025px) {
@@ -2107,7 +2112,8 @@ a {
   @media screen and (max-width: 579px) {
     .home-page h2 {
       font-size: 2rem;
-      padding-top: 2rem; } }
+      padding-top: 2rem;
+      margin-bottom: 1rem; } }
 
 @media screen and (min-width: 768px) {
   .home-page .section__01 {
@@ -2131,7 +2137,9 @@ a {
       padding: 60px 0;
       background-position: center center;
       background-size: cover;
-      background-repeat: no-repeat; } }
+      background-repeat: no-repeat; }
+    .home-page .section__02 .fp-scroller {
+      padding-top: 0; } }
 
 .fp-section .fp-tableCell,
 .fp-section .fp-scroller,
@@ -2288,6 +2296,9 @@ a {
 
 .home-page .incomes {
   padding: 0 0 1rem; }
+  @media screen and (max-width: 579px) {
+    .home-page .incomes {
+      padding-bottom: 30px; } }
 
 .page .incomes {
   padding: 3rem 0 1rem; }
@@ -2407,6 +2418,10 @@ a {
       border-width: 10px;
       border-left-color: transparent;
       border-right-color: transparent;
+      -webkit-transform-origin: center top;
+      -moz-transform-origin: center top;
+      -ms-transform-origin: center top;
+      -o-transform-origin: center top;
       transform-origin: center top;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
@@ -2628,6 +2643,10 @@ a {
           height: 80px;
           position: absolute;
           background-color: #2b1664;
+          -webkit-transform-origin: left top;
+          -moz-transform-origin: left top;
+          -ms-transform-origin: left top;
+          -o-transform-origin: left top;
           transform-origin: left top;
           top: 0;
           left: 0;
@@ -3250,6 +3269,10 @@ a {
         height: 0;
         position: absolute; }
 
+@media screen and (max-width: 579px) {
+  #gallery {
+    margin: 0 -20px; } }
+
 .gallery.big-logo {
   padding-top: 40px; }
 
@@ -3314,6 +3337,10 @@ a {
     .gallery-main button.next {
       right: 0; }
       .gallery-main button.next:after, .gallery-main button.next:before {
+        -webkit-transform-origin: right center;
+        -moz-transform-origin: right center;
+        -ms-transform-origin: right center;
+        -o-transform-origin: right center;
         transform-origin: right center;
         right: 12px; }
       .gallery-main button.next:after {
@@ -3331,6 +3358,10 @@ a {
     .gallery-main button.prev {
       left: 0; }
       .gallery-main button.prev:after, .gallery-main button.prev:before {
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -ms-transform-origin: left center;
+        -o-transform-origin: left center;
         transform-origin: left center;
         left: 12px; }
       .gallery-main button.prev:after {
@@ -3348,6 +3379,11 @@ a {
     @media screen and (min-width: 1025px) {
       .gallery-main button:hover:after, .gallery-main button:hover:before {
         background-color: #2644BC; } }
+    @media screen and (max-width: 579px) {
+      .gallery-main button {
+        background-color: transparent; }
+        .gallery-main button:after, .gallery-main button:before {
+          background-color: #fff; } }
 
 .gallery-list {
   position: absolute;
@@ -3388,9 +3424,17 @@ a {
       transition: all 0.3s; }
     .gallery-list button:after {
       right: 50%;
+      -webkit-transform-origin: right center;
+      -moz-transform-origin: right center;
+      -ms-transform-origin: right center;
+      -o-transform-origin: right center;
       transform-origin: right center; }
     .gallery-list button:before {
       left: 50%;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -ms-transform-origin: left center;
+      -o-transform-origin: left center;
       transform-origin: left center; }
     .gallery-list button.down {
       top: 0; }
@@ -3541,6 +3585,10 @@ a {
         height: 80px;
         position: absolute;
         background-color: #2b1664;
+        -webkit-transform-origin: left top;
+        -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+        -o-transform-origin: left top;
         transform-origin: left top;
         top: 0;
         left: 0;
@@ -3566,6 +3614,10 @@ a {
       border-color: #fff transparent;
       border-width: 75px;
       position: absolute;
+      -webkit-transform-origin: right bottom;
+      -moz-transform-origin: right bottom;
+      -ms-transform-origin: right bottom;
+      -o-transform-origin: right bottom;
       transform-origin: right bottom;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -3661,6 +3713,9 @@ a {
         padding: 10px; } }
     .blog .blog-box {
       padding: 0; }
+    @media screen and (max-width: 579px) {
+      .home-page .blog-box {
+        margin-bottom: 20px; } }
     .blog-box ul {
       overflow: hidden; }
       .blog .blog-box ul {
@@ -3821,6 +3876,10 @@ a {
         top: 1px; }
     .btn-grey.flt i:before {
       left: 5px;
+      -webkit-transform-origin: left top;
+      -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+      -o-transform-origin: left top;
       transform-origin: left top;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -3831,6 +3890,10 @@ a {
         left: 4px; }
     .btn-grey.flt i:after {
       right: 4px;
+      -webkit-transform-origin: right top;
+      -moz-transform-origin: right top;
+      -ms-transform-origin: right top;
+      -o-transform-origin: right top;
       transform-origin: right top;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
@@ -3879,6 +3942,10 @@ a {
       height: 80px;
       position: absolute;
       background-color: #2b1664;
+      -webkit-transform-origin: left top;
+      -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+      -o-transform-origin: left top;
       transform-origin: left top;
       top: 0;
       left: 0;

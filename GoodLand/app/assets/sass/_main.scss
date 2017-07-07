@@ -166,7 +166,11 @@ svg {@extend %fullBlock}
     width: 100%;
     height: 300%;
     background-color: #fff;
-    transform-origin: top right;
+    -webkit-transform-origin:top right;
+    -moz-transform-origin:top right;
+    -ms-transform-origin:top right;
+    -o-transform-origin:top right;
+    transform-origin:top right;
     @include transform(rotate(60deg));
   }
   & > * {position: relative; z-index: 1}

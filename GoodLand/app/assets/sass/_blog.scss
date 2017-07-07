@@ -57,6 +57,11 @@
     .blog & {
       padding: 0;
     }
+    .home-page & {
+      @include media(media,579){
+        margin-bottom: 20px;
+      }
+    }
     ul {
       .blog & {
         margin: 0 -10px;
@@ -249,7 +254,11 @@
     }
     &:before {
       left: 5px;
-      transform-origin: left top;
+      -webkit-transform-origin:left top;
+      -moz-transform-origin:left top;
+      -ms-transform-origin:left top;
+      -o-transform-origin:left top;
+      transform-origin:left top;
       @include transform(rotate(45deg));
       .show-filtres & {
         left: 4px;
@@ -257,7 +266,11 @@
     }
     &:after {
       right: 4px;
-      transform-origin: right top;
+      -webkit-transform-origin:right top;
+      -moz-transform-origin:right top;
+      -ms-transform-origin:right top;
+      -o-transform-origin:right top;
+      transform-origin:right top;
       @include transform(rotate(-45deg));
       .show-filtres & {
         right: 3px;

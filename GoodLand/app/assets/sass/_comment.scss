@@ -81,7 +81,11 @@
         height: 80px;
         position: absolute;
         background-color: $darklink;
-        transform-origin: left top;
+        -webkit-transform-origin:left top;
+        -moz-transform-origin:left top;
+        -ms-transform-origin:left top;
+        -o-transform-origin:left top;
+        transform-origin:left top;
         top: 0;
         left: 0;
         @include transform(rotate(45deg));
@@ -101,7 +105,11 @@
       border-color: #fff transparent;
       border-width: 75px;
       position: absolute;
-      transform-origin: right bottom;
+      -webkit-transform-origin:right bottom;
+      -moz-transform-origin:right bottom;
+      -ms-transform-origin:right bottom;
+      -o-transform-origin:right bottom;
+      transform-origin:right bottom;
       @include transform(rotate(45deg));
       @include media(media,767){
         top: auto;

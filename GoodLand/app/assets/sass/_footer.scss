@@ -146,9 +146,9 @@
             margin-right: 10px;
           }
           @include media(media,579){
-            float: none;
+            //float: none;
             display: block;
-            margin: 0 0 15px;
+            margin: 0 20px 15px 0;
             height: 30px;
             width: 30px;
           }
@@ -160,7 +160,7 @@
             margin-left: 40px;
           }
           @include media(media,579){
-            margin-left: 0;
+            margin-left: 50px;
           }
         }
       }

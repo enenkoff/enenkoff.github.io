@@ -81,6 +81,7 @@
     @include media(media,579){
       font-size: 2rem;
       padding-top: 2rem;
+      margin-bottom: 1rem;
     }
   }
   .section__01 {
@@ -114,6 +115,12 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
+    .section__02 {
+      .fp-scroller {
+        padding-top: 0;
+      }
+    }
+
   }
 }
 .fp-section {
@@ -289,7 +296,9 @@
 .incomes {
   .home-page & {
     padding: 0 0 1rem;
-
+    @include media(media,579){
+      padding-bottom: 30px;
+    }
   }
   .page & {
     padding: 3rem 0 1rem;
@@ -435,7 +444,11 @@
             border-width: 10px;
             border-left-color: transparent;
             border-right-color: transparent;
-            transform-origin: center top;
+            -webkit-transform-origin:center top;
+            -moz-transform-origin:center top;
+            -ms-transform-origin:center top;
+            -o-transform-origin:center top;
+            transform-origin:center top;
             @include transform(rotate(-45deg));
             @include media(media,579){
               left: auto;
@@ -674,7 +687,11 @@
             height: 80px;
             position: absolute;
             background-color: $darklink;
-            transform-origin: left top;
+            -webkit-transform-origin:left top;
+            -moz-transform-origin:left top;
+            -ms-transform-origin:left top;
+            -o-transform-origin:left top;
+            transform-origin:left top;
             top: 0;
             left: 0;
             @include transform(rotate(45deg));
