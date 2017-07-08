@@ -230,15 +230,13 @@ button[type="submit"].gradient {@extend .gradient};
   }
 }
 .show-in-smarts {
-  display: none;
-  @include media(media,767){
-    display: block;
+  @include media(hover,768){
+    display: none !important;
   }
 }
 .show-in-mobile {
-  display: none;
-  @include media(media,579){
-    display: block;
+  @include media(hover,580){
+    display: none !important;
   }
 }
 
@@ -290,6 +288,11 @@ button[type="submit"].gradient {@extend .gradient};
   @include media(media,1023){
     padding-top: 100px;
   }
+  @include media(media,579){
+    .mobile.landscape & {
+      padding-top: 45px;
+    }
+  }
   &.full_margin {
     padding-top: 1px;
     position: relative;
@@ -306,6 +309,13 @@ button[type="submit"].gradient {@extend .gradient};
       .adverse_margin {
         margin-top: 0 !important;
         padding-top: 100px;
+      }
+    }
+    @include media(media,579){
+      .adverse_margin {
+        .mobile.landscape & {
+          padding-top: 10px;
+        }
       }
     }
   }

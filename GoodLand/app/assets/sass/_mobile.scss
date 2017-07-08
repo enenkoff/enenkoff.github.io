@@ -13,6 +13,9 @@
   }
   @include media(media,579){
     padding: 0 20px;
+    .mobile.landscape & {
+      @include translate(0,-100%);
+    }
   }
   .logo {
     display: inline-block;
