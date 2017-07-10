@@ -4,6 +4,9 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     notify = require('gulp-notify'),
     imagemin = require('gulp-imagemin'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cssmin = require('gulp-cssmin'),
+    rename = require("gulp-rename"),
     rigger = require('gulp-rigger');
 
 
@@ -82,6 +85,15 @@ gulp.task('html:build', function () {
 });
 
 
+/* gulp optimize css */
+
+gulp.task('optimize:css', function () {
+    gulp.src('app/assets/css/styles.css')
+        .pipe(autoprefixer())
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('app/assets/css'));
+});
 
 
 

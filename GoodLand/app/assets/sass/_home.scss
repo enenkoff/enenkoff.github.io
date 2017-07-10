@@ -549,6 +549,9 @@
   }
   &-contact {
     padding-bottom: 50px;
+    @include media(media,579){
+      padding-bottom: 15px;
+    }
   }
   &-wrap {
     font-size: 0;

@@ -517,8 +517,9 @@
         height: 39px;
         font-size: 0.8rem;
         margin-left: 40px;
-        display: flex;
         align-items: center;
+        display: table;
+        width: calc(100% - 40px);
       }
       dt, dd {
         float: left;
@@ -529,11 +530,15 @@
         @include media(media,579){
           padding: 0 10px;
           line-height: 1.2;
+          float: none;
+          display: table-cell;
+          vertical-align: middle;
         }
       }
       dt {
         text-transform: uppercase;
       }
+
 
     }
     .drops-content {
