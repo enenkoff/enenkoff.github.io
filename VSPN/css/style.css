@@ -281,14 +281,34 @@ textarea {
   font: inherit;
 }
 
-/* line 58, ../sass/_general.scss */
+/* line 13, ../sass/_general.scss */
+.header nav .nav-menu__list .more, .header .search fieldset input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 18, ../sass/_general.scss */
+svg, .header-top-content .logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* line 23, ../sass/_general.scss */
+.header-top-content .call a i, .header-top-content .call a span, .header .basket i, .header .basket p, .breadcrumbs a, .breadcrumbs span, .catalog header h1, .catalog header .count, .catalog header .view i {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 71, ../sass/_general.scss */
 .layout:after {
   content: "";
   display: block;
   clear: both;
 }
 
-/* line 59, ../sass/_general.scss */
+/* line 72, ../sass/_general.scss */
 .tableBox {
   position: absolute;
   width: 100%;
@@ -296,24 +316,221 @@ textarea {
   left: 0;
   height: 100%;
 }
-/* line 65, ../sass/_general.scss */
+/* line 78, ../sass/_general.scss */
 .tableBox > div {
   display: table;
   width: 100%;
   height: 100%;
 }
-/* line 69, ../sass/_general.scss */
+/* line 82, ../sass/_general.scss */
 .tableBox > div > div {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 3, ../sass/_main.scss */
-body {
+/* line 1, ../sass/_main.scss */
+html, body {
+  background-color: #ecf0f4;
   font-size: 16px;
 }
 
-/* line 7, ../sass/_main.scss */
+/* line 5, ../sass/_main.scss */
+body {
+  color: #292929;
+}
+
+/* line 9, ../sass/_main.scss */
 body, input, textarea, button, select {
-  font-family: Arial, sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/* line 11, ../sass/_main.scss */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/*------------------------- header -------------------------*/
+/* line 21, ../sass/_main.scss */
+.header {
+  background-color: #fff;
+}
+/* line 24, ../sass/_main.scss */
+.header-top {
+  border-bottom: 1px solid #ecf0f4;
+}
+/* line 26, ../sass/_main.scss */
+.header-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* line 30, ../sass/_main.scss */
+.header-top-content .logo {
+  display: inline-block;
+  width: 130px;
+  flex-basis: 130px;
+  flex-shrink: 0;
+}
+/* line 40, ../sass/_main.scss */
+.header-top-content .call a,
+.header-top-content .call strong {
+  display: block;
+  white-space: nowrap;
+}
+/* line 45, ../sass/_main.scss */
+.header-top-content .call strong {
+  font-size: 1.15rem;
+}
+/* line 48, ../sass/_main.scss */
+.header-top-content .call a {
+  color: #359df5;
+  font-size: 0.8rem;
+}
+/* line 52, ../sass/_main.scss */
+.header-top-content .call a i {
+  color: #d1d7de;
+}
+/* line 58, ../sass/_main.scss */
+.header-top-content .enter a {
+  color: inherit;
+  border: 1px solid #d1d7de;
+}
+/* line 67, ../sass/_main.scss */
+.header nav .nav-menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 71, ../sass/_main.scss */
+.header nav .nav-menu__list a {
+  color: inherit;
+  white-space: nowrap;
+  display: block;
+}
+/* line 76, ../sass/_main.scss */
+.header nav .nav-menu__list .more {
+  display: block;
+  width: 75px;
+  height: 40px;
+  text-align: center;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+/* line 88, ../sass/_main.scss */
+.header .search {
+  width: 50%;
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+/* line 92, ../sass/_main.scss */
+.header .search fieldset {
+  border: 1px solid #d1d7de;
+  position: relative;
+}
+/* line 95, ../sass/_main.scss */
+.header .search fieldset input {
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 5px 40px 5px 15px;
+}
+/* line 102, ../sass/_main.scss */
+.header .search fieldset button {
+  position: absolute;
+  background-color: #ffd54f;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 40px;
+  border-radius: 3px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 5px;
+}
+/* line 118, ../sass/_main.scss */
+.header .basket i {
+  width: 31px;
+  height: 27px;
+  position: relative;
+}
+/* line 123, ../sass/_main.scss */
+.header .basket i span {
+  color: #ffd54f;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+/*------------------------- breadcrumbs -------------------------*/
+/* line 143, ../sass/_main.scss */
+.breadcrumbs a, .breadcrumbs span {
+  color: #adaeaf;
+}
+/* line 147, ../sass/_main.scss */
+.breadcrumbs a {
+  position: relative;
+  padding-right: 15px;
+  margin-right: 15px;
+}
+/* line 151, ../sass/_main.scss */
+.breadcrumbs a:after {
+  font-family: 'icomoon' !important;
+  content: "\e902";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 159, ../sass/_main.scss */
+.breadcrumbs .home {
+  width: 12px;
+  height: 11px;
+  color: #d1d7de;
+}
+
+/* line 2, ../sass/_catalog.scss */
+.catalog header {
+  border-bottom: 1px solid #d1d7de;
+  position: relative;
+}
+/* line 8, ../sass/_catalog.scss */
+.catalog header .count {
+  background-color: #fff;
+  color: #b5bcc4;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+/* line 14, ../sass/_catalog.scss */
+.catalog header .view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  white-space: nowrap;
+}
+/* line 19, ../sass/_catalog.scss */
+.catalog header .view i {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #ffd54f;
+}
+/* line 25, ../sass/_catalog.scss */
+.catalog header .view i svg {
+  fill: #fff;
+}
+/* line 30, ../sass/_catalog.scss */
+.catalog__content aside {
+  float: left;
+  width: 180px;
+  background-color: #fff;
+}
+/* line 37, ../sass/_catalog.scss */
+.catalog__main {
+  padding-left: 200px;
 }

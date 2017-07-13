@@ -1,7 +1,164 @@
 html {
+  background-color: $bg;
+  font-size: 16px;
 }
 body {
   @extend html;
-  font-size: 16px;
+  color: $text;
 }
-body, input, textarea, button, select {font-family: Arial, sans-serif;}
+body, input, textarea, button, select {font-family: 'Fira Sans', sans-serif;}
+svg {@extend %fullBlock;}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+
+
+
+/*------------------------- header -------------------------*/
+
+.header {
+  background-color: #fff;
+
+  &-top {
+    border-bottom: 1px solid $bg;
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        display: inline-block;
+        width: 130px;
+        flex-basis: 130px;
+        flex-shrink: 0;
+        img {
+          @extend %fullBlock;
+        }
+      }
+      .call {
+        a,
+        strong {
+          display: block;
+          white-space: nowrap;
+        }
+        strong {
+          font-size: 1.15rem;
+        }
+        a {
+          color: $link;
+          font-size: 0.8rem;
+          i,span {@extend %valign;}
+          i {
+            color: $border;
+          }
+        }
+      }
+      .enter {
+        a {
+          color: inherit;
+          border: 1px solid $border;
+        }
+      }
+    }
+  }
+  nav {
+    .nav-menu {
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: inherit;
+          white-space: nowrap;
+          display: block;
+        }
+        .more {
+          display: block;
+          width: 75px;
+          height: 40px;
+          text-align: center;
+          @extend %boxSize;
+          padding: 15px 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .search {
+    width: 50%;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    fieldset {
+      border: 1px solid $border;
+      position: relative;
+      input {
+        border: none;
+        display: block;
+        width: 100%;
+        padding: 5px 40px 5px 15px;
+        @extend %boxSize;
+      }
+      button {
+        position: absolute;
+        background-color: $button;
+        font-size: 1.2rem;
+        text-align: center;
+        width: 40px;
+        border-radius: 3px;
+        height: 30px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 5px;
+      }
+    }
+  }
+  .basket {
+    i {
+      @extend %valign;
+      width: 31px;
+      height: 27px;
+      position: relative;
+      span {
+        color: $button;
+        font-weight: 600;
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        @include boxShadow(0,0,4px,0,rgba(0,0,0,0.15));
+      }
+    }
+    p {
+      @extend %valign;
+    }
+  }
+}
+
+
+
+/*------------------------- breadcrumbs -------------------------*/
+
+.breadcrumbs {
+  a, span {
+    @extend %valign;
+    color: $greytext;
+  }
+  a {
+    position: relative;
+    padding-right: 15px;
+    margin-right: 15px;
+    &:after {
+      font-family: 'icomoon' !important;
+      content: "\e902";
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .home {
+    width: 12px;
+    height: 11px;
+    color: $border;
+  }
+}

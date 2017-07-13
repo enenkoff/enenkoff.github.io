@@ -1,0 +1,40 @@
+.catalog {
+  header {
+    border-bottom: 1px solid $border;
+    position: relative;
+    h1 {
+      @extend %valign;
+    }
+    .count {
+      @extend %valign;
+      background-color: #fff;
+      color: $bluetext;
+      @include boxShadow(0,0,4px,0,rgba(0,0,0,0.15));
+    }
+    .view {
+      position: absolute;
+      top: 0;
+      right: 0;
+      white-space: nowrap;
+      i {
+        @extend %valign;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-color: $button;
+        svg {fill: #fff}
+      }
+    }
+  }
+  &__content {
+    aside {
+      float: left;
+      width: 180px;
+      background-color: #fff;
+    }
+
+  }
+  &__main {
+    padding-left: 200px;
+  }
+}
