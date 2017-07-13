@@ -2,14 +2,48 @@
   header {
     border-bottom: 1px solid $border;
     position: relative;
+    padding-bottom: 8px;
     h1 {
       @extend %valign;
+      font-size: 1.55rem;
+      line-height: 1.5;
     }
     .count {
       @extend %valign;
       background-color: #fff;
       color: $bluetext;
       @include boxShadow(0,0,4px,0,rgba(0,0,0,0.15));
+      font-size: 0.8rem;
+      margin-left: 14px;
+      padding: 7px;
+      position: relative;
+      border-radius: 3px;
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        @include boxShadow(0,0,4px,0,rgba(0,0,0,0.15));
+        right: 100%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        margin: auto -4px auto 0;
+        -webkit-transform: rotate(41deg) skewX(-8deg);
+        -moz-transform: rotate(41deg) skewX(-8deg);
+        -ms-transform: rotate(41deg) skewX(-8deg);
+        -o-transform: rotate(41deg) skewX(-8deg);
+        transform: rotate(41deg) skewX(-8deg);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        top: 3px;
+        bottom: 3px;
+        background-color: #fff;
+        left: 0;
+      }
     }
     .view {
       position: absolute;
@@ -18,23 +52,108 @@
       white-space: nowrap;
       i {
         @extend %valign;
+        @extend %boxSize;
+        padding: 8px;
         cursor: pointer;
         width: 30px;
         height: 30px;
-        background-color: $button;
-        svg {fill: #fff}
+        border-radius: 50%;
+        margin: 0 4px;
+        background-color: #fff;
+        svg {fill: $border}
+        @include boxShadow(0,1px,2px,0,rgba(0,0,0,0.15));
+        &.active {
+          background-color: $button;
+          svg {fill: #fff}
+        }
       }
     }
   }
   &__content {
+    padding-top: 26px;
     aside {
       float: left;
       width: 180px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 3px;
+      padding: 8px 0;
       background-color: #fff;
+      @include boxShadow(0,1px,1px,0,rgba(0,0,0,0.15));
+      form {
+        p {
+          border-top: 1px solid $bg;
+          padding: 10px 20px 5px;
+          &:first-child {border: none}
+        }
+        fieldset {
+          margin: 0 20px;
+        }
+      }
     }
 
   }
   &__main {
-    padding-left: 200px;
+    padding-left: 210px;
+    ul {
+      font-size: 0;
+      margin: 0 -15px;
+      li {
+        font-size: 1rem;
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+        padding: 0 15px 30px;
+        @extend %boxSize;
+      }
+    }
+  }
+}
+
+.item {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  &__description {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: inherit;
+  }
+  &__img {
+    width: 100%;
+    padding-top: 78%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 12px;
+    div {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @extend %fullBlock;
+      &._hv {
+        bottom: 100%;
+      }
+    }
+  }
+  h5 {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .price {
+    margin-top: 12px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      height: 1px;
+      left: 20px;
+      right: 20px;
+      background-color: $border;
+    }
   }
 }

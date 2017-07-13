@@ -27,7 +27,7 @@
         <path d="m220 110h70v70h-70z"/>
         <path d="m220 0h70v70h-70z"/>
     </symbol>
-    <symbol id="icon_more" viewBox="0 0 612 612">
+    <symbol id="icon_more" fill="#d1d7de" viewBox="0 0 612 612">
         <circle cx="69.55" cy="306" r="69.55"/>
         <circle cx="306" cy="306" r="69.55"/>
         <circle cx="542.46" cy="306" r="69.55"/>
