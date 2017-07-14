@@ -282,7 +282,7 @@ textarea {
 }
 
 /* line 13, ../sass/_general.scss */
-.header nav .nav-menu__list > li.more span, .header .search fieldset input, .catalog header .view i, .catalog__main ul li {
+.header nav .nav-menu__list > li.more span, .header .search fieldset input, .catalog header .view i, .catalog__main ul li, .item .spinner, .item .spinner__counts button, .item .spinner__counts span, .pagination .pages-field a, .pagination .pages-field span {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -296,7 +296,7 @@ svg, .header-top-content .logo img, .item__img div {
 }
 
 /* line 23, ../sass/_general.scss */
-.header-top-content .call a i, .header-top-content .call a span, .header .basket i, .header .basket p, .breadcrumbs a, .breadcrumbs span, .catalog header h1, .catalog header .count, .catalog header .view i {
+.header-top-content .call a i, .header-top-content .call a span, .header .basket i, .header .basket p, .breadcrumbs a, .breadcrumbs span, .catalog header h1, .catalog header .count, .catalog header .view i, .item .price span, .item .spinner__counts, .item .spinner__counts button, .item .spinner__counts span, .item .spinner a, .pagination .pages-field a, .pagination .pages-field span {
   display: inline-block;
   vertical-align: middle;
 }
@@ -350,8 +350,30 @@ body, input, textarea, button, select {
   margin: 0 auto;
 }
 
+/* line 15, ../sass/_main.scss */
+.btn {
+  background-color: #d9dee4;
+  border-radius: 3px;
+  border: none;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 20px;
+  display: inline-block;
+  color: inherit;
+  font-size: 0.85rem;
+}
+/* line 25, ../sass/_main.scss */
+.btn-field {
+  text-align: center;
+}
+
+/* line 29, ../sass/_main.scss */
+#main {
+  padding-bottom: 50px;
+}
+
 /*------------------------- header -------------------------*/
-/* line 21, ../sass/_main.scss */
+/* line 35, ../sass/_main.scss */
 .header {
   background-color: #fff;
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
@@ -359,46 +381,46 @@ body, input, textarea, button, select {
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
   margin-bottom: 13px;
 }
-/* line 25, ../sass/_main.scss */
+/* line 39, ../sass/_main.scss */
 .header-top {
   border-bottom: 1px solid #ecf0f4;
   padding: 11px 0;
 }
-/* line 28, ../sass/_main.scss */
+/* line 42, ../sass/_main.scss */
 .header-top-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-/* line 32, ../sass/_main.scss */
+/* line 46, ../sass/_main.scss */
 .header-top-content .logo {
   display: inline-block;
   width: 130px;
   flex-basis: 130px;
   flex-shrink: 0;
 }
-/* line 42, ../sass/_main.scss */
+/* line 56, ../sass/_main.scss */
 .header-top-content .call a,
 .header-top-content .call strong {
   display: block;
   white-space: nowrap;
 }
-/* line 47, ../sass/_main.scss */
+/* line 61, ../sass/_main.scss */
 .header-top-content .call strong {
   font-size: 1.15rem;
 }
-/* line 50, ../sass/_main.scss */
+/* line 64, ../sass/_main.scss */
 .header-top-content .call a {
   color: #359df5;
   font-size: 0.9rem;
 }
-/* line 54, ../sass/_main.scss */
+/* line 68, ../sass/_main.scss */
 .header-top-content .call a i {
   color: #d1d7de;
   font-size: 10px;
   margin-right: 8px;
 }
-/* line 62, ../sass/_main.scss */
+/* line 76, ../sass/_main.scss */
 .header-top-content .enter a {
   color: inherit;
   border: 1px solid #d1d7de;
@@ -407,23 +429,27 @@ body, input, textarea, button, select {
   font-size: 0.85rem;
   padding: 8px 14px;
 }
-/* line 75, ../sass/_main.scss */
+/* line 87, ../sass/_main.scss */
+.header nav {
+  position: relative;
+}
+/* line 90, ../sass/_main.scss */
 .header nav .nav-menu__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* line 79, ../sass/_main.scss */
+/* line 94, ../sass/_main.scss */
 .header nav .nav-menu__list > li {
   line-height: 40px;
   padding: 0 5px;
 }
-/* line 82, ../sass/_main.scss */
+/* line 97, ../sass/_main.scss */
 .header nav .nav-menu__list > li.more {
   padding: 0;
   margin-left: 30px;
 }
-/* line 85, ../sass/_main.scss */
+/* line 100, ../sass/_main.scss */
 .header nav .nav-menu__list > li.more span {
   display: block;
   width: 75px;
@@ -433,26 +459,49 @@ body, input, textarea, button, select {
   cursor: pointer;
   background-color: #ecf0f4;
 }
-/* line 97, ../sass/_main.scss */
+/* line 111, ../sass/_main.scss */
+.header nav .nav-menu__list > li .drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 120, ../sass/_main.scss */
+.header nav .nav-menu__list > li .drop ul li a {
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 1025px) {
+  /* line 128, ../sass/_main.scss */
+  .header nav .nav-menu__list > li:hover .drop {
+    height: 138px;
+  }
+}
+/* line 134, ../sass/_main.scss */
 .header nav .nav-menu__list a {
   color: inherit;
   white-space: nowrap;
   display: block;
   font-size: 0.8rem;
 }
-/* line 107, ../sass/_main.scss */
+/* line 144, ../sass/_main.scss */
 .header .search {
   width: 45%;
   flex-basis: 45%;
   flex-shrink: 0;
 }
-/* line 111, ../sass/_main.scss */
+/* line 148, ../sass/_main.scss */
 .header .search fieldset {
   border: 1px solid #d1d7de;
   position: relative;
   border-radius: 3px;
 }
-/* line 115, ../sass/_main.scss */
+/* line 152, ../sass/_main.scss */
 .header .search fieldset input {
   border: none;
   display: block;
@@ -462,7 +511,7 @@ body, input, textarea, button, select {
   line-height: 34px;
   background: transparent;
 }
-/* line 125, ../sass/_main.scss */
+/* line 162, ../sass/_main.scss */
 .header .search fieldset button {
   position: absolute;
   background-color: #ffd54f;
@@ -477,18 +526,18 @@ body, input, textarea, button, select {
   margin: auto;
   right: 3px;
 }
-/* line 141, ../sass/_main.scss */
+/* line 178, ../sass/_main.scss */
 .header .basket {
   font-size: 0.85rem;
   color: inherit;
 }
-/* line 144, ../sass/_main.scss */
+/* line 181, ../sass/_main.scss */
 .header .basket i {
   width: 31px;
   height: 27px;
   position: relative;
 }
-/* line 149, ../sass/_main.scss */
+/* line 186, ../sass/_main.scss */
 .header .basket i span {
   color: #ffd54f;
   font-weight: 600;
@@ -505,31 +554,76 @@ body, input, textarea, button, select {
   top: -10px;
   white-space: nowrap;
 }
-/* line 164, ../sass/_main.scss */
+/* line 201, ../sass/_main.scss */
 .header .basket p {
   padding-top: 6px;
   margin-left: 5px;
 }
 
+/* line 209, ../sass/_main.scss */
+.drop {
+  background-color: #ffd54f;
+  overflow: hidden;
+  z-index: 5;
+}
+/* line 213, ../sass/_main.scss */
+.drop:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: grey;
+}
+/* line 222, ../sass/_main.scss */
+.drop ul {
+  height: 138px;
+  display: flex;
+  margin: 0 -15px;
+}
+/* line 226, ../sass/_main.scss */
+.drop ul li {
+  text-align: center;
+}
+/* line 228, ../sass/_main.scss */
+.drop ul li a {
+  text-align: center;
+  margin: 0 15px;
+  display: block;
+  padding: 30px 0 16px;
+}
+/* line 234, ../sass/_main.scss */
+.drop ul li img {
+  display: block;
+  height: 50px;
+  width: auto;
+  margin: 0 auto;
+}
+/* line 240, ../sass/_main.scss */
+.drop ul li i {
+  display: block;
+}
+
 /*------------------------- breadcrumbs -------------------------*/
-/* line 176, ../sass/_main.scss */
+/* line 251, ../sass/_main.scss */
 .breadcrumbs {
   font-size: 0.85rem;
   padding: 15px 10px;
   line-height: 16px;
   margin-bottom: 6px;
 }
-/* line 181, ../sass/_main.scss */
+/* line 256, ../sass/_main.scss */
 .breadcrumbs a, .breadcrumbs span {
   color: #adaeaf;
 }
-/* line 185, ../sass/_main.scss */
+/* line 260, ../sass/_main.scss */
 .breadcrumbs a {
   position: relative;
   padding-right: 20px;
   margin-right: 5px;
 }
-/* line 189, ../sass/_main.scss */
+/* line 264, ../sass/_main.scss */
 .breadcrumbs a:after {
   font-family: 'icomoon' !important;
   content: "\e902";
@@ -540,7 +634,7 @@ body, input, textarea, button, select {
   top: 50%;
   color: #adaeaf;
 }
-/* line 200, ../sass/_main.scss */
+/* line 275, ../sass/_main.scss */
 .breadcrumbs .home {
   width: 13px;
   height: 12px;
@@ -686,46 +780,70 @@ body, input, textarea, button, select {
   width: 100%;
   position: relative;
   background-color: #fff;
+  padding-bottom: 42px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-/* line 117, ../sass/_catalog.scss */
+/* line 122, ../sass/_catalog.scss */
 .item__description {
   display: block;
   width: 100%;
   text-align: center;
   color: inherit;
 }
-/* line 123, ../sass/_catalog.scss */
+/* line 128, ../sass/_catalog.scss */
 .item__img {
   width: 100%;
   padding-top: 78%;
   position: relative;
   overflow: hidden;
   margin-bottom: 12px;
+  border-radius: 3px 3px 0 0;
 }
-/* line 129, ../sass/_catalog.scss */
+/* line 135, ../sass/_catalog.scss */
 .item__img div {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   left: 0;
 }
-/* line 137, ../sass/_catalog.scss */
+/* line 144, ../sass/_catalog.scss */
 .item__img div._hv {
   bottom: 100%;
 }
-/* line 142, ../sass/_catalog.scss */
+/* line 149, ../sass/_catalog.scss */
 .item h5 {
   font-size: 0.8rem;
   font-weight: 600;
 }
-/* line 146, ../sass/_catalog.scss */
+/* line 153, ../sass/_catalog.scss */
+.item p {
+  font-size: 0.7rem;
+  padding-top: 4px;
+}
+/* line 157, ../sass/_catalog.scss */
 .item .price {
   margin-top: 12px;
   position: relative;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 9px 0;
 }
-/* line 149, ../sass/_catalog.scss */
+/* line 163, ../sass/_catalog.scss */
 .item .price:before {
   content: "";
   position: absolute;
@@ -734,4 +852,116 @@ body, input, textarea, button, select {
   left: 20px;
   right: 20px;
   background-color: #d1d7de;
+}
+/* line 172, ../sass/_catalog.scss */
+.item .price span {
+  margin: 0 3px;
+}
+/* line 175, ../sass/_catalog.scss */
+.item .price span.old {
+  font-size: 0.78rem;
+  color: #b5bcc4;
+  text-decoration: line-through;
+}
+/* line 182, ../sass/_catalog.scss */
+.item .spinner {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  z-index: 1;
+  background-color: #ffd54f;
+  border-radius: 3px;
+  font-size: 0;
+  white-space: nowrap;
+  padding: 2px;
+}
+/* line 194, ../sass/_catalog.scss */
+.item .spinner__counts {
+  width: 50%;
+  text-align: center;
+  font-size: 0;
+  background-color: #fff;
+  border-radius: 3px;
+}
+/* line 201, ../sass/_catalog.scss */
+.item .spinner__counts button, .item .spinner__counts span {
+  width: 33.3333%;
+}
+/* line 206, ../sass/_catalog.scss */
+.item .spinner__counts span {
+  font-size: 0.85rem;
+  border-left: 1px solid #d1d7de;
+  border-right: 1px solid #d1d7de;
+  line-height: 24px;
+}
+/* line 212, ../sass/_catalog.scss */
+.item .spinner__counts button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  line-height: 36px;
+}
+/* line 217, ../sass/_catalog.scss */
+.item .spinner__counts button.minus {
+  font-size: 0.7rem;
+}
+/* line 222, ../sass/_catalog.scss */
+.item .spinner a {
+  text-align: center;
+  width: 50%;
+  font-size: 0.8rem;
+  color: inherit;
+  line-height: 36px;
+}
+@media screen and (min-width: 1025px) {
+  /* line 231, ../sass/_catalog.scss */
+  .item:hover {
+    -webkit-transform: translate(0, -5px);
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -o-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
+  /* line 234, ../sass/_catalog.scss */
+  .item:hover .item__img div._mn {
+    bottom: -100%;
+  }
+  /* line 237, ../sass/_catalog.scss */
+  .item:hover .item__img div._hv {
+    bottom: 0;
+  }
+}
+
+/* line 244, ../sass/_catalog.scss */
+.pagination {
+  padding-left: 33.3333%;
+}
+/* line 246, ../sass/_catalog.scss */
+.pagination .btn-field {
+  float: left;
+  width: 50%;
+}
+/* line 250, ../sass/_catalog.scss */
+.pagination .pages {
+  text-align: right;
+}
+/* line 252, ../sass/_catalog.scss */
+.pagination .pages-field {
+  background-color: #fff;
+  border-radius: 3px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+}
+/* line 258, ../sass/_catalog.scss */
+.pagination .pages-field a, .pagination .pages-field span {
+  font-size: 0.9rem;
+  text-align: center;
+  min-width: 26px;
+}
+/* line 265, ../sass/_catalog.scss */
+.pagination .pages-field .total {
+  padding: 0 16px;
+  border-left: 1px solid #ecf0f4;
 }

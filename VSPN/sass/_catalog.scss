@@ -114,6 +114,11 @@
   width: 100%;
   position: relative;
   background-color: #fff;
+  padding-bottom: 42px;
+  border-radius: 3px;
+  @include boxShadow(0,1px,1px,0,rgba(0,0,0,0.15));
+  @include transit(all 0.3s);
+
   &__description {
     display: block;
     width: 100%;
@@ -126,12 +131,14 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 12px;
+    border-radius: 3px 3px 0 0;
     div {
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
       bottom: 0;
+      @include transit(all 0.3s);
       left: 0;
       @extend %fullBlock;
       &._hv {
@@ -143,9 +150,16 @@
     font-size: 0.8rem;
     font-weight: 600;
   }
+  p {
+    font-size: 0.7rem;
+    padding-top: 4px;
+  }
   .price {
     margin-top: 12px;
     position: relative;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 9px 0;
     &:before {
       content: "";
       position: absolute;
@@ -155,5 +169,104 @@
       right: 20px;
       background-color: $border;
     }
+    span {
+      @extend %valign;
+      margin: 0 3px;
+      &.old {
+        font-size: 0.78rem;
+        color: $bluetext;
+        text-decoration: line-through;
+      }
+    }
+  }
+  .spinner {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    z-index: 1;
+    background-color: $button;
+    border-radius: 3px;
+    font-size: 0;
+    white-space: nowrap;
+    @extend %boxSize;
+    padding: 2px;
+    &__counts {
+      @extend %valign;
+      width: 50%;
+      text-align: center;
+      font-size: 0;
+      background-color: #fff;
+      border-radius: 3px;
+      button,span {
+        @extend %valign;
+        width: 33.3333%;
+        @extend %boxSize;
+      }
+      span {
+        font-size: 0.85rem;
+        border-left: 1px solid $border;
+        border-right: 1px solid $border;
+        line-height: 24px;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 0.9rem;
+        line-height: 36px;
+        &.minus {
+          font-size: 0.7rem;
+        }
+      }
+    }
+    a {
+      @extend %valign;
+      text-align: center;
+      width: 50%;
+      font-size: 0.8rem;
+      color: inherit;
+      line-height: 36px;
+    }
+  }
+  &:hover {
+    @include media(hover,1025){
+      @include translate(0,-5px);
+      .item__img div._mn {
+        bottom: -100%;
+      }
+      .item__img div._hv {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.pagination {
+  padding-left: 33.3333%;
+  .btn-field {
+    float: left;
+    width: 50%;
+  }
+  .pages {
+    text-align: right;
+    &-field {
+      background-color: #fff;
+      border-radius: 3px;
+      height: 36px;
+      display: inline-block;
+      line-height: 36px;
+      a, span {
+        @extend %valign;
+        font-size: 0.9rem;
+        text-align: center;
+        min-width: 26px;
+        @extend %boxSize;
+      }
+      .total {
+        padding: 0 16px;
+        border-left: 1px solid $bg;
+      }
+    }
+
   }
 }

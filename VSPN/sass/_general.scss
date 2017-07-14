@@ -59,12 +59,12 @@ $link: #359df5;
   -o-transform: translate($x,$y);
   transform: translate($x,$y);
 }
-@mixin fontsMontserrat($name,$file){
-  @font-face {
-    font-family: $name;
-    src: url("../fonts/Montserrat-" + $file + ".ttf"),
-    url("../fonts/Montserrat-" + $file + ".woff"),
-    url("../fonts/Montserrat-" + $file + ".eot");
+@mixin media($media,$w) {
+  @if $media == hover {
+    @media screen and (min-width:$w+'px'){@content;}
+  }
+  @else {
+    @media screen and (max-width:$w+'px'){@content;}
   }
 }
 
