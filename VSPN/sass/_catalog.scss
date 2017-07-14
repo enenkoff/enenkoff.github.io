@@ -75,7 +75,7 @@
       float: left;
       width: 180px;
       font-size: 0.85rem;
-      font-weight: 600;
+      font-weight: 500;
       border-radius: 3px;
       padding: 8px 0;
       background-color: #fff;
@@ -84,7 +84,12 @@
         p {
           border-top: 1px solid $bg;
           padding: 10px 20px 5px;
-          &:first-child {border: none}
+          margin-top: 18px;
+          margin-bottom: 5px;
+          &:first-child {
+            border: none;
+            margin-top: 0;
+          }
         }
         fieldset {
           margin: 0 20px;
@@ -105,6 +110,10 @@
         vertical-align: top;
         padding: 0 15px 30px;
         @extend %boxSize;
+        .list_view & {
+          width: 100%;
+          display: block;
+        }
       }
     }
   }
@@ -124,6 +133,11 @@
     width: 100%;
     text-align: center;
     color: inherit;
+    .list_view & {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
   &__img {
     width: 100%;
@@ -132,6 +146,12 @@
     overflow: hidden;
     margin-bottom: 12px;
     border-radius: 3px 3px 0 0;
+    .list_view & {
+      width: 102px;
+      padding-top: 78px;
+      border: 5px solid transparent;
+      margin: 0;
+    }
     div {
       background-position: center center;
       background-repeat: no-repeat;
@@ -168,6 +188,9 @@
       left: 20px;
       right: 20px;
       background-color: $border;
+      .list_view & {
+        display: none;
+      }
     }
     span {
       @extend %valign;
@@ -177,6 +200,16 @@
         color: $bluetext;
         text-decoration: line-through;
       }
+    }
+    .list_view & {
+      align-items: center;
+      align-self: stretch;
+      display: flex;
+      border-left: 1px solid $bg;
+      margin: 0;
+      padding: 0 0 38px;
+      justify-content: center;
+      width: 176px;
     }
   }
   .spinner {
@@ -268,5 +301,71 @@
       }
     }
 
+  }
+}
+
+.range-inputs {
+  display: flex;
+  justify-content: space-between;
+  input {
+    border: 1px solid $border;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px 5px;
+    width: 65px;
+    @extend %boxSize;
+  }
+}
+
+.input-check {
+  position: relative;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+
+  label {
+    display: block;
+    padding-bottom: 4px;
+    padding-left: 30px;
+    padding-top: 4px;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $border;
+      border-radius: 2px;
+    }
+    &:after {
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20240.608%20240.608%22%20enable-background%3D%22new%200%200%20240.608%20240.608%22%3E%3Cpath%20d%3D%22m208.79%2029.972l31.819%2031.82-148.84%20148.84-91.76-91.76%2031.819-31.82%2059.944%2059.942%20117.03-117.03%22%20fill%3D%22%23ffd54f%22/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 5px;
+      left: 5px;
+      display: none;
+    }
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    &:checked {
+      & ~ label {
+        &:before {border-color: $button;}
+        &:after {display: block}
+      }
+    }
   }
 }

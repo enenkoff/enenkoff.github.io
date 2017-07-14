@@ -7,6 +7,8 @@
         <title>VSPN-catalog</title>
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100i,300,300i,400,500,600,700&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
         <link href="css/icomoon.css" type="text/css" rel="stylesheet">
+        <link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet">
+        <link href="css/nouislider.css" type="text/css" rel="stylesheet">
         <link href="css/style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
@@ -118,7 +120,7 @@
                                 <p>Раздел</p>
                                 <fieldset>
                                     <div class="form-selects">
-                                        <select>
+                                        <select class="custom-select">
                                             <option value="Формы">Формы</option>
                                             <option value="Раздел">Раздел</option>
                                             <option value="Раздел">Раздел</option>
@@ -129,19 +131,34 @@
                                 <p>Толщина камня</p>
                                 <fieldset>
                                     <div class="form-range">
-
+                                        <div id="width_range"></div>
                                     </div>
                                 </fieldset>
                                 <p>Цена</p>
                                 <fieldset>
                                     <div class="form-range">
-
+                                        <div id="price_range" class="twice"></div>
+                                        <div class="range-inputs">
+                                            <input type="text" id="input-with-keypress-0">
+                                            <input type="text" id="input-with-keypress-1">
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <p>Бренд</p>
                                 <fieldset>
                                     <div class="form-checks">
-
+                                        <div class="input-check">
+                                            <input type="checkbox" id="check01">
+                                            <label for="check01">Cona</label>
+                                        </div>
+                                        <div class="input-check">
+                                            <input type="checkbox" id="check02">
+                                            <label for="check02">Cona название в две строки</label>
+                                        </div>
+                                        <div class="input-check">
+                                            <input type="checkbox" id="check03">
+                                            <label for="check03">Cona</label>
+                                        </div>
                                     </div>
                                 </fieldset>
                             </form>
@@ -155,7 +172,9 @@
                                                 <div class="_mn" style="background-image: url('images/items/item01.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item02.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                                 <span class="old">3 000 &#8381;</span>
@@ -178,7 +197,9 @@
                                                 <div class="_mn" style="background-image: url('images/items/item03.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item04.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                                 <span class="old">3 000 &#8381;</span>
@@ -201,7 +222,9 @@
                                                 <div class="_mn" style="background-image: url('images/items/item01.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item02.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                                 <span class="old">3 000 &#8381;</span>
@@ -224,7 +247,9 @@
                                                 <div class="_mn" style="background-image: url('images/items/item03.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item04.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                                 <span class="old">3 000 &#8381;</span>
@@ -247,8 +272,12 @@
                                                 <div class="_mn" style="background-image: url('images/items/item03.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item04.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
-                                            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
+                                            <div class="item__text">
+                                                <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            </div>
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                                 <span class="old">3 000 &#8381;</span>
@@ -271,8 +300,13 @@
                                                 <div class="_mn" style="background-image: url('images/items/item03.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item04.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
-                                            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
+                                            <div class="item__text">
+                                                <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            </div>
+
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                             </div>
@@ -294,8 +328,12 @@
                                                 <div class="_mn" style="background-image: url('images/items/item03.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item04.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
-                                            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
+                                            <div class="item__text">
+                                                <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            </div>
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                             </div>
@@ -317,8 +355,12 @@
                                                 <div class="_mn" style="background-image: url('images/items/item03.png')"></div>
                                                 <div class="_hv" style="background-image: url('images/items/item04.png')"></div>
                                             </div>
-                                            <h5>Старый кирпич</h5>
-                                            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            <div class="item__head">
+                                                <h5>Старый кирпич</h5>
+                                            </div>
+                                            <div class="item__text">
+                                                <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру</p>
+                                            </div>
                                             <div class="price">
                                                 <span class="new">1 500 &#8381;</span>
                                             </div>
@@ -354,7 +396,11 @@
         </div>
     </div>
 
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js"></script>
+    <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
     </body>
 </html>

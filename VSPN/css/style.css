@@ -282,7 +282,7 @@ textarea {
 }
 
 /* line 13, ../sass/_general.scss */
-.header nav .nav-menu__list > li.more span, .header .search fieldset input, .catalog header .view i, .catalog__main ul li, .item .spinner, .item .spinner__counts button, .item .spinner__counts span, .pagination .pages-field a, .pagination .pages-field span {
+.header nav .nav-menu__list > li.more span, .header .search fieldset input, .catalog header .view i, .catalog__main ul li, .item .spinner, .item .spinner__counts button, .item .spinner__counts span, .pagination .pages-field a, .pagination .pages-field span, .range-inputs input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -574,56 +574,59 @@ body, input, textarea, button, select {
   left: 0;
   right: 0;
   height: 3px;
-  background-color: grey;
+  background: #1e5799;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, transparent 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, transparent 100%);
 }
-/* line 222, ../sass/_main.scss */
+/* line 225, ../sass/_main.scss */
 .drop ul {
   height: 138px;
   display: flex;
   margin: 0 -15px;
 }
-/* line 226, ../sass/_main.scss */
+/* line 229, ../sass/_main.scss */
 .drop ul li {
   text-align: center;
 }
-/* line 228, ../sass/_main.scss */
+/* line 231, ../sass/_main.scss */
 .drop ul li a {
   text-align: center;
   margin: 0 15px;
   display: block;
   padding: 30px 0 16px;
 }
-/* line 234, ../sass/_main.scss */
+/* line 237, ../sass/_main.scss */
 .drop ul li img {
   display: block;
   height: 50px;
   width: auto;
   margin: 0 auto;
 }
-/* line 240, ../sass/_main.scss */
+/* line 243, ../sass/_main.scss */
 .drop ul li i {
   display: block;
 }
 
 /*------------------------- breadcrumbs -------------------------*/
-/* line 251, ../sass/_main.scss */
+/* line 254, ../sass/_main.scss */
 .breadcrumbs {
   font-size: 0.85rem;
   padding: 15px 10px;
   line-height: 16px;
   margin-bottom: 6px;
 }
-/* line 256, ../sass/_main.scss */
+/* line 259, ../sass/_main.scss */
 .breadcrumbs a, .breadcrumbs span {
   color: #adaeaf;
 }
-/* line 260, ../sass/_main.scss */
+/* line 263, ../sass/_main.scss */
 .breadcrumbs a {
   position: relative;
   padding-right: 20px;
   margin-right: 5px;
 }
-/* line 264, ../sass/_main.scss */
+/* line 267, ../sass/_main.scss */
 .breadcrumbs a:after {
   font-family: 'icomoon' !important;
   content: "\e902";
@@ -634,7 +637,7 @@ body, input, textarea, button, select {
   top: 50%;
   color: #adaeaf;
 }
-/* line 275, ../sass/_main.scss */
+/* line 278, ../sass/_main.scss */
 .breadcrumbs .home {
   width: 13px;
   height: 12px;
@@ -736,7 +739,7 @@ body, input, textarea, button, select {
   float: left;
   width: 180px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 3px;
   padding: 8px 0;
   background-color: #fff;
@@ -748,25 +751,28 @@ body, input, textarea, button, select {
 .catalog__content aside form p {
   border-top: 1px solid #ecf0f4;
   padding: 10px 20px 5px;
-}
-/* line 87, ../sass/_catalog.scss */
-.catalog__content aside form p:first-child {
-  border: none;
+  margin-top: 18px;
+  margin-bottom: 5px;
 }
 /* line 89, ../sass/_catalog.scss */
+.catalog__content aside form p:first-child {
+  border: none;
+  margin-top: 0;
+}
+/* line 94, ../sass/_catalog.scss */
 .catalog__content aside form fieldset {
   margin: 0 20px;
 }
-/* line 96, ../sass/_catalog.scss */
+/* line 101, ../sass/_catalog.scss */
 .catalog__main {
   padding-left: 210px;
 }
-/* line 98, ../sass/_catalog.scss */
+/* line 103, ../sass/_catalog.scss */
 .catalog__main ul {
   font-size: 0;
   margin: 0 -15px;
 }
-/* line 101, ../sass/_catalog.scss */
+/* line 106, ../sass/_catalog.scss */
 .catalog__main ul li {
   font-size: 1rem;
   display: inline-block;
@@ -774,8 +780,13 @@ body, input, textarea, button, select {
   vertical-align: top;
   padding: 0 15px 30px;
 }
-
 /* line 113, ../sass/_catalog.scss */
+.list_view .catalog__main ul li {
+  width: 100%;
+  display: block;
+}
+
+/* line 122, ../sass/_catalog.scss */
 .item {
   width: 100%;
   position: relative;
@@ -791,14 +802,20 @@ body, input, textarea, button, select {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 122, ../sass/_catalog.scss */
+/* line 131, ../sass/_catalog.scss */
 .item__description {
   display: block;
   width: 100%;
   text-align: center;
   color: inherit;
 }
-/* line 128, ../sass/_catalog.scss */
+/* line 136, ../sass/_catalog.scss */
+.list_view .item__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* line 142, ../sass/_catalog.scss */
 .item__img {
   width: 100%;
   padding-top: 78%;
@@ -807,7 +824,14 @@ body, input, textarea, button, select {
   margin-bottom: 12px;
   border-radius: 3px 3px 0 0;
 }
-/* line 135, ../sass/_catalog.scss */
+/* line 149, ../sass/_catalog.scss */
+.list_view .item__img {
+  width: 102px;
+  padding-top: 78px;
+  border: 5px solid transparent;
+  margin: 0;
+}
+/* line 155, ../sass/_catalog.scss */
 .item__img div {
   background-position: center center;
   background-repeat: no-repeat;
@@ -821,21 +845,21 @@ body, input, textarea, button, select {
   transition: all 0.3s;
   left: 0;
 }
-/* line 144, ../sass/_catalog.scss */
+/* line 164, ../sass/_catalog.scss */
 .item__img div._hv {
   bottom: 100%;
 }
-/* line 149, ../sass/_catalog.scss */
+/* line 169, ../sass/_catalog.scss */
 .item h5 {
   font-size: 0.8rem;
   font-weight: 600;
 }
-/* line 153, ../sass/_catalog.scss */
+/* line 173, ../sass/_catalog.scss */
 .item p {
   font-size: 0.7rem;
   padding-top: 4px;
 }
-/* line 157, ../sass/_catalog.scss */
+/* line 177, ../sass/_catalog.scss */
 .item .price {
   margin-top: 12px;
   position: relative;
@@ -843,7 +867,7 @@ body, input, textarea, button, select {
   font-weight: 600;
   padding: 9px 0;
 }
-/* line 163, ../sass/_catalog.scss */
+/* line 183, ../sass/_catalog.scss */
 .item .price:before {
   content: "";
   position: absolute;
@@ -853,17 +877,32 @@ body, input, textarea, button, select {
   right: 20px;
   background-color: #d1d7de;
 }
-/* line 172, ../sass/_catalog.scss */
+/* line 191, ../sass/_catalog.scss */
+.list_view .item .price:before {
+  display: none;
+}
+/* line 195, ../sass/_catalog.scss */
 .item .price span {
   margin: 0 3px;
 }
-/* line 175, ../sass/_catalog.scss */
+/* line 198, ../sass/_catalog.scss */
 .item .price span.old {
   font-size: 0.78rem;
   color: #b5bcc4;
   text-decoration: line-through;
 }
-/* line 182, ../sass/_catalog.scss */
+/* line 204, ../sass/_catalog.scss */
+.list_view .item .price {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  border-left: 1px solid #ecf0f4;
+  margin: 0;
+  padding: 0 0 38px;
+  justify-content: center;
+  width: 176px;
+}
+/* line 215, ../sass/_catalog.scss */
 .item .spinner {
   position: absolute;
   bottom: 3px;
@@ -876,7 +915,7 @@ body, input, textarea, button, select {
   white-space: nowrap;
   padding: 2px;
 }
-/* line 194, ../sass/_catalog.scss */
+/* line 227, ../sass/_catalog.scss */
 .item .spinner__counts {
   width: 50%;
   text-align: center;
@@ -884,29 +923,29 @@ body, input, textarea, button, select {
   background-color: #fff;
   border-radius: 3px;
 }
-/* line 201, ../sass/_catalog.scss */
+/* line 234, ../sass/_catalog.scss */
 .item .spinner__counts button, .item .spinner__counts span {
   width: 33.3333%;
 }
-/* line 206, ../sass/_catalog.scss */
+/* line 239, ../sass/_catalog.scss */
 .item .spinner__counts span {
   font-size: 0.85rem;
   border-left: 1px solid #d1d7de;
   border-right: 1px solid #d1d7de;
   line-height: 24px;
 }
-/* line 212, ../sass/_catalog.scss */
+/* line 245, ../sass/_catalog.scss */
 .item .spinner__counts button {
   background-color: transparent;
   border: none;
   font-size: 0.9rem;
   line-height: 36px;
 }
-/* line 217, ../sass/_catalog.scss */
+/* line 250, ../sass/_catalog.scss */
 .item .spinner__counts button.minus {
   font-size: 0.7rem;
 }
-/* line 222, ../sass/_catalog.scss */
+/* line 255, ../sass/_catalog.scss */
 .item .spinner a {
   text-align: center;
   width: 50%;
@@ -915,7 +954,7 @@ body, input, textarea, button, select {
   line-height: 36px;
 }
 @media screen and (min-width: 1025px) {
-  /* line 231, ../sass/_catalog.scss */
+  /* line 264, ../sass/_catalog.scss */
   .item:hover {
     -webkit-transform: translate(0, -5px);
     -moz-transform: translate(0, -5px);
@@ -923,30 +962,30 @@ body, input, textarea, button, select {
     -o-transform: translate(0, -5px);
     transform: translate(0, -5px);
   }
-  /* line 234, ../sass/_catalog.scss */
+  /* line 267, ../sass/_catalog.scss */
   .item:hover .item__img div._mn {
     bottom: -100%;
   }
-  /* line 237, ../sass/_catalog.scss */
+  /* line 270, ../sass/_catalog.scss */
   .item:hover .item__img div._hv {
     bottom: 0;
   }
 }
 
-/* line 244, ../sass/_catalog.scss */
+/* line 277, ../sass/_catalog.scss */
 .pagination {
   padding-left: 33.3333%;
 }
-/* line 246, ../sass/_catalog.scss */
+/* line 279, ../sass/_catalog.scss */
 .pagination .btn-field {
   float: left;
   width: 50%;
 }
-/* line 250, ../sass/_catalog.scss */
+/* line 283, ../sass/_catalog.scss */
 .pagination .pages {
   text-align: right;
 }
-/* line 252, ../sass/_catalog.scss */
+/* line 285, ../sass/_catalog.scss */
 .pagination .pages-field {
   background-color: #fff;
   border-radius: 3px;
@@ -954,14 +993,87 @@ body, input, textarea, button, select {
   display: inline-block;
   line-height: 36px;
 }
-/* line 258, ../sass/_catalog.scss */
+/* line 291, ../sass/_catalog.scss */
 .pagination .pages-field a, .pagination .pages-field span {
   font-size: 0.9rem;
   text-align: center;
   min-width: 26px;
 }
-/* line 265, ../sass/_catalog.scss */
+/* line 298, ../sass/_catalog.scss */
 .pagination .pages-field .total {
   padding: 0 16px;
   border-left: 1px solid #ecf0f4;
+}
+
+/* line 307, ../sass/_catalog.scss */
+.range-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 310, ../sass/_catalog.scss */
+.range-inputs input {
+  border: 1px solid #d1d7de;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 12px;
+  padding: 3px 5px;
+  width: 65px;
+}
+
+/* line 321, ../sass/_catalog.scss */
+.input-check {
+  position: relative;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+/* line 327, ../sass/_catalog.scss */
+.input-check label {
+  display: block;
+  padding-bottom: 4px;
+  padding-left: 30px;
+  padding-top: 4px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 334, ../sass/_catalog.scss */
+.input-check label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #d1d7de;
+  border-radius: 2px;
+}
+/* line 344, ../sass/_catalog.scss */
+.input-check label:after {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20240.608%20240.608%22%20enable-background%3D%22new%200%200%20240.608%20240.608%22%3E%3Cpath%20d%3D%22m208.79%2029.972l31.819%2031.82-148.84%20148.84-91.76-91.76%2031.819-31.82%2059.944%2059.942%20117.03-117.03%22%20fill%3D%22%23ffd54f%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  display: none;
+}
+/* line 356, ../sass/_catalog.scss */
+.input-check input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+/* line 366, ../sass/_catalog.scss */
+.input-check input:checked ~ label:before {
+  border-color: #ffd54f;
+}
+/* line 367, ../sass/_catalog.scss */
+.input-check input:checked ~ label:after {
+  display: block;
 }
