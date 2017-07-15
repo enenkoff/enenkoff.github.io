@@ -1,36 +1,379 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta content="width=device-width" name="viewport">
-        <meta name="author" content="enenkoff@mail.ru">
-        <title>VSPN</title>
-        <link href="css/style.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="wrapper">
-            <header id="header" class="header">
-                <div class="header-top">
-                    <div class="container">
-                        <div class="header-top-content">
-                            <a href="#" class="logo"></a>
-                            <div class="call">
-                                <strong>+7(000) 00-00-00</strong>
-                                <a href="tel:+7000000000"><i></i><span>Заказать звонок</span></a>
-                            </div>
-                        </div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width" name="viewport">
+    <meta name="author" content="enenkoff@mail.ru">
+    <title>VSPN</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100i,300,300i,400,500,600,700,800,900&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+    <link href="css/icomoon.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet">
+    <link href="css/nouislider.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+    <header id="header" class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <a href="#" class="logo"><img src="images/logo.png" alt="VSPN"></a>
+                    <div class="call">
+                        <strong>+7 (000) 00-00-00</strong>
+                        <a href="tel:+7000000000"><i class="icon-phone"></i><span>Заказать звонок</span></a>
                     </div>
+                    <form action="#" class="search">
+                        <fieldset>
+                            <input type="text" placeholder="Поиск">
+                            <button type="submit"><i class="icon-search"></i></button>
+                        </fieldset>
+                    </form>
+                    <div class="enter">
+                        <a href="#">Войти</a>
+                    </div>
+                    <a href="#" class="basket">
+                        <i>
+                            <svg> <use xlink:href="images/svg/sprite.svg#icon_cart"></use> </svg>
+                            <span>45 000</span>
+                        </i>
+                        <p>Корзина</p>
+                    </a>
                 </div>
-                <nav id="nav">
-
-                </nav>
-            </header>
-            <div id="main">
-
             </div>
         </div>
+        <nav id="nav">
+            <div class="container">
+                <div class="nav-menu">
+                    <ul class="nav-menu__list">
+                        <li>
+                            <a href="#">Формы</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для камня
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Красители</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для камня
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Строительные материалы</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для выпечки
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для школьников
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для литья
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Инструменты</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для камня
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Кирпич</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для камня
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Шифер</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для камня
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Краска</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для выпечки
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для школьников
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для литья
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Уголь</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для камня
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Гипсокартон</a>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu01.png" alt="menu">
+                                                Формы для камня
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="more">
+                            <span><svg> <use xlink:href="images/svg/sprite.svg#icon_more"></use> </svg></span>
+                            <div class="drop">
+                                <div class="container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/menu/menu02.png" alt="menu">
+                                                Формы для панно
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="main">
+        <div class="container full">
+            <section class="grid">
+                <header>
+                    <h1>Сеты товаров</h1>
+                </header>
+                <div class="grid__content">
+                    <div class="layout">
+                        <div class="grid__item fig_square fig_big valign-top">
+                            <div class="grid__link">
+                                <a href="#" style="background-image: url('images/grid/pic01.png')">
+                                    <h3>Плитка тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_rect fig_big color-white">
+                            <div class="grid__link">
+                                <a href="#" style="background-image: url('images/grid/pic02.png')">
+                                    <h3>Плитка <br>тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_square fig_small">
+                            <div class="grid__link">
+                                <a href="#" style="background-image: url('images/grid/pic03.png')">
+                                    <h3>Плитка тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_rect fig_big color-white">
+                            <div class="grid__link">
+                                <a href="#" style="background-image: url('images/grid/pic04.png')">
+                                    <h3>Плитка <br>тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_square fig_small">
+                            <div class="grid__link">
+                                <a href="#" style="background-image: url('images/grid/pic05.png')">
+                                    <h3>Плитка тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_rect fig_big">
+                            <div class="grid__link">
+                                <a href="#" style="background-color: #adaeaf">
+                                    <h3>Плитка <br>тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_square fig_small">
+                            <div class="grid__link">
+                                <a href="#" style="background-color: #adaeaf">
+                                    <h3>Плитка тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item block-right fig_square fig_big halign-center">
+                            <div class="grid__link">
+                                <a href="#" style="background-image: url('images/grid/pic06.png')">
+                                    <h3>Плитка тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_rect fig_big">
+                            <div class="grid__link">
+                                <a href="#" style="background-color: #adaeaf">
+                                    <h3>Плитка <br>тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__item fig_square fig_small">
+                            <div class="grid__link">
+                                <a href="#" style="background-color: #adaeaf">
+                                    <h3>Плитка тротуарная</h3>
+                                </a>
+                            </div>
+                        </div>
 
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="js/scripts.js"></script>
-    </body>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+
+
+</body>
 </html>
