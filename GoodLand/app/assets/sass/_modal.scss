@@ -93,6 +93,9 @@
 }
 
 .modal-form {
+  .modal_message {
+    display: none !important;
+  }
   @include media(media,600){
     width: 100%;
     height: 100%;

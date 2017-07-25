@@ -52,6 +52,8 @@ $(document).ready(function(){
         $('#modal').find('.modal-thanks').removeClass('active');
         var data_form = $(this).attr('data-form');
         $('#modal').find('section[data-form="'+data_form+'"]').addClass('current');
+        var modalSuccess = $('#modal').find('section[data-form="'+data_form+'"]').find('.modal_message').html();
+        $('#modal').find('.modal-thanks').html(modalSuccess);
         $('#modal').fadeIn(300);
         $('html').addClass('ovh');
     });

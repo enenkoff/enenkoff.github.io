@@ -1378,6 +1378,9 @@ a {
     width: 40px;
     height: 40px; }
 
+.modal-form .modal_message {
+  display: none !important; }
+
 @media screen and (max-width: 600px) {
   .modal-form {
     width: 100%;
