@@ -11,6 +11,11 @@ svg {@extend %fullBlock;}
 .container {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 15px;
+  &.full {
+    max-width: 1820px;
+
+  }
 }
 .btn {
   background-color: #d9dee4;
@@ -146,11 +151,12 @@ svg {@extend %fullBlock;}
     flex-basis: 45%;
     flex-shrink: 0;
     fieldset {
-      border: 1px solid $border;
+
       position: relative;
-      border-radius: 3px;
+
       input {
-        border: none;
+        border: 1px solid $border;
+        border-radius: 3px;
         display: block;
         width: 100%;
         font-size: 0.8rem;
@@ -158,6 +164,9 @@ svg {@extend %fullBlock;}
         @extend %boxSize;
         line-height: 34px;
         background: transparent;
+        &:focus {
+          border-color: $button;
+        }
       }
       button {
         position: absolute;

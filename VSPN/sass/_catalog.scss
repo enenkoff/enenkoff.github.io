@@ -8,6 +8,10 @@
       font-size: 1.55rem;
       line-height: 1.5;
     }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
     .count {
       @extend %valign;
       background-color: #fff;
@@ -100,19 +104,29 @@
   }
   &__main {
     padding-left: 210px;
+    .preview & {
+      padding-left: 0;
+    }
     ul {
       font-size: 0;
       margin: 0 -15px;
+      .list_view & {
+        margin-bottom: 20px;
+      }
       li {
         font-size: 1rem;
         display: inline-block;
         width: 25%;
         vertical-align: top;
         padding: 0 15px 30px;
+        .preview & {
+          width: 20%;
+        }
         @extend %boxSize;
         .list_view & {
           width: 100%;
           display: block;
+          padding-bottom: 10px;
         }
       }
     }
@@ -127,7 +141,9 @@
   border-radius: 3px;
   @include boxShadow(0,1px,1px,0,rgba(0,0,0,0.15));
   @include transit(all 0.3s);
-
+  .list_view & {
+    padding-bottom: 0;
+  }
   &__description {
     display: block;
     width: 100%;
@@ -135,8 +151,51 @@
     color: inherit;
     .list_view & {
       display: flex;
+
       align-items: center;
       justify-content: space-between;
+    }
+  }
+  &__head {
+    .rank {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      span {
+        @extend %valign;
+        i {
+          @extend %valign;
+          width: 15px;
+          height: 15px;
+        }
+      }
+      .stars {
+        display: block;
+        margin-top: 5px;
+        .list_view & {
+          display: inline-block;
+          border-left: 2px solid $border;
+          margin: 0 0 0 10px;
+          padding: 0 0 3px 10px;
+        }
+      }
+    }
+    .list_view & {
+      flex-shrink: 500;
+      width: 100%;
+      text-align: left;
+      padding: 0 15px;
+    }
+  }
+  &__text {
+    .list_view & {
+      flex-shrink: 500;
+      padding: 0 15px;
+      width: 100%;
+      text-align: left;
+      align-items: center;
+      align-self: stretch;
+      display: flex;
+      border-left: 1px solid $bg;
     }
   }
   &__img {
@@ -218,40 +277,14 @@
     left: 3px;
     right: 3px;
     z-index: 1;
-    background-color: $button;
-    border-radius: 3px;
-    font-size: 0;
-    white-space: nowrap;
-    @extend %boxSize;
-    padding: 2px;
-    &__counts {
-      @extend %valign;
-      width: 50%;
-      text-align: center;
-      font-size: 0;
-      background-color: #fff;
-      border-radius: 3px;
-      button,span {
-        @extend %valign;
-        width: 33.3333%;
-        @extend %boxSize;
-      }
-      span {
-        font-size: 0.85rem;
-        border-left: 1px solid $border;
-        border-right: 1px solid $border;
-        line-height: 24px;
-      }
-      button {
-        background-color: transparent;
-        border: none;
-        font-size: 0.9rem;
-        line-height: 36px;
-        &.minus {
-          font-size: 0.7rem;
-        }
-      }
+    .list_view & {
+      bottom: 0;
+      right: 0;
+      left: auto;
+      width: 176px;
+      border-radius: 0 0 3px 0;
     }
+
     a {
       @extend %valign;
       text-align: center;

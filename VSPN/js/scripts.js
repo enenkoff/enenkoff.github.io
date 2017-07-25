@@ -111,6 +111,22 @@ $(document).ready(function(){
     })
 
 
+    /* grid font */
+
+    var font = 1;
+    function gridFont(){
+        var winWidth = $(window).width();
+        if(winWidth > 1800){
+            font = 1;
+        }
+        else {
+            var k = winWidth/1800;
+            font = k;
+        }
+        $('.grid').css('font-size',font+'em');
+    }
+
+
 
 
 
@@ -123,5 +139,15 @@ $(document).ready(function(){
     if($('.spinner__counts').length > 0){
         spinners();
     }
+    if($('.grid').length > 0){
+        gridFont()
+    }
+
+
+    $(window).resize(function(){
+        if($('.grid').length > 0){
+            gridFont()
+        }
+    })
 
 });
