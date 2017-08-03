@@ -1,0 +1,252 @@
+.header {
+  &__top {
+    background: #1879be;
+    background: -moz-linear-gradient(left, #1879be 0%, $link 100%);
+    background: -webkit-linear-gradient(left, #1879be 0%,$link 100%);
+    background: linear-gradient(to right, #1879be 0%,$link 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1879be', endColorstr=$link,GradientType=1 );
+    color: rgba(255,255,255,0.75);
+    font-size: 12.5px;
+    font-family: VAG_100;
+    position: relative;
+    z-index: 2;
+    a {
+
+      display: block;
+    }
+    &-content {
+      display: flex;
+      justify-content: flex-end;
+      nav {
+        display: flex;
+        align-items: stretch;
+        & > ul {
+          display: flex;
+          align-items: stretch;
+          position: relative;
+
+          li {
+            position: relative;
+            &:hover {
+              @include media(hover,1025){
+                & > ul {display: block;}
+
+              }
+            }
+            a {
+              padding: 0 12px;
+            }
+            ul {
+              display: none;
+              position: absolute;
+              min-width: 100%;
+              max-width: 180px;
+              width: 180px;
+              background-color: $bg_grey_lt;
+              color: $link;
+              font-size: 13px;
+              li {
+                &:last-child {
+                  a {
+                    border: none;
+                  }
+                }
+              }
+              a {
+                padding-top: 14px;
+                padding-bottom: 14px;
+                padding-right: 25px;
+                border-bottom: 1px solid #fff;
+                &:hover {
+                  @include media(hover,1025){
+                    background-color: rgba($link,0.1);
+                  }
+                }
+              }
+            }
+            &.has-drop {
+              ul {
+                top: 100%;
+                left: 0;
+                box-shadow: 1px 2px 2px 0 rgba($link,0.15);
+              }
+
+            }
+            &.has-subdrop {
+              ul {
+                left: 100%;
+                top: 0;
+              }
+              &:before {
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                border-right: 1px solid $arrow;
+                border-bottom: 1px solid $arrow;
+                top: 50%;
+                right: 14px;
+                margin-top: -1px;
+                transform: rotate(-45deg) translate(0,-50%);
+                box-sizing: border-box;
+              }
+              &:hover {
+                @include media(hover, 1025) {
+                  &:after {
+                    content: "";
+                    top: 2px;
+                    left: 100%;
+                    bottom: 0;
+                    margin-left: -1px;
+                    width: 1px;
+                    position: absolute;
+                    z-index: 1;
+                    background-color: transparent;
+                    box-shadow: 1px 0 1px 0 rgba($link,0.1);
+                  }
+                  & ~ li {
+                    &:after {
+                      content: "";
+                      top: 2px;
+                      left: 100%;
+                      bottom: 0;
+                      margin-left: 0;
+                      width: 1px;
+                      position: absolute;
+                      z-index: 1;
+                      background-color: transparent;
+                      box-shadow: 1px 0 1px 0 rgba($link,0.1);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          & > li {
+            & > a {
+              line-height: 35px;
+              &:hover {
+                @include media(hover,1025){
+                  color: #fff;
+                  background-color: rgba(255,255,255,0.1);
+                }
+              }
+            }
+          }
+        }
+        .contact-us {
+          margin-left: 13px;
+          line-height: 35px;
+          &:hover {
+            @include media(hover,1025){
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .sign-in {
+      display: flex;
+      padding: 0 5px;
+      margin-left: 10px;
+      a {
+        margin: 0 10px;
+        line-height: 35px;
+        &:hover {
+          @include media(hover,1025){
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &__main {
+    border-bottom: 1px solid rgba($link,0.1);
+    padding: 21px 0;
+    .logo {
+      display: inline-block;
+      width: 151px;
+      height: 45px;
+      margin-right: 54px;
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+      .tel {
+        font-family: VAG_300;
+        opacity: 0.45;
+        color: $link;
+        font-size: 21px;
+        i {
+          @extend %valign;
+          width: 15px;
+          height: 15px;
+          margin-right: 10px;
+        }
+        span {
+          @extend %valign;
+        }
+      }
+    }
+    &-actions {
+      display: flex;
+      align-items: center;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__search {
+    margin-right: 22px;
+    fieldset {
+      width: 340px;
+      max-width: 340px;
+      position: relative;
+
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 48px;
+        width: 48px;
+        box-sizing: border-box;
+        padding: 13px;
+        i {@extend %fullBlock;}
+      }
+      label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 48px;
+        width: 48px;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+      }
+      input {
+        display: block;
+        width: 0;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        padding: 0 15px;
+        height: 48px;
+        line-height: 46px;
+        box-sizing: border-box;
+        color: rgba(0,0,0,0.8);
+        font-family: VAG_300;
+
+        &:focus,
+        &.active {
+          width: 100%;
+          background-color: rgba(0,0,0,0.02);
+          border-color: rgba(0,0,0,0.1);
+          & ~ label {
+            display: none;
+
+          }
+        }
+      }
+    }
+  }
+}

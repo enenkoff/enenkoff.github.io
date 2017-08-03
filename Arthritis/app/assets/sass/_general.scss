@@ -1,0 +1,43 @@
+// ------------ variables ------------
+$bg_grey_lt: #f7f7f7;
+$link: #184E7D;
+$arrow: #85A6BE;
+$btn: #F5A319;
+
+
+
+// ------------ extends ------------
+%fullBlock {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+%valign {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// ------------ mixins ------------
+@mixin fonts($name,$file){
+  @font-face {
+    font-family: $name;
+    src: url("../fonts/" + $file + ".ttf"),
+    url("../fonts/" + $file + ".woff"),
+    url("../fonts/" + $file + ".eot");
+  }
+}
+@mixin media($media,$w) {
+  @if $media == hover {
+    @media screen and (min-width:$w+'px'){@content;}
+  }
+  @else {
+    @media screen and (max-width:$w+'px'){@content;}
+  }
+}
+
+
+
+@include fonts(Proxima_lt,ProximaNova-Light);
+@include fonts(VAG_100,VAGRoundedStd-Thin);
+@include fonts(VAG_300,VAGRoundedStd-Light);
+@include fonts(VAG_600,VAGRoundedStd-Bold);
