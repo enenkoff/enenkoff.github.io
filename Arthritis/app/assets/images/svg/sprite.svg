@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon_book" viewBox="0 0 21 37">
+        <g fill="none" stroke="#000">
+            <g stroke-linejoin="round" stroke-linecap="round">
+                <path d="m3 9l12-7 6 3v21l-18 10z"/>
+                <path d="m15 2l6 3-6 3c0 0 0-7 0-5z"/>
+                <path d="m18 10l-12 7"/>
+                <path d="m17 14l-12 7"/>
+                <path d="m17 17l-12 7"/>
+                <path d="m17 21l-12 7"/>
+                <path d="m3 36l-2-1v-28l12-6 1 1"/>
+            </g>
+            <path d="m1 7l2 2"/>
+        </g>
+    </symbol>
+    <symbol id="icon_check" viewBox="0 0 254 254">
+        <path d="m3 93c-5-10-2-22 8-27 10-5 22-2 27 8l67 121 113-185c6-9 18-12 27-7 9 6 12 18 7 27l-130 214c-2 3-4 5-7 7-10 5-22 2-27-8l-84-151z"
+              fill="#2644bc" fill-rule="nonzero"/>
+    </symbol>
+</svg>

@@ -1,0 +1,60 @@
+
+html {
+  &.ovh {overflow: hidden !important;}
+  font-family: 'Proxima_lt', sans-serif;
+  font-size: 16px;
+}
+body {
+
+}
+body, input, textarea, button, select {font-family: 'Proxima_lt', sans-serif;}
+a {
+  color: inherit;
+}
+svg {@extend %fullBlock}
+
+.layout:after {content: ""; display: block; clear: both;}
+.tableBox {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  & > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+    & > div {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+}
+
+.content {
+  margin: 0 auto;
+  padding: 0 15px;
+  &_lg {max-width: 1200px;}
+  &_md {max-width: 960px;}
+  //&_sm {max-width: 830px;}
+  //&_xs {max-width: 640px;}
+}
+
+
+.hidden-in-mobile {
+  @include media(media,1024){
+    display: none !important;
+  }
+}
+.hidden-in-smarts {
+  @include media(media,640){
+    display: none !important;
+  }
+}
+.show-in-mobile {
+  display: none;
+  @include media(media,1024){
+    display: block;
+  }
+}
