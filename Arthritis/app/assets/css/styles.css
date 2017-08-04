@@ -279,10 +279,14 @@ svg, .header__search fieldset button i {
   content: "\e90c"; }
 
 html {
+  height: 100%;
   font-family: 'Proxima_lt', sans-serif;
   font-size: 16px; }
   html.ovh {
     overflow: hidden !important; }
+
+body {
+  height: 100%; }
 
 body, input, textarea, button, select {
   font-family: 'Proxima_lt', sans-serif;
@@ -349,6 +353,11 @@ a {
     background-repeat: no-repeat;
     background-position: -15px -7px;
     background-size: auto 127%; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box; }
 
 .header__top {
   background: #1879be;
@@ -653,3 +662,124 @@ a {
         border-color: rgba(0, 0, 0, 0.1); }
         .header__search fieldset input:focus ~ label, .header__search fieldset input.active ~ label {
           display: none; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  .footer__main {
+    position: relative;
+    padding-top: 30px;
+    background-color: #f7f7f7; }
+    .footer__main:before {
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      position: absolute;
+      background: rgba(24, 78, 125, 0.05);
+      background: -moz-linear-gradient(top, rgba(24, 78, 125, 0.06) 0%, rgba(24, 78, 125, 0) 80%);
+      background: -webkit-linear-gradient(top, rgba(24, 78, 125, 0.06) 0%, rgba(24, 78, 125, 0) 80%);
+      background: linear-gradient(to bottom, rgba(24, 78, 125, 0.06) 0%, rgba(24, 78, 125, 0) 80%); }
+    .footer__main .logo {
+      display: block;
+      width: 163px;
+      height: 48px;
+      margin-bottom: 31px; }
+    .footer__main-contacts {
+      background-color: #fff;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 0 3px 0 rgba(24, 78, 125, 0.05);
+      width: 300px;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20239.8%20263.12%22%3E%3Cg%20opacity%3D%220.07%22%3E%3Cpath%20d%3D%22M8764.13%2C3007.26s-36.93-108.75-43.32-113.68c-3.89-3-8.19.88-8.19%2C0.88L8676%2C2920.64c-1.43.74-1.06%2C3.11-1.06%2C3.11v19h-55.63v-19s0.37-2.37-1.06-3.11l-36.62-26.19s-4.3-3.89-8.19-.88c-6.39%2C4.94-43.32%2C113.68-43.32%2C113.68s-8.19%2C18.1%2C3%2C18.63h82.55s4.4%2C0.32%2C4.4-7.6v-52.71h54.15v52.71c0%2C7.92%2C4.4%2C7.6%2C4.4%2C7.6h82.55C8772.32%2C3025.36%2C8764.13%2C3007.26%2C8764.13%2C3007.26Z%22%20transform%3D%22translate%28-8527.23%20-2762.77%29%22%20fill%3D%22%23a5a5a5%22/%3E%3Cpath%20d%3D%22M8703.56%2C2830.78s-26.69-67.2-54.93-68c-0.51%2C0-1%2C.12-1.5.15s-1-.16-1.5-0.15c-28.24.81-54.93%2C68-54.93%2C68s-9.31%2C20-11%2C38.91c0%2C0%2C27.8%2C30%2C56.6%2C38a101.51%2C101.51%2C0%2C0%2C0%2C21.75%2C0c28.8-8%2C56.6-38%2C56.6-38C8712.87%2C2850.81%2C8703.56%2C2830.78%2C8703.56%2C2830.78ZM8647.13%2C2883c-13.75%2C0-24.9-11.8-24.9-26.36s11.15-26.36%2C24.9-26.36%2C24.9%2C11.8%2C24.9%2C26.36S8660.88%2C2883%2C8647.13%2C2883Z%22%20transform%3D%22translate%28-8527.23%20-2762.77%29%22%20fill%3D%22%23a5a5a5%22/%3E%3C/g%3E%3C/svg%3E");
+      background-position: 200% 120%;
+      background-repeat: no-repeat;
+      background-size: 85% auto;
+      font-family: VAG_300;
+      box-sizing: border-box;
+      padding: 30px 36px 0;
+      margin-right: 30px; }
+      .footer__main-contacts a {
+        color: rgba(24, 121, 190, 0.8); }
+      .footer__main-contacts dl {
+        margin-bottom: 20px; }
+        .footer__main-contacts dl dt {
+          font-size: 19px; }
+        .footer__main-contacts dl dd {
+          font-size: 15px;
+          color: rgba(44, 53, 71, 0.4); }
+    .footer__main-nav {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding-top: 22px; }
+    .footer__main-list {
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(24, 121, 190, 0.08);
+      margin-bottom: 30px; }
+      .footer__main-list h6 {
+        font-family: VAG_600;
+        color: #184E7D;
+        font-size: 18px;
+        margin-bottom: 13px; }
+      .footer__main-list nav {
+        width: 30%; }
+      .footer__main-list ul li {
+        margin-bottom: 10px; }
+      .footer__main-list ul a {
+        font-family: VAG_100;
+        color: #8c8c8c;
+        font-size: 15px; }
+    .footer__main-content {
+      display: flex;
+      justify-content: space-between; }
+  .footer__copyright {
+    background-color: rgba(24, 27, 33, 0.5); }
+  .footer__bottom {
+    background-color: #232830;
+    color: #fff; }
+
+/*************** sharing ***************/
+.footer .sharing {
+  margin: 30px 0; }
+
+.sharing ul {
+  display: flex;
+  align-items: center; }
+  .sharing ul li {
+    margin-right: 21px; }
+  .sharing ul a {
+    display: block; }
+    .footer .sharing ul a {
+      color: rgba(24, 121, 190, 0.6); }
+      .footer .sharing ul a .icon-share_fb {
+        font-size: 20px; }
+      .footer .sharing ul a .icon-share_tw {
+        font-size: 16px; }
+      .footer .sharing ul a .icon-share_lnk {
+        font-size: 20px; }
+      .footer .sharing ul a .icon-share_ytb {
+        font-size: 15px; }
+      .footer .sharing ul a .icon-share_inst {
+        font-size: 20px; }
+
+/*************** banners ***************/
+.footer .banners {
+  margin-bottom: 40px; }
+
+.footer .banners ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0; }
+  .footer .banners ul li {
+    width: 30%; }
+    .footer .banners ul li img {
+      display: block;
+      max-width: 150px;
+      height: auto; }

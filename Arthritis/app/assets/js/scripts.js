@@ -2,6 +2,18 @@ $(document).ready(function () {
 
 /* ------------------ functions ------------------ */
 
+    /* footer bottom*/
+
+    function footer_at_bottom() {
+
+        var $footer = $('#footer');
+        var $wrapper = $('#wrapper');
+        var $footer_height = $footer.height();
+
+        $wrapper.css('paddingBottom',$footer_height);
+
+    }
+
     /* active search field*/
 
     var $searchBox = $('.header__search');
@@ -59,11 +71,13 @@ $(document).ready(function () {
 
 /* ------------------ document load ------------------ */
 
+    footer_at_bottom();
     invert_submenu();
 
 /* ------------------ document resize ------------------ */
 
     $(window).resize(function () {
+        footer_at_bottom();
         invert_submenu();
     });
 

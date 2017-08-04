@@ -1,0 +1,49 @@
+/*************** sharing ***************/
+
+.sharing {
+  .footer & {
+    margin: 30px 0;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin-right: 21px;
+    }
+    a {
+      display: block;
+      .footer & {
+        color: rgba($link_lt,0.6);
+        .icon-share_fb {font-size: 20px}
+        .icon-share_tw {font-size: 16px}
+        .icon-share_lnk {font-size: 20px}
+        .icon-share_ytb {font-size: 15px}
+        .icon-share_inst {font-size: 20px}
+      }
+    }
+  }
+}
+
+/*************** banners ***************/
+
+.banners {
+  .footer & {
+    margin-bottom: 40px;
+  }
+  ul {
+    .footer & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      li {
+        width: 30%;
+        img {
+          display: block;
+          max-width: 150px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
