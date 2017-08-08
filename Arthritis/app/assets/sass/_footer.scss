@@ -60,11 +60,20 @@
         background-position: 101% 105%;
         padding: 30px 0 0;
       }
+      @include media(media,767){
+        padding: 30px 0 8px;
+      }
       a {
         color: rgba($link_lt,0.8);
       }
       dl {
         margin-bottom: 20px;
+        @include media(media,767){
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 24px;
+          margin-bottom: 14px;
+        }
         dt {
           font-size: 19px;
           @include media(media,959){
@@ -84,6 +93,9 @@
         justify-content: space-between;
         align-items: baseline;
       }
+      @include media(media,767){
+        display: block;
+      }
     }
     &-nav {
       display: flex;
@@ -101,21 +113,42 @@
       padding-bottom: 30px;
       border-bottom: 1px solid rgba($link_lt,0.08);
       margin-bottom: 30px;
+      @include media(media,767){
+        flex-flow: row wrap;
+        padding-bottom: 0;
+      }
       h6 {
         font-family: VAG_600;
         color: $link;
         font-size: 18px;
         margin-bottom: 13px;
       }
-      nav {width: 30%}
+      nav {
+        width: 30%;
+        @include media(media,767){
+          width: 50%;
+          box-sizing: border-box;
+          padding-right: 10px;
+          margin-bottom: 15px;
+        }
+      }
       ul {
         li {
           margin-bottom: 10px;
+          @include media(media,779){
+            margin-bottom: 8px;
+          }
+          @include media(media,767){
+            margin-bottom: 10px;
+          }
         }
         a {
           font-family: VAG_100;
           color: $bg_grey;
           font-size: 15px;
+          @include media(media,779){
+            font-size: 14px;
+          }
         }
       }
     }
@@ -130,9 +163,15 @@
   }
   &__offer {
     padding: 26px 0;
+    @include media(media,767){
+      padding: 26px 0 14px;
+    }
     &-content {
       display: flex;
       align-content: center;
+      @include media(media,767){
+        flex-direction: column;
+      }
     }
     .title {
       color: rgba(134,134,134,0.8);
@@ -148,6 +187,10 @@
         width: 66%;
         padding: 12px 0 10px;
       }
+      @include media(media,767){
+        width: 100%;
+        margin-bottom: 20px;
+      }
       blockquote {
         font-family: Minion;
         color: rgba(255,255,255,0.7);
@@ -156,6 +199,10 @@
         display: inline-block;
         padding: 0 38px;
         margin: 5px 0;
+        @include media(media,767){
+          font-size: 22px;
+          padding: 0 34px;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -184,11 +231,18 @@
       width: 26%;
       padding-left: 28px;
       box-sizing: border-box;
-      border-left: 1px solid rgba(255,255,255,0.1);
+      border-width: 1px;
+      border-color: rgba(255,255,255,0.1);
+      border-style: none none none solid;
       display: flex;
       justify-content: space-between;
       @include media(media,958){
         width: 34%;
+      }
+      @include media(media,767){
+        width: 100%;
+        border-style: solid none none;
+        padding: 20px 0 0;
       }
       a {
         opacity: 0.8;
@@ -204,6 +258,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include media(media,767){
+        flex-direction: column-reverse;
+        ul {margin-bottom: 8px}
+      }
     }
     li {
       display: inline-block;

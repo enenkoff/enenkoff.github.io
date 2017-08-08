@@ -53,6 +53,10 @@ svg {@extend %fullBlock}
     margin: 0 auto;
     padding: 0 15px;
   }
+  @include media(media,767){
+    padding: 0 25px;
+    width: auto;
+  }
 }
 
 
