@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 10;
   &__top {
     background: #1879be;
     background: -moz-linear-gradient(left, #1879be 0%, $link 100%);
@@ -10,6 +12,14 @@
     font-family: VAG_100;
     position: relative;
     z-index: 2;
+    @include media(media,959){
+      display: none;
+    }
+    .content {
+      @include media(media,960){
+        padding: 0;
+      }
+    }
     a {
       display: block;
     }
@@ -27,7 +37,7 @@
           li {
             position: relative;
             &:hover {
-              @include media(hover,1025){
+              @include media(hover,960){
                 & > ul {display: block;}
 
               }
@@ -57,7 +67,7 @@
                 padding-right: 25px;
                 border-bottom: 1px solid #fff;
                 &:hover {
-                  @include media(hover,1025){
+                  @include media(hover,960){
                     background-color: rgba($link,0.1);
                   }
                 }
@@ -103,7 +113,7 @@
                 box-sizing: border-box;
               }
               &:hover {
-                @include media(hover, 1025) {
+                @include media(hover,960) {
                   &:after {
                     content: "";
                     top: 2px;
@@ -140,7 +150,7 @@
             }
             &:hover {
               & > a {
-                @include media(hover,1025){
+                @include media(hover,960){
                   color: #fff;
                   background-color: rgba(255,255,255,0.1);
                 }
@@ -153,7 +163,7 @@
           margin-left: 13px;
           line-height: 35px;
           &:hover {
-            @include media(hover,1025){
+            @include media(hover,960){
               color: #fff;
             }
           }
@@ -167,8 +177,24 @@
       a {
         margin: 0 10px;
         line-height: 35px;
+        position: relative;
+        &:after {
+          content: "";
+          width: 1px;
+          top: 50%;
+          height: 14px;
+          left: 100%;
+          margin: -7px 0 0 10px;
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.75);
+        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
         &:hover {
-          @include media(hover,1025){
+          @include media(hover,960){
             color: #fff;
           }
         }
@@ -178,15 +204,92 @@
   &__main {
     border-bottom: 1px solid rgba($link,0.1);
     padding: 21px 0;
+    @include media(media,959){
+      padding: 9px 0;
+    }
+    .content {
+      @include media(media,960){
+        padding: 0 20px;
+      }
+      @include media(media,959){
+        padding-left: 0;
+      }
+    }
     .logo {
       display: inline-block;
       width: 151px;
       height: 45px;
       margin-right: 54px;
+      @include media(media,959){
+        width: 122px;
+        height: 36px;
+      }
+    }
+    a {
+      position: relative;
+      &:after {
+        content: "";
+        width: 1px;
+        top: 50%;
+        height: 40px;
+        left: 100%;
+        margin: -20px 0 0 26px;
+        position: absolute;
+        background-color: rgba(14, 100, 153, 0.1);
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
     }
     &-info {
       display: flex;
       align-items: center;
+      @include media(media,959){
+        padding-left: 80px;
+      }
+      .burger {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        cursor: pointer;
+        background: $link_lt;
+        background: -moz-linear-gradient(top, $link_lt 0%, $link 100%);
+        background: -webkit-linear-gradient(top, $link_lt 0%, $link 100%);
+        background: linear-gradient(to bottom, $link_lt 0%, $link 100%);
+        span {
+          position: absolute;
+          width: 16px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: #fff;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background-color: #fff;
+            left: 0;
+            right: 0;
+          }
+          &:before {
+            bottom: 100%;
+            margin-bottom: 6px;
+          }
+          &:after {
+            top: 100%;
+            margin-top: 6px;
+          }
+        }
+      }
       .tel {
         font-family: VAG_300;
         opacity: 0.45;
@@ -214,6 +317,14 @@
   }
   &__nav {
     position: relative;
+    @include media(media,959){
+      display: none;
+    }
+    .content {
+      @include media(media,960){
+        padding: 0;
+      }
+    }
     &:after {
       content: "";
       position: absolute;
@@ -262,14 +373,14 @@
               padding-right: 25px;
               border-bottom: 1px solid #fff;
               &:hover {
-                @include media(hover,1025){
+                @include media(hover,960){
                   background-color: rgba($link,0.1);
                 }
               }
             }
           }
           &:hover {
-            @include media(hover,1025){
+            @include media(hover,960){
               & > ul {display: block;}
 
             }
@@ -313,7 +424,7 @@
               box-sizing: border-box;
             }
             &:hover {
-              @include media(hover, 1025) {
+              @include media(hover, 960) {
                 &:after {
                   content: "";
                   top: 2px;
@@ -366,7 +477,7 @@
           }
           &:hover {
             & > a {
-              @include media(hover,1025){
+              @include media(hover,960){
                 color: #fff;
                 background-color: $link;
               }
@@ -385,7 +496,10 @@
       width: 340px;
       max-width: 340px;
       position: relative;
-
+      @include media(media,959){
+        width: 180px;
+        max-width: 180px;
+      }
       button {
         position: absolute;
         top: 0;
@@ -395,6 +509,11 @@
         box-sizing: border-box;
         padding: 13px;
         i {@extend %fullBlock;}
+        @include media(media,959){
+          height: 42px;
+          width: 42px;
+          padding: 10px;
+        }
       }
       label {
         position: absolute;
@@ -405,6 +524,11 @@
         opacity: 0;
         z-index: 1;
         cursor: pointer;
+        @include media(media,959){
+          height: 42px;
+          width: 42px;
+
+        }
       }
       input {
         display: block;
@@ -417,7 +541,11 @@
         box-sizing: border-box;
         color: rgba(0,0,0,0.8);
         font-family: VAG_300;
+        @include media(media,959){
+          height: 42px;
+          line-height: 40px;
 
+        }
         &:focus,
         &.active {
           width: 100%;

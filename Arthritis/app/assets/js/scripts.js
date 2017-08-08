@@ -2,7 +2,21 @@ $(document).ready(function () {
 
 /* ------------------ functions ------------------ */
 
-    /* active search field*/
+    /* footer bottom */
+
+    function footer_at_bottom() {
+
+        var winWidth = $(window).width();
+        var $footer = $('#footer');
+        var $wrapper = $('#wrapper');
+        var $footer_height = $footer.height();
+
+        winWidth >= 960 ? $wrapper.css('paddingBottom',$footer_height) : $wrapper.css('paddingBottom',0)
+
+
+    }
+
+    /* active search field */
 
     var $searchBox = $('.header__search');
     $searchBox.find('label').click(function(){
@@ -17,7 +31,7 @@ $(document).ready(function () {
         }
     });
 
-    /* inverting submenu*/
+    /* inverting submenu */
 
     function invert_submenu() {
 
@@ -55,15 +69,39 @@ $(document).ready(function () {
 
     }
 
+    /* banners carousel */
+
+    function banners_carousel() {
+        $('.banners__slider').find('.owl-carousel').owlCarousel({
+            loop: true,
+            dots: false,
+            nav: true,
+            mouseDrag: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                480:{
+                    items:3
+                }
+            }
+        })
+    }
+
 
 
 /* ------------------ document load ------------------ */
 
+    footer_at_bottom();
     invert_submenu();
+    if($('.owl-carousel').length > 0) {
+        banners_carousel();
+    }
 
 /* ------------------ document resize ------------------ */
 
     $(window).resize(function () {
+        footer_at_bottom();
         invert_submenu();
     });
 
