@@ -111,6 +111,9 @@
     @include media(media,779){
       padding: 45px 0 70px;
     }
+    @include media(media,479){
+      padding: 35px 0 56px;
+    }
     & > * {position: relative}
     &:before {
       content: "";
@@ -164,6 +167,9 @@
       }
       @include media(media,767){
         margin: 54px 0 55px;
+      }
+      @include media(media,479){
+        margin: 54px 0 47px;
       }
       .owl-stage {font-size: 0}
       .owl-item {
@@ -265,6 +271,9 @@
         height: auto;
         margin: 0 auto;
         max-width: 150px;
+        @include media(media,479){
+          max-width: 135px;
+        }
       }
     }
     .footer & {
@@ -289,6 +298,9 @@
   @include media(media,779){
     padding: 50px 0 24px;
   }
+  @include media(media,479){
+    padding: 38px 0 23px;
+  }
   .content {
     @include media(media,779){
       padding: 0 20px;
@@ -296,11 +308,18 @@
     @include media(media,767){
       padding: 0 30px;
     }
+    @include media(media,479){
+      padding: 0 15px;
+    }
   }
   .subtitle {
     font-size: 20px;
     @include media(media,767){
       font-size: 18px;
+    }
+    @include media(media,479){
+      font-size: 17px;
+      margin-bottom: 4px;
     }
   }
   .head_title {
@@ -312,6 +331,9 @@
     @include media(media,767){
       font-size: 28px;
       margin-bottom: 18px;
+    }
+    @include media(media,479){
+      font-size: 22px;
     }
   }
   ul {
@@ -369,6 +391,9 @@
         }
         @include media(media,767){
           padding-top: 29%;
+        }
+        @include media(media,479){
+          padding-top: 32%;
         }
       }
       h3 {

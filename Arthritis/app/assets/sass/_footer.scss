@@ -37,6 +37,9 @@
       @include media(media,959){
         margin-bottom: 25px;
       }
+      @include media(media,479){
+        margin-bottom: 36px;
+      }
     }
     &-contacts {
       background-color: #fff;
@@ -62,6 +65,9 @@
       }
       @include media(media,767){
         padding: 30px 0 8px;
+      }
+      @include media(media,479){
+        padding: 30px 0 44px;
       }
       a {
         color: rgba($link_lt,0.8);
@@ -131,6 +137,10 @@
           padding-right: 10px;
           margin-bottom: 15px;
         }
+        @include media(media,479){
+          width: 100%;
+          margin-bottom: 20px;
+        }
       }
       ul {
         li {
@@ -166,6 +176,9 @@
     @include media(media,767){
       padding: 26px 0 14px;
     }
+    @include media(media,479){
+      padding: 5px 0 10px;
+    }
     &-content {
       display: flex;
       align-content: center;
@@ -190,6 +203,9 @@
       @include media(media,767){
         width: 100%;
         margin-bottom: 20px;
+      }
+      @include media(media,479){
+        margin-bottom: 7px;
       }
       blockquote {
         font-family: Minion;

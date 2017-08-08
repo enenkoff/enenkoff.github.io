@@ -23,6 +23,9 @@
           @include media(media,960){
             padding: 0 30px;
           }
+          @include media(media,479){
+            padding: 0 15px;
+          }
         }
         width: 445px;
         box-sizing: border-box;
@@ -51,12 +54,21 @@
           margin: 76px 0 0;
           padding: 30px 35px 25px;
         }
+        @include media(media,479){
+          width: auto;
+          max-width: 318px;
+          margin: 165px 0 0;
+          padding: 16px 24px 25px;
+        }
         h1 {
           font-size: 33px;
           margin-bottom: 25px;
           line-height: 1.2;
           @include media(media,779){
             font-size: 29px;
+          }
+          @include media(media,479){
+            font-size: 25px;
           }
         }
         p {
@@ -83,6 +95,10 @@
       @include media(media,767){
         margin-bottom: 0;
       }
+      @include media(media,479){
+        transform: translate(0,-50px);
+        margin-bottom: -20px;
+      }
       ul {
         font-size: 0;
         margin: 0 -10px;
@@ -102,6 +118,9 @@
           @include media(media,767){
             width: 100%;
             font-size: 23px;
+          }
+          @include media(media,479){
+            font-size: 17px;
           }
           a {
             display: block;
@@ -125,6 +144,9 @@
             }
             @include media(media,767){
               padding: 23px 18px;
+            }
+            @include media(media,479){
+              padding: 10px 2px;
             }
             span {
               font-family: VAG_600;
@@ -173,6 +195,10 @@
               text-align: center;
               width: 60px;
             }
+            @include media(media,479){
+              width: 47px;
+              font-size: 24px;
+            }
           }
         }
       }
@@ -181,10 +207,16 @@
   &__statistics {
     background-color: #F8FBFF;
     padding-bottom: 64px;
+    @include media(media,479){
+      padding-bottom: 35px;
+    }
     .text-box {
       color: $link_drk;
       font-size: 18px;
       line-height: 1.5;
+      @include media(media,479){
+        font-size: 15px;
+      }
       img {
         float: right;
         margin: 0 0 25px 25px;
@@ -196,6 +228,11 @@
         }
         @include media(media,767){
           margin: 0 0 25px 25px;
+        }
+        @include media(media,479){
+          width: 96px;
+          height: auto;
+          margin: 0 15px 25px 25px;
         }
       }
       h3 {
@@ -212,6 +249,9 @@
         }
         @include media(media,767){
           margin-bottom: 20px;
+        }
+        @include media(media,479){
+          font-size: 22px;
         }
       }
       p {
@@ -255,6 +295,9 @@
         width: 100%;
         height: 300px;
       }
+      @include media(media,479){
+        height: 360px;
+      }
     }
     &-main {
       width: 50%;
@@ -268,6 +311,9 @@
       }
       @include media(media,767){
         padding: 0 25px 38px 45px;
+      }
+      @include media(media,479){
+        padding: 0 15px 28px 34px;
       }
       .join-community {
         background-color: #fff;
@@ -288,6 +334,10 @@
         }
         @include media(media,767){
           margin-bottom: -2px;
+        }
+        @include media(media,479){
+          transform: translate(0,-100px);
+          margin-bottom: -70px;
         }
         i {
           position: absolute;

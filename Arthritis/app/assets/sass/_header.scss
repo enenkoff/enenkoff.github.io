@@ -239,6 +239,9 @@
         margin: -20px 0 0 26px;
         position: absolute;
         background-color: rgba(14, 100, 153, 0.1);
+        @include media(media,779){
+          display: none;
+        }
       }
       &:last-child {
         &:after {
@@ -298,6 +301,9 @@
         opacity: 0.45;
         color: $link;
         font-size: 21px;
+        @include media(media,779){
+          display: none;
+        }
         i {
           @extend %valign;
           width: 15px;
