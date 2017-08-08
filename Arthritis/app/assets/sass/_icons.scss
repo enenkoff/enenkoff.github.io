@@ -1,4 +1,4 @@
-@include fonts(icomoon,icons);
+@include fonts(icomoon,icomoon);
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -15,6 +15,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ico_slider-left:before {
+  content: "\e90f";
+}
+.icon-ico_slider-right:before {
+  content: "\e910";
+}
+.icon-ico_arrow:before {
+  content: "\e90d";
+}
+.icon-ico_man:before {
+  content: "\e90e";
+}
 .icon-share_inst:before {
   content: "\e900";
 }
