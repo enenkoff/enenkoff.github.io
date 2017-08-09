@@ -14,7 +14,7 @@ a {
   span,i {@extend %valign}
 }
 svg {@extend %fullBlock}
-
+br {@include media(media,479){display: none}}
 .layout:after {content: ""; display: block; clear: both;}
 .tableBox {
   position: absolute;
@@ -40,6 +40,9 @@ svg {@extend %fullBlock}
   @include media(media,960){
     padding: 0 30px;
   }
+  @include media(media,479){
+    padding: 0 15px;
+  }
   &_lg {max-width: 1200px;}
   &_md {max-width: 960px;}
   //&_sm {max-width: 830px;}
@@ -51,6 +54,13 @@ svg {@extend %fullBlock}
     max-width: 768px;
     width: 768px;
     margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include media(media,767){
+    padding: 0 25px;
+    width: auto;
+  }
+  @include media(media,479){
     padding: 0 15px;
   }
 }

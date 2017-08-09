@@ -1,0 +1,194 @@
+.mobile-menu {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  @extend %fullBlock;
+  overflow: hidden;
+  z-index: 100;
+  background-color: $link_foot;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    i {
+      color: rgba(255,255,255,0.7);
+      position: absolute;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 18px;
+      top: 7px;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+  &.active {
+    .bg {
+      i {
+        opacity: 1;
+      }
+    }
+  }
+  &__container {
+    margin-right: 50px;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    transform: translate(-100%,0);
+    transition: all 0.3s;
+    .mobile-menu.active & {
+      transform: translate(0,0);
+    }
+  }
+  &__actions {
+    height: 70px;
+    position: absolute;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: $bg_grey_lt;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba($link_lt,0.1);
+    .sign-in {
+      color: $link;
+      font-family: VAG_300;
+      a {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+  &__nav {
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding-top: 70px;
+    background-color: $bg_grey_lt;
+    nav {
+      background-color: #fff;
+      & > ul {
+        a {
+          display: block;
+          color: $link;
+          font-size: 16px;
+          line-height: 20px;
+          padding: 17px 70px 17px 20px;
+          border-bottom: 1px solid rgba($link_lt,0.1);
+        }
+        ul {
+          display: none;
+          box-shadow: inset 0 7px 4px -6px rgba($link,0.15), inset 0 -7px 4px -6px rgba($link,0.15);
+        }
+        li {
+          & > div {
+            position: relative;
+          }
+          button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 56px;
+            height: 100%;
+            background-color: rgba(59,104,144,0.1);
+            border-color: rgba($link_lt,0.1);
+            border-width: 1px;
+            border-style: none none none solid;
+            z-index: 3;
+            &:before {
+              content: "+";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              right: 0;
+              text-align: center;
+              width: 20px;
+              height: 20px;
+              margin: -10px auto 0;
+              line-height: 20px;
+              color: $link;
+              font-family: VAG_300;
+              font-size: 20px;
+            }
+            &.active {
+              background-color: rgba(59,104,144,0.2);
+              &:before {
+                content: "\2013";
+                font-size: 24px;
+              }
+            }
+          }
+          &.active {
+            & > ul {
+              display: block;
+            }
+          }
+          &.has-drop {
+            & > ul {
+              background-color: rgba(59,104,144,0.07);
+              box-shadow: inset 0 7px 4px -6px rgba($link,0.25), inset 0 -7px 4px -6px rgba($link,0.25);
+              a {
+                font-family: VAG_300;
+                white-space: nowrap;
+                i {
+                  font-size: 11px;
+                  margin-right: 5px;
+                  vertical-align: top;
+                  line-height: 20px;
+                }
+                span {
+                  white-space: normal;
+                }
+              }
+            }
+
+          }
+          &.has-subdrop {
+            & > ul {
+              background-color: rgba($link,0.75);
+              button {
+                border-color: rgba(255,255,255,0.1);
+                &:before {color: #fff}
+              }
+              a {
+                color: #fff;
+                border-color: rgba(255,255,255,0.1);
+              }
+            }
+            .has-subdrop {
+              ul {
+                a {
+                  color: rgba(255,255,255,0.7);
+                }
+              }
+
+            }
+          }
+        }
+
+        & > li {
+          & > div {
+            a {
+              display: block;
+              color: $link;
+              font-family: VAG_600;
+              font-size: 16px;
+              line-height: 20px;
+              padding: 17px 70px 17px 20px;
+              border-bottom: 1px solid rgba($link_lt,0.1);
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

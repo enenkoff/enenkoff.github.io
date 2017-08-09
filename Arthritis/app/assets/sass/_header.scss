@@ -214,6 +214,9 @@
       @include media(media,959){
         padding-left: 0;
       }
+      @include media(media,779){
+        padding-right: 10px;
+      }
     }
     .logo {
       display: inline-block;
@@ -236,6 +239,9 @@
         margin: -20px 0 0 26px;
         position: absolute;
         background-color: rgba(14, 100, 153, 0.1);
+        @include media(media,779){
+          display: none;
+        }
       }
       &:last-child {
         &:after {
@@ -295,6 +301,9 @@
         opacity: 0.45;
         color: $link;
         font-size: 21px;
+        @include media(media,779){
+          display: none;
+        }
         i {
           @extend %valign;
           width: 15px;
@@ -309,6 +318,9 @@
     &-actions {
       display: flex;
       align-items: center;
+      @include media(media,779){
+        .btn {display: none}
+      }
     }
     &-content {
       display: flex;
@@ -492,6 +504,9 @@
   }
   &__search {
     margin-right: 22px;
+    @include media(media,779){
+      margin-right: 0;
+    }
     fieldset {
       width: 340px;
       max-width: 340px;
@@ -499,6 +514,11 @@
       @include media(media,959){
         width: 180px;
         max-width: 180px;
+      }
+      @include media(media,779){
+        width: 42px;
+        height: 42px;
+        position: static;
       }
       button {
         position: absolute;
@@ -514,6 +534,9 @@
           width: 42px;
           padding: 10px;
         }
+        @include media(media,779){
+          position: static;
+        }
       }
       label {
         position: absolute;
@@ -528,6 +551,10 @@
           height: 42px;
           width: 42px;
 
+        }
+        @include media(media,779){
+          right: 10px;
+          top: 9px;
         }
       }
       input {
@@ -546,11 +573,24 @@
           line-height: 40px;
 
         }
+        @include media(media,779){
+          position: absolute;
+          left: 0;
+          top: 100%;
+          border-radius: 0;
+          display: none;
+          height: 46px;
+          line-height: 44px;
+        }
         &:focus,
         &.active {
           width: 100%;
           background-color: rgba(0,0,0,0.02);
           border-color: rgba(0,0,0,0.1);
+          @include media(media,779){
+            display: block;
+            background-color: #FAFAFA;
+          }
           & ~ label {
             display: none;
 

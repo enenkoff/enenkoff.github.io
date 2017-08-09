@@ -15,6 +15,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ico_mob-subarrow:before {
+  content: "\e913";
+}
+.icon-ico_mob-arrow:before {
+  content: "\e912";
+}
+.icon-ico_close:before {
+  content: "\e911";
+}
 .icon-ico_slider-left:before {
   content: "\e90f";
 }
