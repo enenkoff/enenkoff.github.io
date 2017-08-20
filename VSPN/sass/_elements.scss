@@ -1,0 +1,32 @@
+/* get order */
+
+.basket_view {
+  margin-bottom: 38px;
+}
+.checkout__total {
+  text-align: right;
+  &_field {
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 5px;
+    @include boxShadow(0,1px,1px,0,rgba(0,0,0,0.15));
+    p,a {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    p {
+      padding: 0 15px;
+    }
+    a {
+      background-color: $button;
+      border-radius: 3px;
+      color: inherit;
+      padding: 8px 20px;
+      &:hover {
+        background-color: $barkbutton;
+      }
+    }
+  }
+}

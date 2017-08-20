@@ -31,13 +31,42 @@
                         <div class="enter">
                             <a href="#">Войти</a>
                         </div>
-                        <a href="#" class="basket">
-                            <i>
-                                <svg> <use xlink:href="images/svg/sprite.svg#icon_cart"></use> </svg>
-                                <span>45 000</span>
-                            </i>
-                            <p>Корзина</p>
-                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket">
+                                <i>
+                                    <svg> <use xlink:href="images/svg/sprite.svg#icon_cart"></use> </svg>
+                                    <span>45 000</span>
+                                </i>
+                                <p>Корзина</p>
+                            </a>
+                            <div class="checkout-preview">
+                                <div class="catalog__main">
+                                    <table>
+                                        <tr>
+                                            <td><h5>Старый кирпич</h5></td>
+                                            <td>1 шт.</td>
+                                            <td>30 000 руб.</td>
+                                            <td>
+                                                <a href="#" class="item__remove">
+                                                    <svg> <use xlink:href="images/svg/sprite.svg#icon_waste"/> </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><h5>Старый кирпич</h5></td>
+                                            <td>1 шт.</td>
+                                            <td>14 000 руб.</td>
+                                            <td>
+                                                <a href="#" class="item__remove">
+                                                    <svg> <use xlink:href="images/svg/sprite.svg#icon_waste"/> </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <p class="total"><span>Итог:</span> 2 товара на сумму 34 000 руб </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -308,7 +337,7 @@
                                                 </div>
                                                 <div class="item__head">
                                                     <h5>Старый кирпич</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, officiis.</p>
+                                                    <p>Сайт рыбатекст поможет  дизайнеру, верстальщику,  вебмастеру сгенериров... </p>
                                                 </div>
                                             </a>
                                             <div class="item__checkout_data">
@@ -322,12 +351,14 @@
                                             <div class="item__checkout_data">
                                                 <h6>Цена</h6>
                                                 <div class="price">
-                                                    <span class="new">30 000 &#8381;</span>
+                                                    <span class="new">30 000 руб</span>
                                                 </div>
                                             </div>
                                             <div class="item__checkout_data">
                                                 <h6>Удалить</h6>
-                                                <a href="#" class="item__remove"></a>
+                                                <a href="#" class="item__remove">
+                                                    <svg> <use xlink:href="images/svg/sprite.svg#icon_waste"/> </svg>
+                                                </a>
                                             </div>
                                         </div>
 
@@ -335,42 +366,47 @@
                                 </li>
                                 <li>
                                     <div class="item">
-                                        <a href="#" class="item__description">
-                                            <div class="item__img">
-                                                <div class="_mn" style="background-image: url('images/items/item03.png')"></div>
-                                                <div class="_hv" style="background-image: url('images/items/item04.png')"></div>
+                                        <div class="item__checkout">
+                                            <a href="#" class="item__description">
+                                                <div class="item__img">
+                                                    <div class="_mn" style="background-image: url('images/items/item01.png')"></div>
+                                                    <div class="_hv" style="background-image: url('images/items/item02.png')"></div>
+                                                </div>
+                                                <div class="item__head">
+                                                    <h5>Старый кирпич</h5>
+                                                    <p>Сайт рыбатекст поможет  дизайнеру, верстальщику,  вебмастеру сгенериров... </p>
+                                                </div>
+                                            </a>
+                                            <div class="item__checkout_data">
+                                                <h6>Количество</h6>
+                                                <div class="spinner__counts">
+                                                    <button class="minus"><i class="icon-minus"></i></button>
+                                                    <span>4</span>
+                                                    <button class="plus"><i class="icon-plus"></i></button>
+                                                </div>
                                             </div>
-                                            <div class="item__head">
-                                                <h5>Старый кирпич</h5>
+                                            <div class="item__checkout_data">
+                                                <h6>Цена</h6>
+                                                <div class="price">
+                                                    <span class="new">14 000 руб</span>
+                                                </div>
                                             </div>
-                                            <div class="price">
-                                                <span class="new">1 500 &#8381;</span>
-                                                <span class="old">3 000 &#8381;</span>
+                                            <div class="item__checkout_data">
+                                                <h6>Удалить</h6>
+                                                <a href="#" class="item__remove">
+                                                    <svg> <use xlink:href="images/svg/sprite.svg#icon_waste"/> </svg>
+                                                </a>
                                             </div>
-                                        </a>
-                                        <div class="spinner">
-                                            <div class="spinner__counts">
-                                                <button class="minus"><i class="icon-minus"></i></button>
-                                                <span>10</span>
-                                                <button class="plus"><i class="icon-plus"></i></button>
-                                            </div>
-                                            <a href="#">В корзину</a>
                                         </div>
+
                                     </div>
                                 </li>
 
                             </ul>
-                            <div class="pagination layout">
-                                <div class="btn-field">
-                                    <a href="#" class="btn">Следующая страница</a>
-                                </div>
-                                <div class="pages">
-                                    <div class="pages-field">
-                                        <a href="#"><i class="icon-keyboard_arrow_left"></i></a>
-                                        <span>12</span>
-                                        <a href="#"><i class="icon-keyboard_arrow_right"></i></a>
-                                        <span class="total">из 15</span>
-                                    </div>
+                            <div class="checkout__total">
+                                <div class="checkout__total_field">
+                                    <p>Итого: 2 товара на сумму 34 000 руб</p>
+                                    <a href="#">Оформить заказ</a>
                                 </div>
                             </div>
                         </div>
