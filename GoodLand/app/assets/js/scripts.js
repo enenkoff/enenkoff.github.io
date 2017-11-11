@@ -209,6 +209,44 @@ $(document).ready(function(){
         $('html').removeClass('ovh');
     });
 
+    // call form
+
+    function callme() {
+        $(document).click(function(e){
+            var targ = $(e.target)
+            if(targ.parents('#call-me').length > 0 || targ.is('#call-me') == true){
+                $('#call-me').addClass('active')
+            }
+            else {
+                $('#call-me').removeClass('active')
+            }
+        });
+
+        function telephoneMask(val){
+            var mask = '+7(000)000-00-00';
+            if(val.length > 0){
+                var newMask = mask.slice(val.length, 16);
+                $('.telephone-mask .placeholder').text(val+newMask)
+            }
+            else {
+                $('.telephone-mask .placeholder').text(mask)
+            }
+        }
+        var starttVal = $('.telephone-mask').find('input').val();
+        telephoneMask(starttVal)
+        $('.telephone-mask').find('input').keyup(function (event) {
+            var $thisVal = $(this).val()
+            telephoneMask($thisVal)
+        });
+    }
+    if($('#call-me').length > 0){
+        callme()
+    }
+
+
+
+
+
 
     // start functions
 
