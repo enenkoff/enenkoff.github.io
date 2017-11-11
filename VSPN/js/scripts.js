@@ -47,7 +47,7 @@ $(document).ready(function(){
             inputs[handle].value = values[handle];
         });
 
-        /* change input in range */
+    /* change input in range */
 
         function setSliderHandle(i, value) {
             var r = [null,null];
@@ -72,6 +72,19 @@ $(document).ready(function(){
         });
 
     }
+
+    /* checkout modal */
+
+    $('.get_order').click(function (e) {
+        e.preventDefault();
+        $('#modal').addClass('active');
+    })
+    $('#modal').find('.close').click(function () {
+        $('#modal').removeClass('active');
+    })
+    $('#modal_thanks').find('.close').click(function () {
+        $('#modal_thanks').removeClass('active');
+    })
 
     /* spinner counts */
 
