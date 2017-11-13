@@ -213,34 +213,60 @@ $(document).ready(function(){
 
     function callme() {
         $(document).click(function(e){
-            var targ = $(e.target)
+            var targ = $(e.target);
             if(targ.parents('#call-me').length > 0 || targ.is('#call-me') == true){
+                var starttVal = $('.telephone-mask').find('input').val();
+                telephoneMask(starttVal);
                 $('#call-me').addClass('active')
             }
             else {
-                $('#call-me').removeClass('active')
+                $('#call-me').removeClass('active success')
+                var call_button = $('.show-call-form').find('span');
+                call_button.text(call_button.attr('data-default'));
             }
         });
 
         function telephoneMask(val){
-            var mask = '+7(000)000-00-00';
+            var mask = '+7(000)000-00-00',
+                call_button = $('.show-call-form').find('span'),
+                call_button_send = call_button.attr('data-send'),
+                call_button_def = call_button.attr('data-default');
             if(val.length > 0){
                 var newMask = mask.slice(val.length, 16);
-                $('.telephone-mask .placeholder').text(val+newMask)
+                $('.telephone-mask .placeholder').text(val+newMask);
+                call_button.text(call_button_send);
             }
             else {
-                $('.telephone-mask .placeholder').text(mask)
+                $('.telephone-mask .placeholder').text(mask);
+                call_button.text(call_button_def);
             }
         }
-        var starttVal = $('.telephone-mask').find('input').val();
-        telephoneMask(starttVal)
+
         $('.telephone-mask').find('input').keyup(function (event) {
             var $thisVal = $(this).val()
             telephoneMask($thisVal)
         });
     }
     if($('#call-me').length > 0){
-        callme()
+        callme();
+        $('.call_me__form').find('form').validate({
+            rules: {
+                callme: {
+                    required: true,
+                    number: true
+                }
+            },
+            messages: {
+                callme: {required: ""}
+            },
+            errorClass: 'invalid',
+            errorPlacement: $.noop,
+            submitHandler:function (form) {
+                $('#call-me').addClass('success');
+                return false;
+            }
+
+        })
     }
 
 
