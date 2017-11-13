@@ -94,6 +94,7 @@
     position: relative;
     font-size: 28px;
     font-weight: 300;
+    outline: none;
 }
 .call_me__form .telephone-mask {
     display: inline-block;
@@ -102,6 +103,7 @@
     vertical-align: middle;
     position: relative;
     font-size: 28px;
+    outline: none;
 }
 .telephone-mask .placeholder {
     width: 100%;
