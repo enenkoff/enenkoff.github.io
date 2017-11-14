@@ -167,7 +167,25 @@
     position: absolute;
     top: 15px;
     right: 15px;
+    animation-name: tossing;
+    -webkit-animation-name: tossing;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
+@keyframes tossing {
+    0% {transform: rotate(-8deg);}
+    50% {transform: rotate(8deg);}
+    100% {transform: rotate(-8deg);}}
+@-moz-keyframes tossing {
+    0% {-moz-transform: rotate(-8deg);}
+    50% {-moz-transform: rotate(8deg);}
+    100% {-moz-transform: rotate(-8deg);}}
+@-webkit-keyframes tossing {
+    0% {-webkit-transform: rotate(-8deg);}
+    50% {-webkit-transform: rotate(8deg);}
+    100% {-webkit-transform: rotate(-8deg);}}
 .call_me.active .show-call-form {
     pointer-events: none;
 }
@@ -183,6 +201,12 @@
     width: 300px;
     padding: 10px 70px 10px 25px;
     border-radius: 0 30px 30px 0;
+}
+.show-call-form:hover i {
+    -webkit-animation: unset;
+    -moz-animation: unset;
+    -o-animation: unset;
+    animation: unset;
 }
 .call_me.active:not(.success) .show-call-form span,
 .show-call-form:hover span {
