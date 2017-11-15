@@ -85,7 +85,9 @@
     left: 0;
     z-index: 1;
 }
-
+.call_me input:-webkit-autofill {
+    background: transparent;
+}
 .call_me__form button {
     display: inline-block;
     width: 280px;
@@ -121,6 +123,10 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    width: 0;
+}
+.call_me.active .call_me__main {
+    width: auto;
 }
 .show-call-form {
     z-index: 3;
@@ -152,12 +158,13 @@
     border: none;
     outline: none;
 }
-.show-call-form span {
+.show-call-form--txt {
     vertical-align: middle;
     display: block;
     line-height: 40px;
     font-size: 22px;
     opacity: 0;
+    cursor: pointer;
 }
 .show-call-form i {
     vertical-align: middle;
@@ -209,8 +216,8 @@
     -o-animation: unset;
     animation: unset;
 }
-.call_me.active:not(.success) .show-call-form span,
-.show-call-form:hover span {
+.call_me.active:not(.success) .show-call-form--txt,
+.show-call-form:hover .show-call-form--txt {
     opacity: 1;
     -webkit-transition: all 0.1s ease 0.2s;
     -moz-transition: all 0.1s ease 0.2s;

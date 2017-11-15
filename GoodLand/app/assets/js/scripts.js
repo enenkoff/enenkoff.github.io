@@ -212,40 +212,80 @@ $(document).ready(function(){
     // call form
 
     function callme() {
+
+        var $callInput = $('.telephone-mask').find('input');
+        var $thisVal = $callInput.val();
+
         $(document).click(function(e){
             var targ = $(e.target);
             if(targ.parents('#call-me').length > 0 || targ.is('#call-me') == true){
-                var starttVal = $('.telephone-mask').find('input').val();
-                telephoneMask(starttVal);
+                telephoneMask($callInput.val());
                 $('#call-me').addClass('active')
             }
             else {
-                $('#call-me').removeClass('active success')
-                var call_button = $('.show-call-form').find('span');
+                $('#call-me').removeClass('active success');
+                var call_button = $('.show-call-form--txt');
                 call_button.text(call_button.attr('data-default'));
             }
         });
 
+
         function telephoneMask(val){
-            var mask = '+7(000)000-00-00',
-                call_button = $('.show-call-form').find('span'),
-                call_button_send = call_button.attr('data-send'),
-                call_button_def = call_button.attr('data-default');
-            if(val.length > 0){
-                var newMask = mask.slice(val.length, 16);
-                $('.telephone-mask .placeholder').text(val+newMask);
-                call_button.text(call_button_send);
-            }
-            else {
-                $('.telephone-mask .placeholder').text(mask);
-                call_button.text(call_button_def);
+            if (val == ''){
+                $callInput.val('+7')
             }
         }
 
-        $('.telephone-mask').find('input').keyup(function (event) {
-            var $thisVal = $(this).val()
-            telephoneMask($thisVal)
+        telephoneMask($thisVal)
+
+        function getChar(event) {
+            if (event.which == null) { // IE
+                if (event.keyCode < 32) return null;
+                return String.fromCharCode(event.keyCode)
+            }
+
+            if (event.which != 0 && event.charCode != 0) { // no IE
+                if (event.which < 32) return null;
+                return String.fromCharCode(event.which);
+            }
+
+            return null;
+        }
+
+        $callInput.keypress(function (e) {
+
+            e = e || event;
+            if (e.ctrlKey || e.altKey || e.metaKey) return;
+            var chr = getChar(e);
+            if (chr == null) return;
+            if($(this).val() == ''){
+                if (chr == '+') {}
+                else if (chr < '0' || chr > '9') {
+                    return false;
+                }
+            }
+            else if (chr < '0' || chr > '9') {
+                return false;
+            }
+            else {
+                $thisVal = $(this).val();
+
+                if($thisVal[0] == '+'){
+                    if($thisVal.length == 2){
+                        $callInput.val($thisVal+'(');
+                    }
+                    else if($thisVal.length == 6){
+                        $callInput.val($thisVal+')');
+                    }
+                    else if($thisVal.length == 10 || $thisVal.length == 13){
+                        $callInput.val($thisVal+'-');
+                    }
+                }
+
+            }
+
         });
+
     }
     if($('#call-me').length > 0){
         callme();
