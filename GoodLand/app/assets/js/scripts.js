@@ -231,6 +231,16 @@ $(document).ready(function(){
 
 
         function telephoneMask(val){
+            var call_button = $('.show-call-form--txt'),
+                call_button_send = call_button.attr('data-send'),
+                call_button_def = call_button.attr('data-default');
+
+            if(val.length > 0){
+                call_button.text(call_button_send);
+            }
+            else {
+                call_button.text(call_button_def);
+            }
             if (val == ''){
                 $callInput.val('+7')
             }

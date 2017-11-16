@@ -173,6 +173,7 @@
     width: 30px;
     position: absolute;
     top: 15px;
+    text-align: center;
     right: 15px;
     animation-name: tossing;
     -webkit-animation-name: tossing;
