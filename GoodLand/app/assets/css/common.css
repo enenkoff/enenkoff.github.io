@@ -165,6 +165,7 @@
     font-size: 22px;
     opacity: 0;
     cursor: pointer;
+    text-align: center;
 }
 .show-call-form i {
     vertical-align: middle;
